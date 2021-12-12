@@ -1,0 +1,47 @@
+.governance-view {
+    max-width : 1240px;
+    margin    : auto;
+    margin-top: 32px;
+    text-align: center;
+
+    >h1 {
+        font-size    : @headline1;
+        font-weight  : 700;
+        margin-bottom: 8px;
+    }
+
+    >.paragraph {
+        font-size  : @paragraph;
+        font-weight: 400;
+    }
+
+    >.top-nav {
+        display        : flex;
+        justify-content: space-between;
+        margin-top     : 24px;
+        margin-bottom  : 8px;
+
+        >h2 {
+            font-size    : @headline2;
+            font-weight  : 700;
+            margin-bottom: 8px;
+        }
+
+        >button {
+            height          : 44px;
+            border          : 1px solid @brand-primary;
+            box-sizing      : border-box;
+            border-radius   : 8px;
+            background-color: white;
+            color           : @brand-primary;
+            font-size       : @headline5;
+            font-weight     : 700;
+            padding         : 0px 24px 0px 24px;
+        }
+
+        >button:hover {
+            color           : white;
+            background-color: @brand-primary;
+        }
+    }
+}

@@ -310,38 +310,41 @@ body {
 .user-menu > ul > li > a:active {
   color: #F2780C;
 }
-.buy-view {
-  max-width: 1240px;
-  margin: auto;
-  margin-top: 32px;
-  text-align: center;
+.proposal-view {
+  width: 100%;
+  background-color: #F9F9F9;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  height: 44px;
+  margin-top: 8px;
 }
-.buy-view > h1 {
-  font-size: 2.8125rem;
-  font-weight: 700;
+.proposal-view > .proposal {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 8px 32px 8px 32px;
 }
-.buy-view > .klayswap {
-  margin-top: 24px;
-}
-.buy-view > .klayswap > h4 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-top: 12px;
-}
-.buy-view > .paragraph {
+.proposal-view > .proposal > .serial {
   font-size: 0.875rem;
   font-weight: 400;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  text-align: center;
+  line-height: 24px;
 }
-.buy-view > a {
+.proposal-view > .proposal > h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.proposal-view > .proposal > .status {
   font-size: 1rem;
   font-weight: 700;
-  color: #3190FD;
-  text-decoration: none;
+  padding: 8px 32px 8px 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: solid 0.5px;
 }
-.buy-view > a:hover {
-  text-decoration: underline;
+.proposal-view:hover {
+  background-color: #F8FAFB;
 }
 .layout {
   width: 100%;
@@ -438,5 +441,79 @@ body {
   margin: auto;
   font-size: 12px;
   height: 100px;
+}
+.buy-view {
+  max-width: 1240px;
+  margin: auto;
+  margin-top: 32px;
+  text-align: center;
+}
+.buy-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+.buy-view > .klayswap {
+  margin-top: 24px;
+}
+.buy-view > .klayswap > h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.buy-view > .paragraph {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.buy-view > a {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3190FD;
+  text-decoration: none;
+}
+.buy-view > a:hover {
+  text-decoration: underline;
+}
+.governance-view {
+  max-width: 1240px;
+  margin: auto;
+  margin-top: 32px;
+  text-align: center;
+}
+.governance-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.governance-view > .paragraph {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.governance-view > .top-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+.governance-view > .top-nav > h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.governance-view > .top-nav > button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.governance-view > .top-nav > button:hover {
+  color: white;
+  background-color: #F2780C;
 }
 
