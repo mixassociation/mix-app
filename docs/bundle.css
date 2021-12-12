@@ -425,20 +425,15 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  margin-top: 54px;
-  max-width: 1240px;
+  min-height: 100vh;
 }
 .layout > footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: #F9F9F9;
-  width: 100%;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   margin: auto;
+  background-color: #F9F9F9;
   font-size: 12px;
   height: 100px;
 }
@@ -474,6 +469,105 @@ body {
 }
 .buy-view > a:hover {
   text-decoration: underline;
+}
+.booth-view {
+  margin: auto;
+  margin-top: 16px;
+  text-align: center;
+}
+.booth-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+.booth-view > h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+.booth-view > h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 8px;
+}
+.booth-view > h6 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.booth-view > .paragraph {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.booth-view > .mixset {
+  margin: 8px;
+}
+.booth-view > .none-bold-h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.booth-view > .text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F9F9F9;
+  font-size: 0.875rem;
+  font-weight: 400;
+  height: 100px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.booth-view > .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.booth-view > .form > input {
+  width: 392px;
+  height: 44px;
+  background: #F0F0F0;
+  margin-top: 16px;
+  border-radius: 8px;
+  padding: 8px;
+}
+.booth-view > .form > button {
+  width: 392px;
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.booth-view > .form > button:hover {
+  color: white;
+  background-color: #F2780C;
+}
+.booth-view > .form > .container {
+  width: 392px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 0.75rem;
+}
+.booth-view > .form > .container > .caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.booth-view > .form > .container > .caption > img {
+  margin-right: 4px;
+}
+.booth-view > .form > .container > .max-btn {
+  background-color: transparent;
+  font-weight: 400;
+  color: #3190FD;
+}
+.booth-view > .form > .container > .max-btn:hover {
+  font-weight: 600;
 }
 .governance-view {
   max-width: 1240px;
