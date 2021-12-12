@@ -35,12 +35,6 @@ export default class UserInfo extends DomNode {
             this.addressDisplay.style({ display: "block" });
             this.addressDisplay.empty().appendText(CommonUtil.shortenAddress(address));
             (this.mobile === true ? this : this.addressDisplay).append(el("ul",
-                el("li", el("a", "내 PFP", {
-                    click: () => ViewUtil.go("/user/my-pfps"),
-                })),
-                el("li", el("a", "내 Arts", {
-                    click: () => ViewUtil.go("/user/my-arts"),
-                })),
                 Klip.connected !== true ? undefined : el("li", el("a", "로그아웃", {
                     click: () => Klip.disconnect(),
                 })),

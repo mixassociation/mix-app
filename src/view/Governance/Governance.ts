@@ -1,14 +1,14 @@
 import { DomNode, el } from "@hanul/skynode";
 import { View, ViewParams } from "skyrouter";
-import Layout from "./Layout";
-import Proposal from '../component/Proposal';
+import Layout from "../Layout";
+import Proposal from '../../component/Proposal';
 
 export default class Governance implements View {
 
     private container: DomNode;
 
     constructor() {
-        Layout.current.title = "MIX 구매";
+        Layout.current.title = "거버넌스";
         Layout.current.content.append(
             this.container = el(".governance-view",
                 el("h1", "MIX 거버넌스"),
