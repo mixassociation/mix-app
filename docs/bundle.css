@@ -310,12 +310,44 @@ body {
 .user-menu > ul > li > a:active {
   color: #F2780C;
 }
+.buy-view {
+  max-width: 1240px;
+  margin: auto;
+  margin-top: 32px;
+  text-align: center;
+}
+.buy-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+.buy-view > .klayswap {
+  margin-top: 24px;
+}
+.buy-view > .klayswap > h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.buy-view > .paragraph {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.buy-view > a {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #3190FD;
+  text-decoration: none;
+}
+.buy-view > a:hover {
+  text-decoration: underline;
+}
 .layout {
   width: 100%;
 }
 .layout > header {
   background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: #04111d 0px 0px 8px 0px;
   position: fixed;
   left: 0;
   top: 0;
@@ -394,15 +426,17 @@ body {
   max-width: 1240px;
 }
 .layout > footer {
-  color: #F9F9F9;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #F9F9F9;
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  margin-top: 16px;
-  padding: 16px;
-  padding-bottom: 32px;
-  font-size: 14px;
+  font-size: 12px;
+  height: 100px;
 }
 

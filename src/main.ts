@@ -7,7 +7,7 @@ import Buy from "./view/Buy";
     SkyRouter.route("**", Layout);
     SkyRouter.route("", Home);
 
-    SkyRouter.route("/buy", Buy);
+    SkyRouter.route("buy", Buy);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
