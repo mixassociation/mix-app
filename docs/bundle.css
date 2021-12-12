@@ -173,4 +173,236 @@ body {
   display: flex;
   margin: auto;
 }
+.pc-menu > ul {
+  display: flex;
+}
+.pc-menu > ul > li {
+  position: relative;
+  color: #fff;
+}
+.pc-menu > ul > li > a {
+  font-size: 16px;
+  padding: 16px;
+}
+.pc-menu > ul > li > a:hover {
+  color: #F2780C;
+}
+.pc-menu > ul > li > a:active {
+  color: #F2780C;
+}
+.pc-menu > ul > li > ul {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 100px;
+  display: none;
+  padding: 10px 0;
+}
+.pc-menu > ul > li > ul > li > a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+.pc-menu > ul > li > ul > li > a:hover {
+  color: #F2780C;
+}
+.pc-menu > ul > li > ul > li > a:active {
+  color: #F2780C;
+  font-weight: 600;
+}
+.pc-menu > ul > li:hover > ul {
+  display: block;
+}
+.mobile-menu {
+  position: fixed;
+  width: 170px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: #FFFFFF;
+}
+.mobile-menu > ul > li > a {
+  display: block;
+  padding: 12px 5px;
+  font-size: 18px;
+}
+.mobile-menu > ul > li > a:hover {
+  color: #F2780C;
+}
+.mobile-menu > ul > li > a:active {
+  color: #F2780C;
+}
+.mobile-menu > ul > li > ul {
+  margin-left: 10px;
+}
+.mobile-menu > ul > li > ul > li > a {
+  display: block;
+  padding: 8px 5px;
+  color: #ccc;
+}
+.mobile-menu > ul > li > ul > li > a:hover {
+  color: #F2780C;
+}
+.mobile-menu > ul > li > ul > li > a:active {
+  color: #F2780C;
+}
+.mobile-menu > ul > li > ul > li.parent {
+  display: none;
+}
+.mobile-menu > .user-menu {
+  margin: auto;
+  margin-top: 16px;
+}
+.user-menu > .connect-wallet,
+.user-menu > .wallet-address {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+}
+.user-menu > .connect-wallet,
+.user-menu > .wallet-address:hover {
+  border-style: solid;
+  border-width: 0.5px;
+  border-radius: 4px;
+}
+.user-menu > .wallet-address {
+  position: relative;
+  cursor: pointer;
+}
+.user-menu > .wallet-address > ul {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 100px;
+  display: none;
+  padding: 10px 0;
+}
+.user-menu > .wallet-address > ul > li > a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+}
+.user-menu > .wallet-address > ul > li > a:hover {
+  color: #F2780C;
+}
+.user-menu > .wallet-address > ul > li > a:active {
+  color: #F2780C;
+}
+.user-menu > .wallet-address:hover > ul {
+  display: block;
+}
+.user-menu > ul {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.user-menu > ul > li > a {
+  display: block;
+  padding: 8px 5px;
+  color: #ccc;
+}
+.user-menu > ul > li > a:hover {
+  color: #F2780C;
+}
+.user-menu > ul > li > a:active {
+  color: #F2780C;
+}
+.layout {
+  width: 100%;
+}
+.layout > header {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: #04111d 0px 0px 8px 0px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.layout > header > a {
+  margin-right: 16px;
+}
+.layout > header > a > .logo {
+  display: flex;
+}
+.layout > header > a > .logo > span {
+  margin-left: 4px;
+  margin-top: 12px;
+  color: #e17d1c;
+}
+@media only screen and (max-width: 719px) {
+  .layout > header > .pc-menu {
+    display: none;
+  }
+}
+.layout > header > .right {
+  flex-grow: 1;
+}
+.layout > header > .right:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.layout > header > .right > .user-menu {
+  float: right;
+}
+@media only screen and (max-width: 719px) {
+  .layout > header > .right > .user-menu {
+    display: none;
+  }
+}
+.layout > header > .right > .mix-button {
+  float: right;
+  margin-top: 2px;
+  margin-right: 16px;
+}
+@media only screen and (max-width: 719px) {
+  .layout > header > .right > .mix-button {
+    margin-top: 6px;
+    margin-right: 10px;
+  }
+}
+.layout > header > .right > .menu-button {
+  float: right;
+  display: none;
+  padding: 10px;
+}
+@media only screen and (max-width: 719px) {
+  .layout > header > .right > .menu-button {
+    display: block;
+  }
+}
+.layout > main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: 54px;
+  max-width: 1240px;
+}
+.layout > footer {
+  color: #F9F9F9;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: 16px;
+  padding: 16px;
+  padding-bottom: 32px;
+  font-size: 14px;
+}
 

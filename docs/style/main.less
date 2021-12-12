@@ -1,4 +1,5 @@
 @import "base.less";
+@import "font.less";
 @import "palette.less";
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
 
@@ -10,5 +11,11 @@ body {
     margin     : auto;
 }
 
+// components
+@import "component/menu/pc-menu.less";
+@import "component/menu/mobile-menu.less";
+@import "component/menu/user-menu.less";
+
 // views
 @import "view/home.less";
+@import "view/layout.less";

@@ -1,0 +1,54 @@
+.mobile-menu {
+    position        : fixed;
+    width           : 170px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding         : 10px;
+    color           : @background;
+
+    >ul {
+        >li {
+            >a {
+                display  : block;
+                padding  : 12px 5px;
+                font-size: 18px;
+
+                &:hover {
+                    color: @brand-primary
+                }
+
+                &:active {
+                    color: @brand-primary
+                }
+            }
+
+            >ul {
+                margin-left: 10px;
+
+                >li {
+                    >a {
+                        display: block;
+                        padding: 8px 5px;
+                        color  : #ccc;
+
+                        &:hover {
+                            color: @brand-primary
+                        }
+
+                        &:active {
+                            color: @brand-primary
+                        }
+                    }
+
+                    &.parent {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    >.user-menu {
+        margin    : auto;
+        margin-top: 16px;
+    }
+}
