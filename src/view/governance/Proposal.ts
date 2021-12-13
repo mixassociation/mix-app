@@ -55,7 +55,7 @@ export default class Proposal implements View {
                     el("p", "후보들 중에 마음에 드는 후보가 없는 경우 다른 후보를 등록할 수 있습니다."),
                     proposal.passed !== true ? undefined : el("button", "후보 추가", {
                         click: () => {
-                            new Prompt("후보 추가", "선택지로 추가할 후보를 입력해주시기 바랍니다. 후보를 추가하면 추가한 당사자는 해당 후보로 자동으로 투표하며, 수정 및 취소는 불가능합니다.", "추가하기", async (optionTitle) => {
+                            new Prompt("후보 추가", "선택지로 추가할 후보를 입력해주시기 바랍니다. 후보를 추가하면 추가한 당사자는 해당 후보로 자동으로 투표합니다.", "추가하기", async (optionTitle) => {
                                 const walletAddress = await Wallet.loadAddress();
                                 if (walletAddress !== undefined) {
                                     const signedMessage = await Wallet.signMessage("Add Governance Proposal Option");
@@ -71,7 +71,7 @@ export default class Proposal implements View {
                                     if (result.ok === true) {
                                         SkyRouter.refresh();
                                     } else {
-                                        new Alert("실패", "투표에 실패했습니다. 이미 투표에 참여한 경우 재투표가 불가능합니다.");
+                                        new Alert("실패", "투표에 실패했습니다.");
                                     }
                                 }
                             });
@@ -89,7 +89,7 @@ export default class Proposal implements View {
                 el(".controller",
                     proposal.passed !== true ? undefined : el("button", "투표하기", {
                         click: () => {
-                            new Confirm("투표하기", `\"${option.title}\" 후보로 투표하시겠습니까? 투표 수정 및 취소는 불가능합니다.`, "투표하기", async () => {
+                            new Confirm("투표하기", `\"${option.title}\" 후보에 투표하시겠습니까? 투표후 다른 후보에 재투표가 가능하며, 투표 취소는 불가능합니다.`, "투표하기", async () => {
                                 const walletAddress = await Wallet.loadAddress();
                                 if (walletAddress !== undefined) {
                                     const signedMessage = await Wallet.signMessage("Vote Governance Proposal");
@@ -105,7 +105,7 @@ export default class Proposal implements View {
                                     if (result.ok === true) {
                                         SkyRouter.refresh();
                                     } else {
-                                        new Alert("실패", "투표에 실패했습니다. 이미 투표에 참여한 경우 재투표가 불가능합니다.");
+                                        new Alert("실패", "투표에 실패했습니다.");
                                     }
                                 }
                             });
