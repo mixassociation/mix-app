@@ -834,7 +834,7 @@ input {
   clear: both;
   visibility: hidden;
 }
-* {
+*:not(i) {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif !important;
 }
 a {
@@ -1213,6 +1213,7 @@ body {
   float: right;
   display: none;
   padding: 10px;
+  color: #fff;
 }
 @media only screen and (max-width: 719px) {
   .layout > header > .right > .menu-button {
