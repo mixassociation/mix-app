@@ -1,0 +1,163 @@
+.governance-propose-view {
+    >h1 {
+        font-size    : @headline1;
+        margin-bottom: 16px;
+        text-align   : center;
+        font-weight  : 700;
+        max-width    : 1280px;
+        padding      : 0 20px;
+        margin       : auto;
+    }
+
+    >.form {
+
+        >label,
+        >.term>label {
+            display      : block;
+            max-width    : 1280px;
+            padding      : 0 20px;
+            margin       : auto;
+            margin-bottom: 32px;
+
+            >span {
+                display    : block;
+                font-size  : 24px;
+                font-weight: 700;
+            }
+
+            >p {
+                font-size  : 14px;
+                padding    : 8px 0;
+                line-height: 1.2em;
+            }
+
+            >a {
+                color    : @link;
+                font-size: 14px;
+            }
+
+            >input,
+            >textarea {
+                margin-top: 13px;
+                display   : block;
+                width     : 100%;
+            }
+
+            >input {
+                height       : 32px;
+                border-bottom: 1px solid #A9AFB3;
+            }
+
+            >textarea {
+                border : 1px solid #A9AFB3;
+                padding: 12px;
+                height : 230px;
+            }
+        }
+
+        >.term {
+            background-color: #F9F9F9;
+            padding         : 30px 0;
+            margin-bottom   : 32px;
+
+            >label {
+                display      : flex;
+                margin-bottom: 0;
+
+                >input {
+                    width       : auto;
+                    height      : auto;
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        >.options {
+            max-width    : 1280px;
+            padding      : 0 20px;
+            margin       : auto;
+            margin-bottom: 32px;
+
+            >h5 {
+                display      : block;
+                font-size    : 24px;
+                font-weight  : 700;
+                margin-bottom: 16px;
+            }
+
+            >ul {
+                >li {
+                    display: flex;
+                    padding: 5px 0;
+
+                    >span {
+                        flex-grow: 1;
+                    }
+
+                    >.delete-button {
+                        color: red;
+                    }
+                }
+            }
+
+            >button {
+                height          : 32px;
+                border          : 1px solid @brand-primary;
+                box-sizing      : border-box;
+                border-radius   : 8px;
+                background-color: white;
+                color           : @brand-primary;
+                padding         : 0 16px;
+                margin-top      : 16px;
+
+                &:hover {
+                    color           : white;
+                    background-color: @brand-primary;
+                }
+            }
+        }
+
+        >.proposer {
+            max-width    : 1280px;
+            padding      : 0 20px;
+            margin       : auto;
+            margin-bottom: 32px;
+
+            >h5 {
+                display    : block;
+                font-size  : 24px;
+                font-weight: 700;
+            }
+
+            >span {
+                display   : block;
+                margin-top: 13px;
+                font-size : 14px;
+            }
+        }
+
+        >.controller {
+            max-width    : 1280px;
+            padding      : 0 20px;
+            margin       : auto;
+            margin-bottom: 32px;
+
+            >button {
+                width           : 100%;
+                height          : 44px;
+                border          : 1px solid @brand-primary;
+                box-sizing      : border-box;
+                border-radius   : 8px;
+                background-color: white;
+                color           : @brand-primary;
+                font-size       : @headline5;
+                font-weight     : 700;
+
+                &:hover {
+                    color           : white;
+                    background-color: @brand-primary;
+                }
+            }
+        }
+    }
+}

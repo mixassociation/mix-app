@@ -12,6 +12,7 @@ export default class Home implements View {
         Layout.current.content.append(
             (this.container = el(".home-view",
                 el(".content",
+                    "거버넌스를 제외한 다른 페이지들은 작업중입니다. 거버넌스 도입이 시급하여 거버넌스 페이지만을 오픈한 상태입니다.",
                 ),
             )),
         );

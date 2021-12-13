@@ -166,8 +166,14 @@ input {
   clear: both;
   visibility: hidden;
 }
+* {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif !important;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 body {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
   background: #FFFFFF;
   color: #000;
   display: flex;
@@ -310,32 +316,27 @@ body {
 .user-menu > ul > li > a:active {
   color: #F2780C;
 }
-.proposal-view {
+.proposal {
   width: 100%;
   background-color: #F9F9F9;
   border-radius: 8px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 8px 16px 8px 16px;
   height: 44px;
   margin-top: 8px;
 }
-.proposal-view > .proposal {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding: 8px 16px 8px 16px;
-}
-.proposal-view > .proposal > .serial {
+.proposal > .serial {
   font-size: 0.875rem;
   font-weight: 400;
   text-align: center;
   line-height: 24px;
 }
-.proposal-view > .proposal > h5 {
+.proposal > h5 {
   font-size: 1.25rem;
   font-weight: 700;
 }
-.proposal-view > .proposal > .status {
+.proposal > .status {
   font-size: 1rem;
   font-weight: 700;
   padding: 8px 32px 8px 32px;
@@ -343,11 +344,141 @@ body {
   border-radius: 8px;
   border: solid 0.5px;
 }
-.proposal-view:hover {
+.proposal:hover {
   background-color: #F8FAFB;
+}
+.popup-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 20px 0;
+}
+.dialogue.alert {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  border-radius: 4px;
+  background-color: #F0F0F0;
+}
+.dialogue.alert > h2 {
+  font-size: 24px;
+  padding: 16px;
+}
+.dialogue.alert > p {
+  padding: 16px;
+  border-top: 1px solid #CED3D6;
+  color: #999;
+  line-height: 1.2em;
+}
+.dialogue.alert > .button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+}
+.dialogue.alert > .button-container > button {
+  background-color: transparent;
+  color: #F2780C;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.dialogue.alert > .button-container > button:hover {
+  background-color: #ffffff;
+}
+.dialogue.confirm {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  border-radius: 4px;
+  background-color: #F0F0F0;
+}
+.dialogue.confirm > h2 {
+  font-size: 24px;
+  padding: 16px;
+}
+.dialogue.confirm > p {
+  padding: 16px;
+  border-top: 1px solid #CED3D6;
+  color: #999;
+  line-height: 1.2em;
+}
+.dialogue.confirm > .button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+}
+.dialogue.confirm > .button-container > button {
+  background-color: transparent;
+  color: #F2780C;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.dialogue.confirm > .button-container > button:hover {
+  background-color: #ffffff;
+}
+.dialogue.prompt {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  border-radius: 4px;
+  background-color: #F0F0F0;
+}
+.dialogue.prompt > h2 {
+  font-size: 24px;
+  padding: 16px;
+}
+.dialogue.prompt > p {
+  padding: 16px;
+  border-top: 1px solid #CED3D6;
+  color: #999;
+  line-height: 1.2em;
+}
+.dialogue.prompt > .input-container {
+  padding: 0 16px;
+}
+.dialogue.prompt > .input-container > input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 8px;
+  height: 40px;
+}
+.dialogue.prompt > .input-container > input:hover {
+  border: 1px solid #F2780C;
+}
+.dialogue.prompt > .input-container > input:focus {
+  border: 1px solid #F2780C;
+}
+.dialogue.prompt > .button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+}
+.dialogue.prompt > .button-container > button {
+  background-color: transparent;
+  color: #F2780C;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.dialogue.prompt > .button-container > button:hover {
+  background-color: #ffffff;
 }
 .layout {
   width: 100%;
+  padding-top: 44px;
 }
 .layout > header {
   background-color: rgba(0, 0, 0, 0.7);
@@ -421,11 +552,7 @@ body {
   }
 }
 .layout > main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-  min-height: 100vh;
+  padding: 50px 0;
 }
 .layout > footer {
   display: flex;
@@ -570,15 +697,16 @@ body {
   font-weight: 600;
 }
 .governance-view {
-  max-width: 1240px;
+  max-width: 1280px;
+  padding: 0 20px;
   margin: auto;
-  margin-top: 32px;
-  text-align: center;
+  margin-bottom: 32px;
 }
 .governance-view > h1 {
   font-size: 2.8125rem;
   font-weight: 700;
   margin-bottom: 8px;
+  text-align: center;
 }
 .governance-view > .paragraph {
   font-size: 0.875rem;
@@ -610,63 +738,134 @@ body {
   color: white;
   background-color: #F2780C;
 }
-.governance-detail-view {
-  margin: auto;
-  margin-top: 32px;
-  text-align: center;
-}
-.governance-detail-view > h1 {
+.governance-propose-view > h1 {
   font-size: 2.8125rem;
+  margin-bottom: 16px;
+  text-align: center;
   font-weight: 700;
-  margin-bottom: 8px;
-}
-.governance-detail-view > .top-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 36px;
-  margin-bottom: 20px;
-  max-width: 1240px;
+  max-width: 1280px;
+  padding: 0 20px;
   margin: auto;
 }
-.governance-detail-view > .top-nav > h5 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #878D91;
+.governance-propose-view > .form > label,
+.governance-propose-view > .form > .term > label {
+  display: block;
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: auto;
+  margin-bottom: 32px;
 }
-.governance-detail-view > .top-nav > .status {
-  font-size: 1rem;
+.governance-propose-view > .form > label > span,
+.governance-propose-view > .form > .term > label > span {
+  display: block;
+  font-size: 24px;
   font-weight: 700;
-  padding: 8px 32px 8px 32px;
+}
+.governance-propose-view > .form > label > p,
+.governance-propose-view > .form > .term > label > p {
+  font-size: 14px;
+  padding: 8px 0;
+  line-height: 1.2em;
+}
+.governance-propose-view > .form > label > a,
+.governance-propose-view > .form > .term > label > a {
+  color: #3190FD;
+  font-size: 14px;
+}
+.governance-propose-view > .form > label > input,
+.governance-propose-view > .form > .term > label > input,
+.governance-propose-view > .form > label > textarea,
+.governance-propose-view > .form > .term > label > textarea {
+  margin-top: 13px;
+  display: block;
+  width: 100%;
+}
+.governance-propose-view > .form > label > input,
+.governance-propose-view > .form > .term > label > input {
   height: 32px;
-  border-radius: 8px;
-  border: solid 0.5px;
+  border-bottom: 1px solid #A9AFB3;
 }
-.governance-detail-view > .content {
-  max-width: 1240px;
+.governance-propose-view > .form > label > textarea,
+.governance-propose-view > .form > .term > label > textarea {
+  border: 1px solid #A9AFB3;
+  padding: 12px;
+  height: 230px;
+}
+.governance-propose-view > .form > .term {
+  background-color: #F9F9F9;
+  padding: 30px 0;
+  margin-bottom: 32px;
+}
+.governance-propose-view > .form > .term > label {
+  display: flex;
+  margin-bottom: 0;
+}
+.governance-propose-view > .form > .term > label > input {
+  width: auto;
+  height: auto;
+  margin-right: 8px;
+}
+.governance-propose-view > .form > .options {
+  max-width: 1280px;
+  padding: 0 20px;
   margin: auto;
-  text-align: left;
+  margin-bottom: 32px;
 }
-.governance-detail-view > .content > h6 {
-  font-size: 1rem;
+.governance-propose-view > .form > .options > h5 {
+  display: block;
+  font-size: 24px;
   font-weight: 700;
-  margin-top: 16px;
   margin-bottom: 16px;
 }
-.governance-detail-view > .content > .paragraph {
-  font-size: 0.875rem;
-  font-weight: 400;
+.governance-propose-view > .form > .options > ul > li {
+  display: flex;
+  padding: 5px 0;
 }
-.governance-detail-view .vote-container {
-  background-color: #F9F9F9;
-  overflow: visible;
+.governance-propose-view > .form > .options > ul > li > span {
+  flex-grow: 1;
+}
+.governance-propose-view > .form > .options > ul > li > .delete-button {
+  color: red;
+}
+.governance-propose-view > .form > .options > button {
+  height: 32px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: white;
+  color: #F2780C;
+  padding: 0 16px;
   margin-top: 16px;
-  padding: 24px 0px 24px 0px;
 }
-.governance-detail-view > button {
-  max-width: 1240px;
+.governance-propose-view > .form > .options > button:hover {
+  color: white;
+  background-color: #F2780C;
+}
+.governance-propose-view > .form > .proposer {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: auto;
+  margin-bottom: 32px;
+}
+.governance-propose-view > .form > .proposer > h5 {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+}
+.governance-propose-view > .form > .proposer > span {
+  display: block;
+  margin-top: 13px;
+  font-size: 14px;
+}
+.governance-propose-view > .form > .controller {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: auto;
+  margin-bottom: 32px;
+}
+.governance-propose-view > .form > .controller > button {
   width: 100%;
   height: 44px;
-  margin-top: 16px;
   border: 1px solid #F2780C;
   box-sizing: border-box;
   border-radius: 8px;
@@ -674,9 +873,125 @@ body {
   color: #F2780C;
   font-size: 1.25rem;
   font-weight: 700;
-  padding: 0px 24px 0px 24px;
 }
-.governance-detail-view > button:hover {
+.governance-propose-view > .form > .controller > button:hover {
+  color: white;
+  background-color: #F2780C;
+}
+.governance-proposal-view {
+  margin: auto;
+  margin-top: 32px;
+}
+.governance-proposal-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.governance-proposal-view > .content {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: auto;
+  margin-bottom: 32px;
+}
+.governance-proposal-view > .content > h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.governance-proposal-view > .content > .paragraph {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.governance-proposal-view > .options-wrapper {
+  background-color: #F9F9F9;
+  padding: 30px 0;
+  margin-bottom: 32px;
+}
+.governance-proposal-view > .options-wrapper > .options {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: auto;
+  margin-bottom: 32px;
+}
+.governance-proposal-view > .options-wrapper > .options > .list {
+  margin-bottom: 16px;
+}
+.governance-proposal-view > .options-wrapper > .options > .list > header {
+  font-weight: bold;
+}
+.governance-proposal-view > .options-wrapper > .options > .list > header,
+.governance-proposal-view > .options-wrapper > .options > .list > ul > li {
+  display: flex;
+}
+.governance-proposal-view > .options-wrapper > .options > .list > header > .title,
+.governance-proposal-view > .options-wrapper > .options > .list > ul > li > .title,
+.governance-proposal-view > .options-wrapper > .options > .list > header > .voters,
+.governance-proposal-view > .options-wrapper > .options > .list > ul > li > .voters,
+.governance-proposal-view > .options-wrapper > .options > .list > header > .percent,
+.governance-proposal-view > .options-wrapper > .options > .list > ul > li > .percent,
+.governance-proposal-view > .options-wrapper > .options > .list > header > .controller,
+.governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller {
+  padding: 5px;
+  text-align: center;
+  width: 80px;
+}
+.governance-proposal-view > .options-wrapper > .options > .list > header > .title,
+.governance-proposal-view > .options-wrapper > .options > .list > ul > li > .title {
+  width: auto;
+  flex-grow: 1;
+  text-align: left;
+}
+.governance-proposal-view > .options-wrapper > .options > .list > header > .controller > button,
+.governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller > button {
+  width: 100%;
+  height: 24px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: white;
+  color: #F2780C;
+}
+.governance-proposal-view > .options-wrapper > .options > .list > header > .controller > button:hover,
+.governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller > button:hover {
+  color: white;
+  background-color: #F2780C;
+}
+.governance-proposal-view > .options-wrapper > .options > button {
+  margin-top: 16px;
+  width: 100%;
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.governance-proposal-view > .options-wrapper > .options > button:hover {
+  color: white;
+  background-color: #F2780C;
+}
+.governance-proposal-view > .controller {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: auto;
+  margin-bottom: 32px;
+}
+.governance-proposal-view > .controller > button {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.governance-proposal-view > .controller > button:hover {
   color: white;
   background-color: #F2780C;
 }

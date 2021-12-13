@@ -1,21 +1,20 @@
 import { DomNode, el } from "@hanul/skynode";
+import ViewUtil from "../view/ViewUtil";
 
 export default class Proposal extends DomNode {
 
-    public content: DomNode;
-
     constructor(
-        serial: string,
+        id: string,
         title: string,
         status: string
     ) {
-        super(".proposal-view");
+        super("a.proposal");
         this.append(
-            this.content = el(".proposal",
-                el(".serial", serial),
-                el("h5", title),
-                el(".status", status),
-            )
+            el("h5", title),
+            el(".status", status),
         );
+        this.onDom("click", () => {
+            ViewUtil.go(`/governance/${id}`);
+        });
     }
 }

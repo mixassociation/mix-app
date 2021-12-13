@@ -1,9 +1,9 @@
 import { SkyRouter } from "skyrouter";
 import Booth from "./view/Booth";
 import Buy from "./view/Buy";
-import Governance from "./view/Governance/Governance";
-import GovernanceDetail from "./view/Governance/GovernanceDetail";
-import Propose from "./view/Governance/Propose";
+import Governance from "./view/governance/Governance";
+import Proposal from "./view/governance/Proposal";
+import Propose from "./view/governance/Propose";
 import Home from "./view/Home";
 import Layout from "./view/Layout";
 
@@ -12,7 +12,7 @@ import Layout from "./view/Layout";
     SkyRouter.route("", Home);
 
     SkyRouter.route("governance", Governance);
-    SkyRouter.route("governance/{governanceId}", GovernanceDetail, [
+    SkyRouter.route("governance/{proposalId}", Proposal, [
         "governance/propose",
     ]);
     SkyRouter.route("governance/propose", Propose);
