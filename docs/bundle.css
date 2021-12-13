@@ -1370,6 +1370,48 @@ body {
 .booth-view > .form > .container > .max-btn:hover {
   font-weight: 600;
 }
+.mining-view {
+  max-width: 1240px;
+  margin: auto;
+  margin-top: 32px;
+  text-align: center;
+}
+.mining-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+.mining-view > .paragraph {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.mining-view > .top-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.mining-view > .top-nav > .mix-container > h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.mining-view > .top-nav > .mix-container > h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.mining-view > .top-nav > button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.mining-view > .top-nav > button:hover {
+  color: white;
+  background-color: #F2780C;
+}
 .governance-view {
   max-width: 1280px;
   padding: 0 20px;

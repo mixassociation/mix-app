@@ -1,6 +1,7 @@
 import { SkyRouter } from "skyrouter";
 import Booth from "./view/Booth";
 import Buy from "./view/Buy";
+import Mining from "./view/Mining";
 import Governance from "./view/governance/Governance";
 import Proposal from "./view/governance/Proposal";
 import Propose from "./view/governance/Propose";
@@ -19,6 +20,7 @@ import Layout from "./view/Layout";
 
     SkyRouter.route("buy", Buy);
     SkyRouter.route("booth", Booth);
+    SkyRouter.route("mining", Mining);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
