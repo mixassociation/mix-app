@@ -1,0 +1,162 @@
+.home-view {
+    text-align: center;
+
+    >.ribbon {
+        display         : flex;
+        justify-content : center;
+        background-color: @error-light;
+        font-size       : @paragraph;
+        color           : white;
+        padding         : 12px
+    }
+
+    >.mix {
+        margin-top: 32px;
+    }
+
+    >h1 {
+        margin-top : 16px;
+        font-size  : @headline1;
+        font-weight: 700;
+    }
+
+    >h2 {
+        margin-top : 32px;
+        font-size  : @headline2;
+        font-weight: 700;
+    }
+
+    >.paragraph {
+        font-size: @paragraph;
+    }
+
+    >.button-container {
+        padding-top   : 32px;
+        padding-bottom: 32px;
+
+        >.buy-mix-btn {
+            height          : 44px;
+            border          : 1px solid @brand-primary;
+            box-sizing      : border-box;
+            border-radius   : 4px;
+            background-color: white;
+            color           : @brand-primary;
+            font-size       : @headline5;
+            font-weight     : 700;
+            padding         : 0px 24px 0px 24px;
+            margin-right    : 64px;
+        }
+
+        >.buy-mix-btn:hover {
+            color           : white;
+            background-color: @brand-primary;
+        }
+
+        >.white-paper-btn {
+            height          : 44px;
+            border          : 1px solid black;
+            box-sizing      : border-box;
+            border-radius   : 4px;
+            background-color: white;
+            color           : black;
+            font-size       : @headline5;
+            font-weight     : 700;
+            padding         : 0px 24px 0px 24px;
+        }
+
+        >.white-paper-btn:hover {
+            color           : white;
+            background-color: black;
+        }
+    }
+
+    >.overview-container {
+        display         : flex;
+        justify-content : center;
+        text-align      : center;
+        margin          : auto;
+        background-color: @shadow-light;
+        height          : 100px;
+        margin-top      : 32px;
+        margin-bottom   : 32px;
+
+        >.price-container {
+            display        : flex;
+            justify-content: center;
+            text-align     : center;
+            align-items    : center;
+            margin         : auto;
+
+            >.paragraph {
+                font-size   : @paragraph;
+                margin-right: 16px;
+            }
+
+            >h4 {
+                font-size  : @headline4;
+                font-weight: 700;
+            }
+        }
+    }
+
+    >.pool-container {
+        display        : flex;
+        justify-content: space-around;
+        align-items    : center;
+        flex-wrap      : wrap;
+        margin-top     : 16px;
+        margin-bottom  : 32px;
+
+        >.pool-card-left {
+            flex            : 1 1 40%;
+            width           : 100%;
+            min-height      : 216px;
+            margin          : 16px 32px 16px 0px;
+            background-color: @shadow-light;
+            display         : flex;
+            flex-direction  : column;
+            justify-content : center;
+            text-align      : center;
+            align-items     : center;
+
+            >h3 {
+                font-size  : @headline3;
+                font-weight: 700;
+                padding-top: 16px;
+            }
+
+            >.paragraph {
+                max-width     : 392px;
+                font-size     : @paragraph;
+                padding-top   : 8px;
+                padding-bottom: 16px;
+            }
+        }
+
+        >.pool-card-right {
+            flex            : 1 1 40%;
+            width           : 100%;
+            min-height      : 216px;
+            margin          : 16px 0px 16px 32px;
+            background-color: @shadow-light;
+            display         : flex;
+            flex-direction  : column;
+            justify-content : center;
+            text-align      : center;
+            align-items     : center;
+
+            >h3 {
+                font-size  : @headline3;
+                font-weight: 700;
+                padding-top: 16px;
+            }
+
+            >.paragraph {
+                max-width     : 392px;
+                font-size     : @paragraph;
+                padding-top   : 8px;
+                padding-bottom: 16px;
+            }
+        }
+    }
+}

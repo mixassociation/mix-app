@@ -1225,9 +1225,6 @@ body {
     display: block;
   }
 }
-.layout > main {
-  padding: 50px 0;
-}
 .layout > footer {
   display: flex;
   flex-direction: column;
@@ -1237,6 +1234,147 @@ body {
   background-color: #F9F9F9;
   font-size: 12px;
   height: 100px;
+}
+.home-view {
+  text-align: center;
+}
+.home-view > .ribbon {
+  display: flex;
+  justify-content: center;
+  background-color: #FF3B30;
+  font-size: 0.875rem;
+  color: white;
+  padding: 12px;
+}
+.home-view > .mix {
+  margin-top: 32px;
+}
+.home-view > h1 {
+  margin-top: 16px;
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+.home-view > h2 {
+  margin-top: 32px;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+.home-view > .paragraph {
+  font-size: 0.875rem;
+}
+.home-view > .button-container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.home-view > .button-container > .buy-mix-btn {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-right: 64px;
+}
+.home-view > .button-container > .buy-mix-btn:hover {
+  color: white;
+  background-color: #F2780C;
+}
+.home-view > .button-container > .white-paper-btn {
+  height: 44px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.home-view > .button-container > .white-paper-btn:hover {
+  color: white;
+  background-color: black;
+}
+.home-view > .overview-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  background-color: #F9F9F9;
+  height: 100px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.home-view > .overview-container > .price-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+.home-view > .overview-container > .price-container > .paragraph {
+  font-size: 0.875rem;
+  margin-right: 16px;
+}
+.home-view > .overview-container > .price-container > h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.home-view > .pool-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+.home-view > .pool-container > .pool-card-left {
+  flex: 1 1 40%;
+  width: 100%;
+  min-height: 216px;
+  margin: 16px 32px 16px 0px;
+  background-color: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.home-view > .pool-container > .pool-card-left > h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-top: 16px;
+}
+.home-view > .pool-container > .pool-card-left > .paragraph {
+  max-width: 392px;
+  font-size: 0.875rem;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+.home-view > .pool-container > .pool-card-right {
+  flex: 1 1 40%;
+  width: 100%;
+  min-height: 216px;
+  margin: 16px 0px 16px 32px;
+  background-color: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.home-view > .pool-container > .pool-card-right > h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-top: 16px;
+}
+.home-view > .pool-container > .pool-card-right > .paragraph {
+  max-width: 392px;
+  font-size: 0.875rem;
+  padding-top: 8px;
+  padding-bottom: 16px;
 }
 .buy-view {
   max-width: 1240px;
@@ -1416,6 +1554,7 @@ body {
   max-width: 1280px;
   padding: 0 20px;
   margin: auto;
+  margin-top: 32px;
   margin-bottom: 32px;
 }
 .governance-view > h1 {
@@ -1453,6 +1592,9 @@ body {
 .governance-view > .top-nav > button:hover {
   color: white;
   background-color: #F2780C;
+}
+.governance-propose-view {
+  margin-top: 32px;
 }
 .governance-propose-view > h1 {
   font-size: 2.8125rem;
