@@ -27,6 +27,7 @@ export default class Proposal implements View {
         Layout.current.title = proposal.title;
 
         let contentDisplay;
+        let noteDisplay;
         let optionList;
 
         this.container.append(
@@ -35,9 +36,9 @@ export default class Proposal implements View {
                 el("h6", "요약"),
                 el(".paragraph", proposal.summary),
                 el("h6", "본문"),
-                contentDisplay = el(".paragraph"),
+                contentDisplay = el(".paragraph.markdown-body"),
                 el("h6", "비고"),
-                el(".paragraph", proposal.note),
+                noteDisplay = el(".paragraph.markdown-body"),
                 el("h6", "제안자"),
                 el(".paragraph", proposal.proposer),
             ),
@@ -115,7 +116,8 @@ export default class Proposal implements View {
             ));
         }
 
-        contentDisplay.domElement.innerHTML = xss(marked(proposal.content));
+        contentDisplay.domElement.innerHTML = xss(marked(proposal.content.replace(/\n/g, "<br>")));
+        noteDisplay.domElement.innerHTML = xss(marked(proposal.note.replace(/\n/g, "<br>")));
 
         if (proposal.passed !== true) {
             this.container.append(el("p", "검토중인 제안입니다. 검토가 완료되면 투표를 진행하실 수 있습니다."));
