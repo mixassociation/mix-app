@@ -2033,7 +2033,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports[\"default\"] = {\r\n    apiHost: \"localhost:1110\",\r\n    admin: \"0x5d3C6E36538f485C3483B1C0d3e27a3416E16217\",\r\n};\r\n\n\n//# sourceURL=webpack:///./src/Config.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports[\"default\"] = {\r\n    apiHost: \"api.mix.info\",\r\n    admin: \"0x5d3C6E36538f485C3483B1C0d3e27a3416E16217\",\r\n};\r\n\n\n//# sourceURL=webpack:///./src/Config.ts?");
 
 /***/ }),
 
