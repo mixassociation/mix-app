@@ -789,6 +789,10 @@ body {
 .governance-propose-view > .form > .term > label > textarea {
   border: 1px solid #A9AFB3;
   padding: 12px;
+  height: 100px;
+}
+.governance-propose-view > .form > label > textarea.content,
+.governance-propose-view > .form > .term > label > textarea.content {
   height: 230px;
 }
 .governance-propose-view > .form > .term {
