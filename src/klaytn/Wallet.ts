@@ -66,6 +66,8 @@ class Wallet extends EventContainer {
     public async signMessage(message: string) {
         if (ExtWallet.installed === true) {
             return await ExtWallet.signMessage(message);
+        } else {
+            alert("현재 지갑에서는 메시지 서명이 제공되지 않습니다. 카이카스를 설치해주시기 바랍니다.");
         }
     }
 }
