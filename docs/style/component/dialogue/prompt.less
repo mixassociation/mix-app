@@ -7,15 +7,16 @@
     background-color: #F0F0F0;
 
     >h2 {
-        font-size: 24px;
-        padding  : 16px;
+        padding    : 16px;
+        font-size  : @headline4;
+        font-weight: 700;
     }
 
     >p {
         padding    : 16px;
         border-top : 1px solid #CED3D6;
-        color      : #999;
         line-height: 1.2em;
+        font-size  : @paragraph;
     }
 
     >.input-container {
@@ -27,7 +28,7 @@
             border-radius   : 4px;
             background-color: #fff;
             padding         : 8px;
-            height          : 40px;
+            height          : 36px;
 
             &:hover {
                 border: 1px solid @brand-primary;
@@ -52,7 +53,7 @@
             border-radius   : 4px;
 
             &:hover {
-                background-color: #ffffff;
+                background-color: rgba(255, 255, 255, 0.5);
             }
         }
     }
