@@ -1,25 +1,6 @@
-
-   
 {
     "menu": [{
-            "uri": "governance",
-            "name": "거버넌스"
-        },
-        {
-            "uri": "buy",
-            "name": "구매"
-        },
-        {
-            "uri": "mining",
-            "name": "채굴"
-        },
-        {
-            "uri": "turntable",
-            "name": "턴테이블"
-        },
-        {
-            "uri": "booth",
-            "name": "부스"
-        }
-    ]
+        "uri": "governance",
+        "name": "거버넌스"
+    }]
 }

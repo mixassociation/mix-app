@@ -34,7 +34,7 @@ export default class Layout implements View {
                 ),
                 el("main", (this.content = el(".content"))),
                 el("footer",
-                    "Copyright © 2021 DSC. All rights reserved.",
+                    "Copyright © 2021 Mix Association. All rights reserved.",
                 ),
             ))
         );
