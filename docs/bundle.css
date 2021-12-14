@@ -1393,17 +1393,41 @@ body {
   font-size: 2.8125rem;
   font-weight: 700;
 }
+@media only screen and (max-width: 719px) {
+  .home-view > h1 {
+    font-size: 2.8125rem;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
 .home-view > h2 {
   margin-top: 32px;
   font-size: 2.25rem;
   font-weight: 700;
 }
+@media only screen and (max-width: 719px) {
+  .home-view > h2 {
+    font-size: 2rem;
+  }
+}
 .home-view > .paragraph {
   font-size: 0.875rem;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > .paragraph {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
 .home-view > .button-container {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > .button-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .home-view > .button-container > .buy-mix-btn {
   height: 44px;
@@ -1416,6 +1440,11 @@ body {
   font-weight: 700;
   padding: 0px 24px 0px 24px;
   margin-right: 64px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > .button-container > .buy-mix-btn {
+    margin: 0px 8px 16px 8px;
+  }
 }
 .home-view > .button-container > .buy-mix-btn:hover {
   color: white;
@@ -1436,6 +1465,11 @@ body {
   font-weight: 700;
   padding: 0px 24px 0px 24px;
 }
+@media only screen and (max-width: 719px) {
+  .home-view > .button-container > .white-paper-btn {
+    margin: 0px 8px 0px 8px;
+  }
+}
 .home-view > .button-container > .white-paper-btn:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
@@ -1450,9 +1484,16 @@ body {
   text-align: center;
   margin: auto;
   background-color: #F9F9F9;
-  height: 100px;
+  min-height: 100px;
   margin-top: 32px;
   margin-bottom: 32px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > .overview-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 140px;
+  }
 }
 .home-view > .overview-container > .price-container {
   display: flex;
@@ -1476,6 +1517,12 @@ body {
   flex-wrap: wrap;
   margin-top: 16px;
   margin-bottom: 32px;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > .pool-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .home-view > .pool-container > .pool-card-left {
   flex: 1 1 40%;

@@ -18,21 +18,41 @@
         margin-top : 16px;
         font-size  : @headline1;
         font-weight: 700;
+
+        @media @phone {
+            font-size   : @headline1;
+            margin-left : 8px;
+            margin-right: 8px;
+        }
     }
 
     >h2 {
         margin-top : 32px;
         font-size  : @headline2;
         font-weight: 700;
+
+        @media @phone {
+            font-size: @headline3;
+        }
     }
 
     >.paragraph {
         font-size: @paragraph;
+
+        @media @phone {
+            margin-left : 8px;
+            margin-right: 8px;
+        }
     }
 
     >.button-container {
         padding-top   : 32px;
         padding-bottom: 32px;
+
+        @media @phone {
+            display       : flex;
+            flex-direction: column;
+        }
 
         >.buy-mix-btn {
             height          : 44px;
@@ -45,6 +65,10 @@
             font-weight     : 700;
             padding         : 0px 24px 0px 24px;
             margin-right    : 64px;
+
+            @media @phone {
+                margin: 0px 8px 16px 8px;
+            }
         }
 
         >.buy-mix-btn:hover {
@@ -67,6 +91,10 @@
             font-size       : @headline5;
             font-weight     : 700;
             padding         : 0px 24px 0px 24px;
+
+            @media @phone {
+                margin: 0px 8px 0px 8px;
+            }
         }
 
         >.white-paper-btn:hover {
@@ -86,11 +114,15 @@
         text-align      : center;
         margin          : auto;
         background-color: @shadow-light;
-        height          : 100px;
+        min-height      : 100px;
         margin-top      : 32px;
         margin-bottom   : 32px;
 
-
+        @media @phone {
+            display       : flex;
+            flex-direction: column;
+            min-height    : 140px;
+        }
 
         >.price-container {
             display        : flex;
@@ -118,6 +150,11 @@
         flex-wrap      : wrap;
         margin-top     : 16px;
         margin-bottom  : 32px;
+
+        @media @phone {
+            display       : flex;
+            flex-direction: column;
+        }
 
         >.pool-card-left {
             flex            : 1 1 40%;
