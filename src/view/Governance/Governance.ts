@@ -28,7 +28,7 @@ export default class Governance implements View {
         const result = await fetch(`https://${Config.apiHost}/governance/proposals`);
         const proposals = await result.json();
         for (const proposal of proposals) {
-            this.proposalList.append(new Proposal(proposal.id, proposal.title, proposal.passed == true ? "투표중" : "검토중"));
+            this.proposalList.append(new Proposal(proposal));
         }
     }
 

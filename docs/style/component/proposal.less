@@ -52,4 +52,18 @@
     &:active {
         background-color: @brand-primary;
     }
+
+    &.rejected {
+        >.status {
+            border-color: @error-light;
+            color       : @error-light;
+        }
+    }
+
+    &.passed {
+        >.status {
+            border-color: @success-light;
+            color       : @success-light;
+        }
+    }
 }

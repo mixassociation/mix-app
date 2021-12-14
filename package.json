@@ -4,11 +4,13 @@
         "webpack-prod": "webpack --mode production --config webpack.config.prod.js"
     },
     "dependencies": {
+        "@types/moment": "^2.13.0",
         "@types/marked": "^3.0.1",
         "@hanul/skynode": "^0.0.17",
         "@hanul/waiter": "^0.0.1",
         "@types/superagent": "^4.1.12",
         "@walletconnect/web3-provider": "^1.4.1",
+        "moment": "^2.29.1",
         "marked": "^3.0.4",
         "xss": "^1.0.9",
         "bowser": "^2.11.0",

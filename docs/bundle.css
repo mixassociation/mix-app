@@ -1044,6 +1044,14 @@ body {
 .proposal:active {
   background-color: #F2780C;
 }
+.proposal.rejected > .status {
+  border-color: #FF3B30;
+  color: #FF3B30;
+}
+.proposal.passed > .status {
+  border-color: #34C759;
+  color: #34C759;
+}
 .popup-background {
   position: fixed;
   left: 0;
@@ -2021,7 +2029,7 @@ body {
   font-size: 2.8125rem;
   font-weight: 700;
   margin-bottom: 8px;
-  text-align: left;
+  text-align: center;
   margin: auto;
   max-width: 1248px;
 }
@@ -2137,6 +2145,16 @@ body {
   color: white;
   padding: 12px;
   margin-bottom: 32px;
+}
+.governance-proposal-view > .reject-reason {
+  display: flex;
+  justify-content: center;
+  background-color: #FF3B30;
+  font-size: 0.875rem;
+  color: white;
+  padding: 12px;
+  margin-bottom: 32px;
+  line-height: 1.2em;
 }
 .governance-proposal-view > .controller {
   max-width: 1280px;

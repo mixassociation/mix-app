@@ -1,5 +1,26 @@
 import { DomNode } from "@hanul/skynode";
-export default class Proposal extends DomNode {
-    constructor(id: string, title: string, status: string);
+interface GovernanceProposalOption {
+    title: string;
+    voters: string[];
+    revoters?: string[];
 }
+interface GovernanceProposal {
+    id: string;
+    proposer: string;
+    title: string;
+    summary: string;
+    content: string;
+    note: string;
+    passed: boolean;
+    passTime?: number;
+    rejected?: boolean;
+    rejectReason?: string;
+    voters: string[];
+    revoters?: string[];
+    options: GovernanceProposalOption[];
+}
+export default class Proposal extends DomNode {
+    constructor(proposal: GovernanceProposal);
+}
+export {};
 //# sourceMappingURL=Proposal.d.ts.map

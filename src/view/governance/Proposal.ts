@@ -7,6 +7,7 @@ import Confirm from "../../component/dialogue/Confirm";
 import Prompt from "../../component/dialogue/Prompt";
 import Config from "../../Config";
 import Wallet from "../../klaytn/Wallet";
+import TimeFormatter from "../../TimeFormatter";
 import Layout from "../Layout";
 
 export default class Proposal implements View {
@@ -33,6 +34,8 @@ export default class Proposal implements View {
         this.container.append(
             el("h1", proposal.title),
             el(".content",
+                el("h6", "기간"),
+                el(".paragraph", `투표 종료: ${TimeFormatter.fromNow(new Date(proposal.passTime + 604800000))}`),
                 el("h6", "요약"),
                 el(".paragraph", proposal.summary),
                 el("h6", "본문"),
@@ -119,7 +122,11 @@ export default class Proposal implements View {
         contentDisplay.domElement.innerHTML = xss(marked(proposal.content));
         noteDisplay.domElement.innerHTML = xss(marked(proposal.note));
 
-        if (proposal.passed !== true) {
+        if (proposal.rejected === true) {
+            this.container.append(el("p.reject-reason", proposal.rejectReason));
+        }
+
+        else if (proposal.passed !== true) {
             this.container.append(el("p.review", "검토중인 제안입니다. 검토가 완료되면 투표를 진행하실 수 있습니다."));
 
             const walletAddress = await Wallet.loadAddress();
@@ -137,7 +144,23 @@ export default class Proposal implements View {
                             });
                             SkyRouter.refresh();
                         },
-                    })
+                    }),
+                    el("button", "기각", {
+                        click: async () => {
+                            new Prompt("기각", "기각 사유 입력", "기각", async (rejectReason) => {
+                                const signedMessage = await Wallet.signMessage("Reject Governance Proposal");
+                                await fetch(`https://${Config.apiHost}/governance/rejectproposal`, {
+                                    method: "POST",
+                                    body: JSON.stringify({
+                                        proposalId,
+                                        rejectReason,
+                                        signedMessage,
+                                    }),
+                                });
+                                SkyRouter.refresh();
+                            });
+                        },
+                    }),
                 ));
             }
         }
