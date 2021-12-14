@@ -16,22 +16,23 @@ export default class Layout implements View {
         BodyNode.append(
             (this.container = el(".layout",
                 el("header",
-                    el("a", { click: () => ViewUtil.go("/") },
-                        el(".logo",
-                            el("img", { src: "/images/logo/logo.svg", height: "20" }),
+                    el(".nav",
+                        el("a", { click: () => ViewUtil.go("/") },
+                            el(".logo",
+                                el("img", { src: "/images/logo/logo.svg", height: "20" }),
+                            ),
                         ),
-                    ),
-                    new PCMenu(),
-                    el(".right",
-                        new UserInfo(),
-                        el("a.menu-button", el("i.fas.fa-bars"), {
-                            click: (event, button) => {
-                                const rect = button.rect;
-                                new MobileMenu({ left: rect.right - 170, top: rect.bottom }).appendTo(BodyNode);
-                            },
-                        })
-                    ),
-                ),
+                        new PCMenu(),
+                        el(".right",
+                            new UserInfo(),
+                            el("a.menu-button", el("i.fas.fa-bars"), {
+                                click: (event, button) => {
+                                    const rect = button.rect;
+                                    new MobileMenu({ left: rect.right - 170, top: rect.bottom }).appendTo(BodyNode);
+                                },
+                            })
+                        ),
+                    )),
                 el("main", (this.content = el(".content"))),
                 el("footer",
                     "Copyright © 2021 Mix Association. All rights reserved.",

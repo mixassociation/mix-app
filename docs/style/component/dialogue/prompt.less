@@ -4,31 +4,34 @@
     width           : 90%;
     margin          : auto;
     border-radius   : 4px;
-    background-color: #F0F0F0;
+    background-color: white;
+    box-shadow      : 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     >h2 {
-        padding    : 16px;
-        font-size  : @headline4;
+        font-size  : @headline5;
         font-weight: 700;
+        padding    : 16px;
     }
 
     >p {
-        padding    : 16px;
-        border-top : 1px solid #CED3D6;
-        line-height: 1.2em;
-        font-size  : @paragraph;
+        padding-left: 16px;
+        padding-top : 8px;
+        color       : @greyscale-7;
+        font-size   : @paragraph;
+        line-height : 1.2em;
     }
 
     >.input-container {
-        padding: 0 16px;
+        margin-top: 16px;
+        padding   : 0 16px;
 
         >input {
-            width           : 100%;
-            box-sizing      : border-box;
-            border-radius   : 4px;
-            background-color: #fff;
-            padding         : 8px;
-            height          : 36px;
+            width        : 100%;
+            box-sizing   : border-box;
+            border-radius: 4px;
+            padding      : 8px;
+            height       : 36px;
+            border       : 1px solid @greyscale-5;
 
             &:hover {
                 border: 1px solid @brand-primary;
@@ -49,11 +52,17 @@
             background-color: transparent;
             color           : @brand-primary;
             padding         : 8px 16px;
-            font-size       : 14px;
+            font-size       : @caption;
             border-radius   : 4px;
 
             &:hover {
-                background-color: rgba(255, 255, 255, 0.5);
+                color           : white;
+                background-color: rgba(242, 120, 12, 0.8);
+            }
+
+            &:active {
+                color           : white;
+                background-color: @brand-primary;
             }
         }
     }

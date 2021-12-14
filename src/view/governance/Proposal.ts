@@ -120,7 +120,7 @@ export default class Proposal implements View {
         noteDisplay.domElement.innerHTML = xss(marked(proposal.note));
 
         if (proposal.passed !== true) {
-            this.container.append(el("p", "검토중인 제안입니다. 검토가 완료되면 투표를 진행하실 수 있습니다."));
+            this.container.append(el("p.review", "검토중인 제안입니다. 검토가 완료되면 투표를 진행하실 수 있습니다."));
 
             const walletAddress = await Wallet.loadAddress();
             if (walletAddress === Config.admin) {

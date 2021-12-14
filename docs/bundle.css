@@ -938,9 +938,17 @@ body {
   border-style: solid;
   border-width: 0.5px;
 }
-.user-menu > .connect-wallet,
+.user-menu > .connect-wallet:hover,
 .user-menu > .wallet-address:hover {
-  color: #F2780C;
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+  border-color: rgba(242, 120, 12, 0.8);
+}
+.user-menu > .connect-wallet:active,
+.user-menu > .wallet-address:active {
+  color: white;
+  background-color: #F2780C;
+  border-color: #F2780C;
 }
 .user-menu > .wallet-address {
   position: relative;
@@ -979,7 +987,7 @@ body {
   color: #ccc;
 }
 .user-menu > ul > li > a:hover {
-  color: #F2780C;
+  background-color: rgba(242, 120, 12, 0.8);
 }
 .user-menu > ul > li > a:active {
   color: #F2780C;
@@ -1005,6 +1013,11 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
 }
+@media only screen and (max-width: 719px) {
+  .proposal > h5 {
+    font-size: 1rem;
+  }
+}
 .proposal > .status {
   font-size: 1rem;
   font-weight: 700;
@@ -1012,6 +1025,11 @@ body {
   height: 32px;
   border-radius: 4px;
   border: solid 0.5px;
+}
+@media only screen and (max-width: 719px) {
+  .proposal > .status {
+    padding: 0px 16px 0px 16px;
+  }
 }
 .proposal:hover {
   background-color: rgba(242, 120, 12, 0.8);
@@ -1026,7 +1044,7 @@ body {
   z-index: 99999;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
@@ -1038,16 +1056,19 @@ body {
   width: 90%;
   margin: auto;
   border-radius: 4px;
-  background-color: #F0F0F0;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .dialogue.alert > h2 {
-  font-size: 24px;
+  font-size: 1.25rem;
+  font-weight: 700;
   padding: 16px;
 }
 .dialogue.alert > p {
-  padding: 16px;
-  border-top: 1px solid #CED3D6;
-  color: #999;
+  padding-left: 16px;
+  padding-top: 8px;
+  color: #4D5256;
+  font-size: 0.875rem;
   line-height: 1.2em;
 }
 .dialogue.alert > .button-container {
@@ -1059,11 +1080,16 @@ body {
   background-color: transparent;
   color: #F2780C;
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 0.75rem;
   border-radius: 4px;
 }
 .dialogue.alert > .button-container > button:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.dialogue.alert > .button-container > button:active {
+  color: white;
+  background-color: #F2780C;
 }
 .dialogue.confirm {
   position: relative;
@@ -1071,16 +1097,19 @@ body {
   width: 90%;
   margin: auto;
   border-radius: 4px;
-  background-color: #F0F0F0;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .dialogue.confirm > h2 {
-  font-size: 24px;
+  font-size: 1.25rem;
+  font-weight: 700;
   padding: 16px;
 }
 .dialogue.confirm > p {
-  padding: 16px;
-  border-top: 1px solid #CED3D6;
-  color: #999;
+  padding-left: 16px;
+  padding-top: 8px;
+  color: #4D5256;
+  font-size: 0.875rem;
   line-height: 1.2em;
 }
 .dialogue.confirm > .button-container {
@@ -1092,11 +1121,16 @@ body {
   background-color: transparent;
   color: #F2780C;
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 0.75rem;
   border-radius: 4px;
 }
 .dialogue.confirm > .button-container > button:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.dialogue.confirm > .button-container > button:active {
+  color: white;
+  background-color: #F2780C;
 }
 .dialogue.prompt {
   position: relative;
@@ -1104,29 +1138,32 @@ body {
   width: 90%;
   margin: auto;
   border-radius: 4px;
-  background-color: #F0F0F0;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .dialogue.prompt > h2 {
-  padding: 16px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
+  padding: 16px;
 }
 .dialogue.prompt > p {
-  padding: 16px;
-  border-top: 1px solid #CED3D6;
-  line-height: 1.2em;
+  padding-left: 16px;
+  padding-top: 8px;
+  color: #4D5256;
   font-size: 0.875rem;
+  line-height: 1.2em;
 }
 .dialogue.prompt > .input-container {
+  margin-top: 16px;
   padding: 0 16px;
 }
 .dialogue.prompt > .input-container > input {
   width: 100%;
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: #fff;
   padding: 8px;
   height: 36px;
+  border: 1px solid #A9AFB3;
 }
 .dialogue.prompt > .input-container > input:hover {
   border: 1px solid #F2780C;
@@ -1143,19 +1180,23 @@ body {
   background-color: transparent;
   color: #F2780C;
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 0.75rem;
   border-radius: 4px;
 }
 .dialogue.prompt > .button-container > button:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.dialogue.prompt > .button-container > button:active {
+  color: white;
+  background-color: #F2780C;
 }
 .layout {
   width: 100%;
-  padding-top: 44px;
 }
 .layout > header {
   background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
+  position: static;
   left: 0;
   top: 0;
   z-index: 999;
@@ -1168,26 +1209,34 @@ body {
   padding-left: 16px;
   padding-right: 16px;
 }
-.layout > header > a {
+.layout > header > .nav {
+  display: flex;
+  align-items: center;
+  max-width: 1248px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.layout > header > .nav > a {
   margin-right: 16px;
 }
-.layout > header > a > .logo {
+.layout > header > .nav > a > .logo {
   display: flex;
 }
-.layout > header > a > .logo > span {
+.layout > header > .nav > a > .logo > span {
   margin-left: 4px;
   margin-top: 12px;
   color: #e17d1c;
 }
 @media only screen and (max-width: 719px) {
-  .layout > header > .pc-menu {
+  .layout > header > .nav > .pc-menu {
     display: none;
   }
 }
-.layout > header > .right {
+.layout > header > .nav > .right {
   flex-grow: 1;
 }
-.layout > header > .right:after {
+.layout > header > .nav > .right:after {
   content: " ";
   display: block;
   font-size: 0;
@@ -1195,33 +1244,33 @@ body {
   clear: both;
   visibility: hidden;
 }
-.layout > header > .right > .user-menu {
+.layout > header > .nav > .right > .user-menu {
   float: right;
 }
 @media only screen and (max-width: 719px) {
-  .layout > header > .right > .user-menu {
+  .layout > header > .nav > .right > .user-menu {
     display: none;
   }
 }
-.layout > header > .right > .mix-button {
+.layout > header > .nav > .right > .mix-button {
   float: right;
   margin-top: 2px;
   margin-right: 16px;
 }
 @media only screen and (max-width: 719px) {
-  .layout > header > .right > .mix-button {
+  .layout > header > .nav > .right > .mix-button {
     margin-top: 6px;
     margin-right: 10px;
   }
 }
-.layout > header > .right > .menu-button {
+.layout > header > .nav > .right > .menu-button {
   float: right;
   display: none;
   padding: 10px;
   color: #fff;
 }
 @media only screen and (max-width: 719px) {
-  .layout > header > .right > .menu-button {
+  .layout > header > .nav > .right > .menu-button {
     display: block;
   }
 }
@@ -1280,6 +1329,10 @@ body {
 }
 .home-view > .button-container > .buy-mix-btn:hover {
   color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.home-view > .button-container > .buy-mix-btn:active {
+  color: white;
   background-color: #F2780C;
 }
 .home-view > .button-container > .white-paper-btn {
@@ -1294,6 +1347,10 @@ body {
   padding: 0px 24px 0px 24px;
 }
 .home-view > .button-container > .white-paper-btn:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.home-view > .button-container > .white-paper-btn:active {
   color: white;
   background-color: black;
 }
@@ -1483,6 +1540,10 @@ body {
 }
 .booth-view > .form > button:hover {
   color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.booth-view > .form > button:active {
+  color: white;
   background-color: #F2780C;
 }
 .booth-view > .form > .container {
@@ -1548,6 +1609,10 @@ body {
 }
 .mining-view > .top-nav > button:hover {
   color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.mining-view > .top-nav > button:active {
+  color: white;
   background-color: #F2780C;
 }
 .governance-view {
@@ -1563,6 +1628,11 @@ body {
   margin-bottom: 8px;
   text-align: center;
 }
+@media only screen and (max-width: 719px) {
+  .governance-view > h1 {
+    font-size: 1.5rem;
+  }
+}
 .governance-view > .paragraph {
   font-size: 0.875rem;
   font-weight: 400;
@@ -1572,6 +1642,11 @@ body {
   justify-content: space-between;
   margin-top: 24px;
   margin-bottom: 16px;
+}
+@media only screen and (max-width: 719px) {
+  .governance-view > .top-nav {
+    display: none;
+  }
 }
 .governance-view > .top-nav > h2 {
   font-size: 2rem;
@@ -1591,6 +1666,10 @@ body {
 }
 .governance-view > .top-nav > button:hover {
   color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.governance-view > .top-nav > button:active {
+  color: white;
   background-color: #F2780C;
 }
 .governance-propose-view {
@@ -1604,6 +1683,12 @@ body {
   max-width: 1280px;
   padding: 0 20px;
   margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  .governance-propose-view > h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
 }
 .governance-propose-view > .form > label,
 .governance-propose-view > .form > .term > label {
@@ -1694,18 +1779,24 @@ body {
   color: red;
 }
 .governance-propose-view > .form > .options > button {
-  height: 32px;
-  border: 1px solid #F2780C;
+  width: 100%;
+  height: 34px;
+  border: 1px solid black;
   box-sizing: border-box;
   border-radius: 4px;
-  background-color: transparent;
-  color: #F2780C;
-  padding: 0 16px;
-  margin-top: 16px;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
 }
 .governance-propose-view > .form > .options > button:hover {
   color: white;
-  background-color: #F2780C;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.governance-propose-view > .form > .options > button:active {
+  color: white;
+  background-color: black;
 }
 .governance-propose-view > .form > .proposer {
   max-width: 1280px;
@@ -1742,6 +1833,10 @@ body {
 }
 .governance-propose-view > .form > .controller > button:hover {
   color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.governance-propose-view > .form > .controller > button:active {
+  color: white;
   background-color: #F2780C;
 }
 .governance-proposal-view {
@@ -1753,6 +1848,11 @@ body {
   font-weight: 700;
   margin-bottom: 8px;
   text-align: center;
+}
+@media only screen and (max-width: 719px) {
+  .governance-proposal-view > h1 {
+    font-size: 2rem;
+  }
 }
 .governance-proposal-view > .content {
   max-width: 1280px;
@@ -1783,6 +1883,7 @@ body {
 }
 .governance-proposal-view > .options-wrapper > .options > p {
   font-size: 0.75rem;
+  margin-left: 4px;
 }
 .governance-proposal-view > .options-wrapper > .options > .list {
   margin-bottom: 16px;
@@ -1822,8 +1923,13 @@ body {
   background-color: transparent;
   color: #F2780C;
 }
-.governance-proposal-view > .options-wrapper > .options > .list > header > .controller > button:hover,
-.governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller > button:hover {
+ > .governance-proposal-view > .options-wrapper > .options > .list > header > .controller > button:hover,
+ > .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller > button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+ > .governance-proposal-view > .options-wrapper > .options > .list > header > .controller > button:active,
+ > .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller > button:active {
   color: white;
   background-color: #F2780C;
 }
@@ -1841,7 +1947,20 @@ body {
 }
 .governance-proposal-view > .options-wrapper > .options > button:hover {
   color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.governance-proposal-view > .options-wrapper > .options > button:active {
+  color: white;
   background-color: #F2780C;
+}
+.governance-proposal-view > .review {
+  display: flex;
+  justify-content: center;
+  background-color: #3190FD;
+  font-size: 0.875rem;
+  color: white;
+  padding: 12px;
+  margin-bottom: 32px;
 }
 .governance-proposal-view > .controller {
   max-width: 1280px;
@@ -1861,6 +1980,10 @@ body {
   font-weight: 700;
 }
 .governance-proposal-view > .controller > button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.governance-proposal-view > .controller > button:active {
   color: white;
   background-color: #F2780C;
 }

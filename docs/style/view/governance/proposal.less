@@ -3,6 +3,10 @@
     margin-top: 32px;
 
     >h1 {
+        @media @phone {
+            font-size: @headline3;
+        }
+
         font-size    : @headline1;
         font-weight  : 700;
         margin-bottom: 8px;
@@ -40,7 +44,8 @@
             margin-bottom: 32px;
 
             >p {
-                font-size: @caption;
+                font-size  : @caption;
+                margin-left: 4px;
             }
 
             >.list {
@@ -79,7 +84,12 @@
                             background-color: transparent;
                             color           : @brand-primary;
 
-                            &:hover {
+                            >&:hover {
+                                color           : white;
+                                background-color: rgba(242, 120, 12, 0.8);
+                            }
+
+                            >&:active {
                                 color           : white;
                                 background-color: @brand-primary;
                             }
@@ -99,14 +109,30 @@
                 color           : @brand-primary;
                 font-size       : @headline5;
                 font-weight     : 700;
+            }
 
-                &:hover {
-                    color           : white;
-                    background-color: @brand-primary;
-                }
+            >button:hover {
+                color           : white;
+                background-color: rgba(242, 120, 12, 0.8);
+            }
+
+            >button:active {
+                color           : white;
+                background-color: @brand-primary;
             }
         }
     }
+
+    >.review {
+        display         : flex;
+        justify-content : center;
+        background-color: @link;
+        font-size       : @paragraph;
+        color           : white;
+        padding         : 12px;
+        margin-bottom   : 32px;
+    }
+
 
     >.controller {
         max-width    : 1280px;
@@ -124,11 +150,16 @@
             color           : @brand-primary;
             font-size       : @headline5;
             font-weight     : 700;
+        }
 
-            &:hover {
-                color           : white;
-                background-color: @brand-primary;
-            }
+        >button:hover {
+            color           : white;
+            background-color: rgba(242, 120, 12, 0.8);
+        }
+
+        >button:active {
+            color           : white;
+            background-color: @brand-primary;
         }
     }
 }
