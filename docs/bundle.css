@@ -1283,6 +1283,7 @@ body {
   background-color: #F9F9F9;
   font-size: 12px;
   height: 100px;
+  margin-top: 32px;
 }
 .home-view {
   text-align: center;
@@ -1570,7 +1571,6 @@ body {
   font-weight: 600;
 }
 .mining-view {
-  max-width: 1240px;
   margin: auto;
   margin-top: 32px;
   text-align: center;
@@ -1584,9 +1584,40 @@ body {
   font-weight: 400;
   margin-top: 8px;
 }
+.mining-view > .ribbon {
+  display: flex;
+  justify-content: center;
+  background-color: #F9F9F9;
+  font-size: 0.875rem;
+  color: black;
+  padding: 12px;
+  margin-top: 16px;
+}
+.mining-view > .tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.mining-view > .tabs > a {
+  font-size: 1rem;
+  background-color: #F9F9F9;
+  padding: 16px 24px 16px 24px;
+  margin: 8px;
+  border-radius: 32px;
+}
+.mining-view > .tabs > a:hover {
+  background-color: #F8FAFB;
+  color: #3190FD;
+}
 .mining-view > .top-nav {
   display: flex;
   justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
 }
 .mining-view > .top-nav > .mix-container > h3 {
   font-size: 2rem;

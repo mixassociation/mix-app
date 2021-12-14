@@ -1,5 +1,4 @@
 .mining-view {
-    max-width : 1240px;
     margin    : auto;
     margin-top: 32px;
     text-align: center;
@@ -15,18 +14,53 @@
         margin-top : 8px;
     }
 
+    >.ribbon {
+        display         : flex;
+        justify-content : center;
+        background-color: @shadow-light;
+        font-size       : @paragraph;
+        color           : black;
+        padding         : 12px;
+        margin-top      : 16px;
+    }
+
+    >.tabs {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        font-size      : @paragraph;
+        font-weight    : 400;
+        margin-top     : 16px;
+        margin-bottom  : 16px;
+
+        >a {
+            font-size       : @headline6;
+            background-color: @shadow-light;
+            padding         : 16px 24px 16px 24px;
+            margin          : 8px;
+            border-radius   : 32px;
+        }
+
+        >a:hover {
+            background-color: @greyscale-3;
+            color           : @link;
+        }
+    }
+
     >.top-nav {
         display        : flex;
         justify-content: space-between;
+        max-width      : 1240px;
+        margin         : auto;
 
         >.mix-container {
             >h3 {
-                font-size: @headline3;
+                font-size  : @headline3;
                 font-weight: 700;
             }
 
             >h5 {
-                font-size: @headline5;
+                font-size  : @headline5;
                 font-weight: 700;
             }
         }
