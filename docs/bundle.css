@@ -1016,6 +1016,9 @@ body {
 @media only screen and (max-width: 719px) {
   .proposal > h5 {
     font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 .proposal > .status {
@@ -1029,6 +1032,10 @@ body {
 @media only screen and (max-width: 719px) {
   .proposal > .status {
     padding: 0px 16px 0px 16px;
+    min-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 .proposal:hover {

@@ -18,16 +18,23 @@
 
     >h5 {
         @media @phone {
-            font-size: @headline6;
+            font-size    : @headline6;
+            white-space  : nowrap;
+            overflow     : hidden;
+            text-overflow: ellipsis;
         }
 
-        font-size  : @headline5;
-        font-weight: 700;
+        font-size   : @headline5;
+        font-weight : 700;
     }
 
     >.status {
         @media @phone {
-            padding  : 0px 16px 0px 16px;
+            padding: 0px 16px 0px 16px;
+            min-width: 80px;
+            white-space  : nowrap;
+            overflow     : hidden;
+            text-overflow: ellipsis;
         }
 
         font-size    : @headline6;
