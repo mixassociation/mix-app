@@ -5,6 +5,7 @@
     >h1 {
         @media @phone {
             font-size: @headline3;
+            margin: 8px;
         }
 
         font-size    : @headline1;
@@ -70,6 +71,14 @@
                         width     : 80px;
                     }
 
+                    @media @phone {
+
+                        >.voters,
+                        >.percent {
+                            display: none;
+                        }
+                    }
+
                     >.title {
                         width     : auto;
                         flex-grow : 1;
@@ -84,6 +93,7 @@
                             box-sizing      : border-box;
                             border-radius   : 4px;
                             background-color: transparent;
+                            min-width       : 70px;
                             color           : @brand-primary;
 
                             >&:hover {
