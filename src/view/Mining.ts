@@ -1,10 +1,15 @@
 import { DomNode, el } from "@hanul/skynode";
 import { View, ViewParams } from "skyrouter";
+import MatesTab from "../component/nftmining/mates/MatesTab";
+import AnimalsPunksV2Tab from "../component/nftmining/ap2/AnimalsPunksV2Tab";
+import CasesByKateTab from "../component/nftmining/cbk/CasesByKateTab";
+import PixelCatTab from "../component/nftmining/pixelcat/PixelCatTab";
 import Layout from "./Layout";
 
 export default class Mining implements View {
 
     private container: DomNode;
+    private tabContainer: DomNode;
 
     constructor() {
         Layout.current.title = "NFT 채굴";
@@ -16,22 +21,28 @@ export default class Mining implements View {
                 el(".tabs",
                     el("a", "Mates", {
                         click: () => {
+                            this.tabContainer.empty().append(new MatesTab());
                         },
                     }),
                     el("a", "Cases by Kate", {
                         click: () => {
+                            this.tabContainer.empty().append(new CasesByKateTab());
                         },
                     }),
                     el("a", "Animals Punks V2", {
                         click: () => {
+                            this.tabContainer.empty().append(new AnimalsPunksV2Tab());
                         },
                     }),
                     el("a", "Pixel Cat", {
                         click: () => {
+                            this.tabContainer.empty().append(new PixelCatTab());
                         },
                     }),
                 ),
-                el(".top-nav", el(".mix-container", el("h6", "쌓인 총 MIX"), el("h3", "5.19222")), el("button", "한꺼번에 받기"))
+                this.tabContainer = el(".tab-container",
+                    new MatesTab(),
+                ),
             )
         );
     }

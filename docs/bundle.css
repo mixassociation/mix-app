@@ -1774,21 +1774,21 @@ body {
   background-color: #F8FAFB;
   color: #3190FD;
 }
-.mining-view > .top-nav {
+.mates-tab > header {
   display: flex;
   justify-content: space-between;
   max-width: 1240px;
   margin: auto;
 }
-.mining-view > .top-nav > .mix-container > h3 {
-  font-size: 2rem;
+.mates-tab > header > .total-mix > h4 {
+  font-size: 1rem;
   font-weight: 700;
 }
-.mining-view > .top-nav > .mix-container > h5 {
-  font-size: 1.25rem;
+.mates-tab > header > .total-mix > span {
+  font-size: 1.5rem;
   font-weight: 700;
 }
-.mining-view > .top-nav > button {
+.mates-tab > header > .take-all-button {
   height: 44px;
   border: 1px solid #F2780C;
   box-sizing: border-box;
@@ -1799,13 +1799,492 @@ body {
   font-weight: 700;
   padding: 0px 24px 0px 24px;
 }
-.mining-view > .top-nav > button:hover {
+.mates-tab > header > .take-all-button:hover {
   color: white;
   background-color: rgba(242, 120, 12, 0.8);
 }
-.mining-view > .top-nav > button:active {
+.mates-tab > header > .take-all-button:active {
   color: white;
   background-color: #F2780C;
+}
+.mates-tab > .mate-list {
+  max-width: 1240px;
+  margin: auto;
+}
+.mates-tab > .mate-list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.mates-tab > .mate-list > .mate-item {
+  float: left;
+  width: 50%;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 799px) {
+  .mates-tab > .mate-list > .mate-item {
+    float: none;
+    width: 100%;
+  }
+}
+.mates-tab > .mate-list > .mate-item > .content {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  align-items: center;
+}
+.mates-tab > .mate-list > .mate-item > .content > .mate {
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  line-height: 1em;
+}
+.mates-tab > .mate-list > .mate-item > .content > .mate > .id {
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  font-family: DungGeunMo;
+}
+.mates-tab > .mate-list > .mate-item > .content > .mate > .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #FF00F6;
+  text-shadow: 3px 3px 3px #656565;
+}
+@media only screen and (max-width: 799px) {
+  .mates-tab > .mate-list > .mate-item > .content > .mate {
+    width: 64px;
+    height: 64px;
+    font-size: 14px;
+  }
+}
+.mates-tab > .mate-list > .mate-item > .content > .info {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.mates-tab > .mate-list > .mate-item > .content > .info > h5 {
+  font-size: 1rem;
+}
+.mates-tab > .mate-list > .mate-item > .content > .info > .amount {
+  font-size: 1.5rem;
+}
+.mates-tab > .mate-list > .mate-item > .content > .controller {
+  padding-right: 6px;
+}
+.mates-tab > .mate-list > .mate-item > .content > .controller > .claim-button {
+  height: 44px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.mates-tab > .mate-list > .mate-item > .content > .controller > .claim-button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.mates-tab > .mate-list > .mate-item > .content > .controller > .claim-button:active {
+  color: white;
+  background-color: black;
+}
+.cases-by-kate-tab > header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+}
+.cases-by-kate-tab > header > .total-mix > h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.cases-by-kate-tab > header > .total-mix > span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.cases-by-kate-tab > header > .take-all-button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.cases-by-kate-tab > header > .take-all-button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.cases-by-kate-tab > header > .take-all-button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.cases-by-kate-tab > .case-list {
+  max-width: 1240px;
+  margin: auto;
+}
+.cases-by-kate-tab > .case-list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.cases-by-kate-tab > .case-list > .case-item {
+  float: left;
+  width: 50%;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 799px) {
+  .cases-by-kate-tab > .case-list > .case-item {
+    float: none;
+    width: 100%;
+  }
+}
+.cases-by-kate-tab > .case-list > .case-item > .content {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  align-items: center;
+}
+.cases-by-kate-tab > .case-list > .case-item > .content > .case {
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  line-height: 1em;
+}
+.cases-by-kate-tab > .case-list > .case-item > .content > .case > .id {
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  font-family: DungGeunMo;
+}
+.cases-by-kate-tab > .case-list > .case-item > .content > .case > .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #FF00F6;
+  text-shadow: 3px 3px 3px #656565;
+}
+@media only screen and (max-width: 799px) {
+  .cases-by-kate-tab > .case-list > .case-item > .content > .case {
+    width: 64px;
+    height: 64px;
+    font-size: 14px;
+  }
+}
+.cases-by-kate-tab > .case-list > .case-item > .content > .info {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.cases-by-kate-tab > .case-list > .case-item > .content > .info > h5 {
+  font-size: 1rem;
+}
+.cases-by-kate-tab > .case-list > .case-item > .content > .info > .amount {
+  font-size: 1.5rem;
+}
+.cases-by-kate-tab > .case-list > .case-item > .content > .controller {
+  padding-right: 6px;
+}
+.cases-by-kate-tab > .case-list > .case-item > .content > .controller > .claim-button {
+  height: 44px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.cases-by-kate-tab > .case-list > .case-item > .content > .controller > .claim-button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.cases-by-kate-tab > .case-list > .case-item > .content > .controller > .claim-button:active {
+  color: white;
+  background-color: black;
+}
+.animals-punks-v2-tab > header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+}
+.animals-punks-v2-tab > header > .total-mix > h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.animals-punks-v2-tab > header > .total-mix > span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.animals-punks-v2-tab > header > .take-all-button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.animals-punks-v2-tab > header > .take-all-button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.animals-punks-v2-tab > header > .take-all-button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.animals-punks-v2-tab > .punk-list {
+  max-width: 1240px;
+  margin: auto;
+}
+.animals-punks-v2-tab > .punk-list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.animals-punks-v2-tab > .punk-list > .punk-item {
+  float: left;
+  width: 50%;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 799px) {
+  .animals-punks-v2-tab > .punk-list > .punk-item {
+    float: none;
+    width: 100%;
+  }
+}
+.animals-punks-v2-tab > .punk-list > .punk-item > .content {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  align-items: center;
+}
+.animals-punks-v2-tab > .punk-list > .punk-item > .content > .punk {
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  line-height: 1em;
+}
+.animals-punks-v2-tab > .punk-list > .punk-item > .content > .punk > .id {
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  font-family: DungGeunMo;
+}
+.animals-punks-v2-tab > .punk-list > .punk-item > .content > .punk > .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #FF00F6;
+  text-shadow: 3px 3px 3px #656565;
+}
+@media only screen and (max-width: 799px) {
+  .animals-punks-v2-tab > .punk-list > .punk-item > .content > .punk {
+    width: 64px;
+    height: 64px;
+    font-size: 14px;
+  }
+}
+.animals-punks-v2-tab > .punk-list > .punk-item > .content > .info {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.animals-punks-v2-tab > .punk-list > .punk-item > .content > .info > h5 {
+  font-size: 1rem;
+}
+.animals-punks-v2-tab > .punk-list > .punk-item > .content > .info > .amount {
+  font-size: 1.5rem;
+}
+.animals-punks-v2-tab > .punk-list > .punk-item > .content > .controller {
+  padding-right: 6px;
+}
+.animals-punks-v2-tab > .punk-list > .punk-item > .content > .controller > .claim-button {
+  height: 44px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.animals-punks-v2-tab > .punk-list > .punk-item > .content > .controller > .claim-button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.animals-punks-v2-tab > .punk-list > .punk-item > .content > .controller > .claim-button:active {
+  color: white;
+  background-color: black;
+}
+.pixel-cat-tab > header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+}
+.pixel-cat-tab > header > .total-mix > h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.pixel-cat-tab > header > .total-mix > span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.pixel-cat-tab > header > .take-all-button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.pixel-cat-tab > header > .take-all-button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.pixel-cat-tab > header > .take-all-button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.pixel-cat-tab > .pixel-cat-list {
+  max-width: 1240px;
+  margin: auto;
+}
+.pixel-cat-tab > .pixel-cat-list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item {
+  float: left;
+  width: 50%;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 799px) {
+  .pixel-cat-tab > .pixel-cat-list > .pixel-cat-item {
+    float: none;
+    width: 100%;
+  }
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  align-items: center;
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .pixel-cat {
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  line-height: 1em;
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .pixel-cat > .id {
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  font-family: DungGeunMo;
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .pixel-cat > .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #FF00F6;
+  text-shadow: 3px 3px 3px #656565;
+}
+@media only screen and (max-width: 799px) {
+  .pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .pixel-cat {
+    width: 64px;
+    height: 64px;
+    font-size: 14px;
+  }
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .info {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .info > h5 {
+  font-size: 1rem;
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .info > .amount {
+  font-size: 1.5rem;
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .controller {
+  padding-right: 6px;
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .controller > .claim-button {
+  height: 44px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .controller > .claim-button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .controller > .claim-button:active {
+  color: white;
+  background-color: black;
 }
 .governance-view {
   max-width: 1280px;

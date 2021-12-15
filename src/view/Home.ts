@@ -16,7 +16,15 @@ export default class Home implements View {
                 ),
                 el("img.mix", { src: "/images/logo/mix.svg", height: "72px" }),
                 el("h1", "NFT 프로젝트 허브를 위한 토큰"),
-                el(".button-container", el("button.buy-mix-btn", "믹스 구매하기"), el("button.white-paper-btn", "백서 보기")),
+                el(".button-container", el("button.buy-mix-btn", "믹스 구매하기", {
+                    click: () => {
+                        ViewUtil.go("/buy");
+                    }
+                }), el("button.white-paper-btn", "백서 보기", {
+                    click: () => {
+                        window.open("https://medium.com/dogesoundclub/dsc-mix-nft-%ED%97%88%EB%B8%8C%EB%A5%BC-%EC%9C%84%ED%95%9C-%ED%86%A0%ED%81%B0-3299dd3a8d1d");
+                    }
+                })),
                 el(".paragraph", "MIX는 NFT 프로젝트들의 허브를 위한 토큰입니다.\nDSC 사이트의 전 범위에서 사용되며, Klayswap에서 유동성 공급 및 거래에 사용될 예정입니다.\n또한 MIX를 활용한 기능을 추가하기로 약속한 파트너 프로젝트의 서비스에서도 사용될 예정입니다."),
                 el(".overview-container",
                     el(".price-container", el(".paragraph", "1믹스 가격"), el("h4", "(연동 중...)원")),
