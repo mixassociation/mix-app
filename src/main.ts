@@ -8,8 +8,12 @@ import Proposal from "./view/governance/Proposal";
 import Propose from "./view/governance/Propose";
 import Home from "./view/Home";
 import Layout from "./view/Layout";
+import AssetsCalculator from "./AssetsCalculator";
 
 (async () => {
+
+    await AssetsCalculator.init();
+
     SkyRouter.route("**", Layout);
     SkyRouter.route("", Home);
 
@@ -26,9 +30,5 @@ import Layout from "./view/Layout";
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
         sessionStorage.removeItem("__spa_path");
-    }
-
-    if (await Wallet.connected() !== true) {
-        await Wallet.connect();
     }
 })();

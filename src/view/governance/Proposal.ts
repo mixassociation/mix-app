@@ -2,6 +2,8 @@ import { DomNode, el } from "@hanul/skynode";
 import marked from "marked";
 import { SkyRouter, View, ViewParams } from "skyrouter";
 import xss from "xss";
+import AssetsCalculator from "../../AssetsCalculator";
+import CommonUtil from "../../CommonUtil";
 import AssetsDisplay from "../../component/AssetsDisplay";
 import Alert from "../../component/dialogue/Alert";
 import Confirm from "../../component/dialogue/Confirm";
@@ -94,7 +96,7 @@ export default class Proposal implements View {
             optionList.append(el("li",
                 el(".title", option.title),
                 el(".voters", String(option.voters.length)),
-                el(".percent", "준비중"),
+                el(".percent", `${CommonUtil.numberWithCommas(String(AssetsCalculator.calculatePercent(proposal.voterAssets, option.voterAssets)))}%`),
                 el(".controller",
                     proposal.passed !== true ? undefined : el("button", "투표하기", {
                         click: () => {

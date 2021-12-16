@@ -1,20 +1,6 @@
 import { DomNode, el } from "@hanul/skynode";
 import { utils } from "ethers";
-
-interface TotalAssets {
-
-    mix: string,
-    mixset: string,
-    devfunds: string,
-    klaylp: string,
-    ksplp: string,
-
-    turntableVolume: number,
-    mates: number,
-    cases: number,
-    apunks: number,
-    pixelcats: number,
-}
+import { TotalAssets } from "../AssetsCalculator";
 
 export default class AssetsDisplay extends DomNode {
 

@@ -6,6 +6,7 @@ export default {
     chainId: TESTNET ? 1001 : 8217,
 
     apiHost: "api.mix.info",
+    admin: "0x5d3C6E36538f485C3483B1C0d3e27a3416E16217",
 
     contracts: TESTNET ? {
         // Testnet
@@ -33,7 +34,6 @@ export default {
         PixelCatPool: "",
 
     } : {
-        admin: "0x5d3C6E36538f485C3483B1C0d3e27a3416E16217",
 
         Mix: "0xDd483a970a7A7FeF2B223C3510fAc852799a88BF",
         MixEmitter: "0x0281dDafc6718b2B60bda163550f2F5F59D92C09",

@@ -1,6 +1,57 @@
 declare const _default: {
+    isTestnet: boolean;
+    chainId: number;
     apiHost: string;
     admin: string;
+    contracts: {
+        Mate: string;
+        Mix: string;
+        MixEmitter: string;
+        DevFundToken: string;
+        DevFundPool: string;
+        MatesPool: string;
+        Booth: string;
+        BurnPool: string;
+        Turntables: string;
+        TurntableExtras: string;
+        MatesListeners: string;
+        KlayMIXListeners: string;
+        KSPMIXListeners: string;
+        CasesByKate: string;
+        CasesByKatePool: string;
+        AnimalsPunksV2: string;
+        AnimalsPunksV2Pool: string;
+        PixelCat: string;
+        PixelCatPool: string;
+        KlayMIXLPToken?: undefined;
+        KSPMIXLPToken?: undefined;
+        Klayswap?: undefined;
+        MixPriceEstimator?: undefined;
+    } | {
+        Mix: string;
+        MixEmitter: string;
+        DevFundToken: string;
+        DevFundPool: string;
+        MatesPool: string;
+        Booth: string;
+        BurnPool: string;
+        Turntables: string;
+        TurntableExtras: string;
+        MatesListeners: string;
+        KlayMIXListeners: string;
+        KSPMIXListeners: string;
+        KlayMIXLPToken: string;
+        KSPMIXLPToken: string;
+        Klayswap: string;
+        MixPriceEstimator: string;
+        CasesByKate: string;
+        CasesByKatePool: string;
+        AnimalsPunksV2: string;
+        AnimalsPunksV2Pool: string;
+        PixelCat: string;
+        PixelCatPool: string;
+        Mate?: undefined;
+    };
 };
 export default _default;
 //# sourceMappingURL=Config.d.ts.map

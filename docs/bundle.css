@@ -2544,6 +2544,32 @@ body {
   font-size: 0.875rem;
   font-weight: 400;
 }
+.governance-proposal-view > .assets {
+  background-color: #F9F9F9;
+  padding: 30px 0;
+  margin-bottom: 32px;
+}
+.governance-proposal-view > .assets > h2 {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: auto;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.governance-proposal-view > .assets > .assets-display {
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: auto;
+}
+.governance-proposal-view > .assets > .assets-display > .asset {
+  display: flex;
+  padding: 5px 0;
+}
+.governance-proposal-view > .assets > .assets-display > .asset > h6 {
+  font-weight: 700;
+  width: 190px;
+}
 .governance-proposal-view > .options-wrapper {
   background-color: #F9F9F9;
   padding: 30px 0;
