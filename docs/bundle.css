@@ -2608,19 +2608,20 @@ body {
   .governance-proposal-view > .options-wrapper > .options > .list > header > .percent,
   .governance-proposal-view > .options-wrapper > .options > .list > header > .controller {
     display: none;
-    border-bottom: none;
   }
 }
 .governance-proposal-view > .options-wrapper > .options > .list > header,
 .governance-proposal-view > .options-wrapper > .options > .list > ul > li {
   display: flex;
+  align-items: center;
+  padding-top: 8px;
 }
 @media only screen and (max-width: 719px) {
   .governance-proposal-view > .options-wrapper > .options > .list > header,
   .governance-proposal-view > .options-wrapper > .options > .list > ul > li {
     flex-direction: column;
-    border-bottom: 0.5px solid #CED3D6;
     padding: 8px;
+    border-bottom: 0.5px solid #CED3D6;
   }
   .governance-proposal-view > .options-wrapper > .options > .list > header > .voters,
   .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .voters {
