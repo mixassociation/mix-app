@@ -1852,7 +1852,8 @@ body {
   position: absolute;
   left: 3px;
   bottom: 0;
-  font-family: DungGeunMo;
+  color: white;
+  text-shadow: 3px 3px 3px #656565;
 }
 .mates-tab > .mate-list > .mate-item > .content > .mate > .name {
   position: absolute;
@@ -1860,7 +1861,7 @@ body {
   left: 0;
   width: 100%;
   text-align: center;
-  color: #FF00F6;
+  color: #F2780C;
   text-shadow: 3px 3px 3px #656565;
 }
 @media only screen and (max-width: 799px) {
@@ -1980,7 +1981,8 @@ body {
   position: absolute;
   left: 3px;
   bottom: 0;
-  font-family: DungGeunMo;
+  color: white;
+  text-shadow: 3px 3px 3px #656565;
 }
 .cases-by-kate-tab > .case-list > .case-item > .content > .case > .name {
   position: absolute;
@@ -1988,7 +1990,7 @@ body {
   left: 0;
   width: 100%;
   text-align: center;
-  color: #FF00F6;
+  color: #F2780C;
   text-shadow: 3px 3px 3px #656565;
 }
 @media only screen and (max-width: 799px) {
