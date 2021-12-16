@@ -2518,7 +2518,7 @@ body {
   font-size: 2.8125rem;
   font-weight: 700;
   margin-bottom: 8px;
-  text-align: center;
+  text-align: left;
   margin: auto;
   max-width: 1248px;
 }
@@ -2526,6 +2526,7 @@ body {
   .governance-proposal-view > h1 {
     font-size: 2rem;
     margin: 8px;
+    margin-left: 16px;
   }
 }
 .governance-proposal-view > .content {
@@ -2564,11 +2565,14 @@ body {
 }
 .governance-proposal-view > .assets > .assets-display > .asset {
   display: flex;
-  padding: 5px 0;
+  padding: 4px 0;
 }
 .governance-proposal-view > .assets > .assets-display > .asset > h6 {
   font-weight: 700;
-  width: 190px;
+  min-width: 190px;
+}
+.governance-proposal-view > .assets > .assets-display > .asset > span {
+  overflow: scroll;
 }
 .governance-proposal-view > .options-wrapper {
   background-color: #F9F9F9;
@@ -2577,11 +2581,18 @@ body {
 }
 .governance-proposal-view > .options-wrapper > .options {
   max-width: 1280px;
-  padding: 0 20px;
+  padding: 0 8px;
   margin: auto;
   margin-bottom: 32px;
 }
-.governance-proposal-view > .options-wrapper > .options > p {
+.governance-proposal-view > .options-wrapper > .options > .caption-container {
+  display: flex;
+  align-items: center;
+}
+.governance-proposal-view > .options-wrapper > .options > .caption-container > img {
+  height: 18px;
+}
+.governance-proposal-view > .options-wrapper > .options > .caption-container > p {
   font-size: 0.75rem;
   margin-left: 4px;
 }
@@ -2591,9 +2602,30 @@ body {
 .governance-proposal-view > .options-wrapper > .options > .list > header {
   font-weight: bold;
 }
+@media only screen and (max-width: 719px) {
+  .governance-proposal-view > .options-wrapper > .options > .list > header > .title,
+  .governance-proposal-view > .options-wrapper > .options > .list > header > .voters,
+  .governance-proposal-view > .options-wrapper > .options > .list > header > .percent,
+  .governance-proposal-view > .options-wrapper > .options > .list > header > .controller {
+    display: none;
+    border-bottom: none;
+  }
+}
 .governance-proposal-view > .options-wrapper > .options > .list > header,
 .governance-proposal-view > .options-wrapper > .options > .list > ul > li {
   display: flex;
+}
+@media only screen and (max-width: 719px) {
+  .governance-proposal-view > .options-wrapper > .options > .list > header,
+  .governance-proposal-view > .options-wrapper > .options > .list > ul > li {
+    flex-direction: column;
+    border-bottom: 0.5px solid #CED3D6;
+    padding: 8px;
+  }
+  .governance-proposal-view > .options-wrapper > .options > .list > header > .voters,
+  .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .voters {
+    display: none;
+  }
 }
 .governance-proposal-view > .options-wrapper > .options > .list > header > .title,
 .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .title,
@@ -2603,16 +2635,46 @@ body {
 .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .percent,
 .governance-proposal-view > .options-wrapper > .options > .list > header > .controller,
 .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller {
-  padding: 5px;
+  padding: 4px;
   text-align: center;
   width: 80px;
+  font-size: 0.875rem;
+  max-width: 900px;
 }
 @media only screen and (max-width: 719px) {
+  .governance-proposal-view > .options-wrapper > .options > .list > header > .title,
+  .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .title,
   .governance-proposal-view > .options-wrapper > .options > .list > header > .voters,
   .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .voters,
   .governance-proposal-view > .options-wrapper > .options > .list > header > .percent,
-  .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .percent {
-    display: none;
+  .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .percent,
+  .governance-proposal-view > .options-wrapper > .options > .list > header > .controller,
+  .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller {
+    text-align: left;
+    word-spacing: 3px;
+  }
+}
+.governance-proposal-view > .options-wrapper > .options > .list > header > .percent-container,
+.governance-proposal-view > .options-wrapper > .options > .list > ul > li > .percent-container {
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  min-width: 80px;
+  font-size: 0.875rem;
+}
+.governance-proposal-view > .options-wrapper > .options > .list > header > .percent-container > .mobile-percent,
+.governance-proposal-view > .options-wrapper > .options > .list > ul > li > .percent-container > .mobile-percent {
+  padding-left: 4px;
+  padding-right: 4px;
+  height: 18px;
+  display: none;
+  font-weight: 300;
+}
+@media only screen and (max-width: 719px) {
+  .governance-proposal-view > .options-wrapper > .options > .list > header > .percent-container > .mobile-percent,
+  .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .percent-container > .mobile-percent {
+    display: block;
   }
 }
 .governance-proposal-view > .options-wrapper > .options > .list > header > .title,
@@ -2620,6 +2682,12 @@ body {
   width: auto;
   flex-grow: 1;
   text-align: left;
+}
+@media only screen and (max-width: 719px) {
+  .governance-proposal-view > .options-wrapper > .options > .list > header > .controller,
+  .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller {
+    width: 100%;
+  }
 }
 .governance-proposal-view > .options-wrapper > .options > .list > header > .controller > button,
 .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller > button {
@@ -2629,8 +2697,14 @@ body {
   box-sizing: border-box;
   border-radius: 4px;
   background-color: transparent;
-  min-width: 70px;
+  width: 70px;
   color: #F2780C;
+}
+@media only screen and (max-width: 719px) {
+  .governance-proposal-view > .options-wrapper > .options > .list > header > .controller > button,
+  .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller > button {
+    width: 100%;
+  }
 }
  > .governance-proposal-view > .options-wrapper > .options > .list > header > .controller > button:hover,
  > .governance-proposal-view > .options-wrapper > .options > .list > ul > li > .controller > button:hover {

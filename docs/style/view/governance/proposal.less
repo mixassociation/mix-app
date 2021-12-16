@@ -4,14 +4,15 @@
 
     >h1 {
         @media @phone {
-            font-size: @headline3;
-            margin: 8px;
+            font-size  : @headline3;
+            margin     : 8px;
+            margin-left: 16px;
         }
 
         font-size    : @headline1;
         font-weight  : 700;
         margin-bottom: 8px;
-        text-align   : center;
+        text-align   : left;
         margin       : auto;
         max-width    : 1248px;
     }
@@ -56,11 +57,15 @@
 
             >.asset {
                 display: flex;
-                padding: 5px 0;
+                padding: 4px 0;
 
                 >h6 {
                     font-weight: 700;
-                    width      : 190px;
+                    min-width  : 190px;
+                }
+
+                >span {
+                    overflow: scroll;
                 }
             }
         }
@@ -73,13 +78,22 @@
 
         >.options {
             max-width    : 1280px;
-            padding      : 0 20px;
+            padding      : 0 8px;
             margin       : auto;
             margin-bottom: 32px;
 
-            >p {
-                font-size  : @caption;
-                margin-left: 4px;
+            >.caption-container {
+                display    : flex;
+                align-items: center;
+
+                >img {
+                    height: 18px;
+                }
+
+                >p {
+                    font-size  : @caption;
+                    margin-left: 4px;
+                }
             }
 
             >.list {
@@ -87,26 +101,67 @@
 
                 >header {
                     font-weight: bold;
+
+                    @media @phone {
+
+                        >.title,
+                        >.voters,
+                        >.percent,
+                        >.controller {
+                            display      : none;
+                            border-bottom: none;
+                        }
+                    }
                 }
 
                 >header,
                 >ul>li {
                     display: flex;
 
+                    @media @phone {
+                        flex-direction: column;
+                        border-bottom : 0.5px solid @greyscale-4;
+                        padding       : 8px;
+
+                        >.voters {
+                            display: none;
+                        }
+                    }
+
                     >.title,
                     >.voters,
                     >.percent,
                     >.controller {
-                        padding   : 5px;
+                        padding   : 4px;
                         text-align: center;
                         width     : 80px;
+                        font-size : @paragraph;
+                        max-width : 900px;
+
+                        @media @phone {
+                            text-align  : left;
+                            word-spacing: 3px;
+                        }
                     }
 
-                    @media @phone {
+                    >.percent-container {
+                        display       : flex;
+                        align-items   : center;
+                        padding-top   : 4px;
+                        padding-bottom: 4px;
+                        min-width     : 80px;
+                        font-size     : @paragraph;
 
-                        >.voters,
-                        >.percent {
-                            display: none;
+                        >.mobile-percent {
+                            padding-left : 4px;
+                            padding-right: 4px;
+                            height       : 18px;
+                            display      : none;
+                            font-weight  : 300;
+
+                            @media @phone {
+                                display: block;
+                            }
                         }
                     }
 
@@ -117,6 +172,10 @@
                     }
 
                     >.controller {
+                        @media @phone {
+                            width: 100%;
+                        }
+
                         >button {
                             width           : 100%;
                             height          : 24px;
@@ -124,8 +183,12 @@
                             box-sizing      : border-box;
                             border-radius   : 4px;
                             background-color: transparent;
-                            min-width       : 70px;
+                            width           : 70px;
                             color           : @brand-primary;
+
+                            @media @phone {
+                                width: 100%;
+                            }
 
                             >&:hover {
                                 color           : white;

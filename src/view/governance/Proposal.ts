@@ -63,7 +63,7 @@ export default class Proposal implements View {
                         ),
                         optionList = el("ul"),
                     ),
-                    el("p", "후보들 중에 마음에 드는 후보가 없는 경우 다른 후보를 등록할 수 있습니다."),
+                    el(".caption-container", el("img", { src: "/images/icon/info.svg" }), el("p", "후보들 중에 마음에 드는 후보가 없는 경우 다른 후보를 등록할 수 있습니다.")),
                     proposal.passed !== true ? undefined : el("button", "후보 추가", {
                         click: () => {
                             new Prompt("후보 추가", "선택지로 추가할 후보를 입력해주시기 바랍니다. 후보를 추가하면 추가한 당사자는 해당 후보로 자동으로 투표합니다.", "추가하기", async (optionTitle) => {
@@ -96,7 +96,8 @@ export default class Proposal implements View {
             optionList.append(el("li",
                 el(".title", option.title),
                 el(".voters", String(option.voters.length)),
-                el(".percent", `${CommonUtil.numberWithCommas(String(AssetsCalculator.calculatePercent(proposal.voterAssets, option.voterAssets)))}%`),
+                el(".percent-container", el("img.mobile-percent", { src: "/images/icon/balance.svg" }),
+                    el(".percent", `${CommonUtil.numberWithCommas(String(AssetsCalculator.calculatePercent(proposal.voterAssets, option.voterAssets)))}%`)),
                 el(".controller",
                     proposal.passed !== true ? undefined : el("button", "투표하기", {
                         click: () => {
