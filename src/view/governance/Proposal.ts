@@ -2,6 +2,7 @@ import { DomNode, el } from "@hanul/skynode";
 import marked from "marked";
 import { SkyRouter, View, ViewParams } from "skyrouter";
 import xss from "xss";
+import AssetsDisplay from "../../component/AssetsDisplay";
 import Alert from "../../component/dialogue/Alert";
 import Confirm from "../../component/dialogue/Confirm";
 import Prompt from "../../component/dialogue/Prompt";
@@ -44,6 +45,10 @@ export default class Proposal implements View {
                 noteDisplay = el(".paragraph.markdown-body"),
                 el("h6", "제안자"),
                 el(".paragraph", proposal.proposer),
+            ),
+            el(".assets",
+                el("h2", "총 투표자산"),
+                new AssetsDisplay(proposal.voterAssets),
             ),
             el(".options-wrapper",
                 el(".options",
