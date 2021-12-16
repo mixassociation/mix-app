@@ -1,4 +1,5 @@
 import { SkyRouter } from "skyrouter";
+import Wallet from "./klaytn/Wallet";
 import Booth from "./view/Booth";
 import Buy from "./view/Buy";
 import Mining from "./view/Mining";
@@ -19,11 +20,15 @@ import Layout from "./view/Layout";
     SkyRouter.route("governance/propose", Propose);
 
     SkyRouter.route("buy", Buy);
-    SkyRouter.route("booth", Booth);
     SkyRouter.route("mining", Mining);
+    SkyRouter.route("booth", Booth);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
         sessionStorage.removeItem("__spa_path");
+    }
+
+    if (await Wallet.connected() !== true) {
+        await Wallet.connect();
     }
 })();
