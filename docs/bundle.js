@@ -4347,7 +4347,7 @@ eval("module.exports = JSON.parse('{\"v\":\"5.5.8\",\"fr\":60,\"ip\":0,\"op\":20
 /***/ ((module) => {
 
 "use strict";
-eval("module.exports = JSON.parse('{\"menu\":[{\"uri\":\"governance\",\"name\":\"거버넌스\"},{\"uri\":\"mining\",\"name\":\"채굴\"}]}');\n\n//# sourceURL=webpack:///./src/component/menu/menu.json?");
+eval("module.exports = JSON.parse('{\"menu\":[{\"uri\":\"governance\",\"name\":\"거버넌스\"}]}');\n\n//# sourceURL=webpack:///./src/component/menu/menu.json?");
 
 /***/ }),
 

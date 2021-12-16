@@ -3,10 +3,6 @@
         {
             "uri": "governance",
             "name": "거버넌스"
-        },
-        {
-            "uri": "mining",
-            "name": "채굴"
         }
     ]
 }
