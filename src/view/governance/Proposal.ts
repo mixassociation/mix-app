@@ -69,14 +69,15 @@ export default class Proposal implements View {
                             new Prompt("후보 추가", "선택지로 추가할 후보를 입력해주시기 바랍니다. 후보를 추가하면 추가한 당사자는 해당 후보로 자동으로 투표합니다.", "추가하기", async (optionTitle) => {
                                 const walletAddress = await Wallet.loadAddress();
                                 if (walletAddress !== undefined) {
-                                    const signedMessage = await Wallet.signMessage("Add Governance Proposal Option");
+                                    const signResult = await Wallet.signMessage("Add Governance Proposal Option");
                                     const result = await fetch(`https://${Config.apiHost}/governance/addoption`, {
                                         method: "POST",
                                         body: JSON.stringify({
                                             proposalId,
                                             option: optionTitle,
                                             voter: walletAddress,
-                                            signedMessage,
+                                            signedMessage: signResult.signedMessage,
+                                            klipSignKey: signResult.klipSignKey,
                                         }),
                                     });
                                     if (result.ok === true) {
@@ -103,14 +104,15 @@ export default class Proposal implements View {
                             new Confirm("투표하기", `\"${option.title}\" 후보에 투표하시겠습니까? 투표후 다른 후보에 재투표가 가능하며, 투표 취소는 불가능합니다.`, "투표하기", async () => {
                                 const walletAddress = await Wallet.loadAddress();
                                 if (walletAddress !== undefined) {
-                                    const signedMessage = await Wallet.signMessage("Vote Governance Proposal");
+                                    const signResult = await Wallet.signMessage("Vote Governance Proposal");
                                     const result = await fetch(`https://${Config.apiHost}/governance/vote`, {
                                         method: "POST",
                                         body: JSON.stringify({
                                             proposalId,
                                             optionIndex,
                                             voter: walletAddress,
-                                            signedMessage,
+                                            signedMessage: signResult.signedMessage,
+                                            klipSignKey: signResult.klipSignKey,
                                         }),
                                     });
                                     if (result.ok === true) {
@@ -141,12 +143,13 @@ export default class Proposal implements View {
                 this.container.append(el(".controller",
                     el("button", "통과", {
                         click: async () => {
-                            const signedMessage = await Wallet.signMessage("Pass Governance Proposal");
+                            const result = await Wallet.signMessage("Pass Governance Proposal");
                             await fetch(`https://${Config.apiHost}/governance/passproposal`, {
                                 method: "POST",
                                 body: JSON.stringify({
                                     proposalId,
-                                    signedMessage,
+                                    signedMessage: result.signedMessage,
+                                    klipSignKey: result.klipSignKey,
                                 }),
                             });
                             SkyRouter.refresh();
@@ -155,13 +158,14 @@ export default class Proposal implements View {
                     el("button", "기각", {
                         click: async () => {
                             new Prompt("기각", "기각 사유 입력", "기각", async (rejectReason) => {
-                                const signedMessage = await Wallet.signMessage("Reject Governance Proposal");
+                                const result = await Wallet.signMessage("Reject Governance Proposal");
                                 await fetch(`https://${Config.apiHost}/governance/rejectproposal`, {
                                     method: "POST",
                                     body: JSON.stringify({
                                         proposalId,
                                         rejectReason,
-                                        signedMessage,
+                                        signedMessage: result.signedMessage,
+                                        klipSignKey: result.klipSignKey,
                                     }),
                                 });
                                 SkyRouter.refresh();

@@ -81,7 +81,7 @@ export default class Propose implements View {
                                     new Confirm("제안하기", "제안을 등록하시겠습니까? 제안 후에는 내용을 수정할 수 없사오니 다시 한 번 확인해주시기 바랍니다.", "제안 등록", async () => {
                                         const walletAddress = await Wallet.loadAddress();
                                         if (walletAddress !== undefined) {
-                                            const signedMessage = await Wallet.signMessage("Governance Proposal");
+                                            const result = await Wallet.signMessage("Governance Proposal");
                                             await fetch(`https://${Config.apiHost}/governance/propose`, {
                                                 method: "POST",
                                                 body: JSON.stringify({
@@ -91,7 +91,8 @@ export default class Propose implements View {
                                                     note: noteInput.domElement.value,
                                                     proposer: walletAddress,
                                                     options: optionTitles,
-                                                    signedMessage,
+                                                    signedMessage: result.signedMessage,
+                                                    klipSignKey: result.klipSignKey,
                                                 }),
                                             });
                                             ViewUtil.go("/governance");

@@ -10,6 +10,7 @@ declare class Klip extends EventContainer {
     get connected(): boolean;
     connect(): Promise<void>;
     runContractMethod(address: string, abi: any, _params: any[], value?: BigNumberish): Promise<void>;
+    sign(): Promise<string>;
     disconnect(): Promise<void>;
 }
 declare const _default: Klip;

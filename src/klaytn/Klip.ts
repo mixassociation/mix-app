@@ -3,6 +3,8 @@ import { utils } from "ethers";
 import EventContainer from "eventcontainer";
 import QRCode from "qrcode";
 import KlipQRPopup from "../component/KlipQRPopup";
+import Config from "../Config";
+import KlipSignerContract from "../contracts/KlipSignerContract";
 import Store from "../Store";
 
 const klipSDK = require("klip-sdk");
@@ -80,6 +82,13 @@ class Klip extends EventContainer {
             value: utils.parseEther((value === undefined ? 0 : value).toString()).toString(),
         });
         await this.request(res);
+    }
+
+    public async sign() {
+        const result = await fetch(`https://${Config.apiHost}/klipsignkey/${this.address}`);
+        const key = await result.text();
+        await KlipSignerContract.sign(key);
+        return key;
     }
 
     public async disconnect() {

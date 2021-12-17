@@ -1,14 +1,13 @@
 import { SkyRouter } from "skyrouter";
-import Wallet from "./klaytn/Wallet";
+import AssetsCalculator from "./AssetsCalculator";
 import Booth from "./view/Booth";
 import Buy from "./view/Buy";
-import Mining from "./view/Mining";
 import Governance from "./view/governance/Governance";
 import Proposal from "./view/governance/Proposal";
 import Propose from "./view/governance/Propose";
 import Home from "./view/Home";
 import Layout from "./view/Layout";
-import AssetsCalculator from "./AssetsCalculator";
+import Mining from "./view/Mining";
 
 (async () => {
 
