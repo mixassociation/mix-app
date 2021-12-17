@@ -34,6 +34,7 @@ export default {
         PixelCatPool: "",
 
     } : {
+        Mate: "0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae",
 
         Mix: "0xDd483a970a7A7FeF2B223C3510fAc852799a88BF",
         MixEmitter: "0x0281dDafc6718b2B60bda163550f2F5F59D92C09",

@@ -28,7 +28,7 @@ export default class PixelCatItem extends DomNode {
                     this.mixAmount = el(".amount", "Loading..."),
                 ),
                 el(".controller",
-                    el("a.claim-button", "받기", {
+                    el("button.claim-button", "받기", {
                         click: async () => {
                             if (await Wallet.connected() !== true) {
                                 await Wallet.connect();
@@ -38,9 +38,9 @@ export default class PixelCatItem extends DomNode {
                                 const balance = await MixContract.balanceOf(owner);
                                 const fee = this.claimable.div(9);
                                 if (balance.lt(fee)) {
-                                    // new Confirm("NFT로부터 MIX를 수령받기 위해서는 수령받을 MIX의 10%의 MIX를 선납해야 합니다.", "믹스 구매", () => {
-                                    //     open("https://klayswap.com/exchange/swap?input=0x0000000000000000000000000000000000000000&output=0xdd483a970a7a7fef2b223c3510fac852799a88bf");
-                                    // });
+                                    new Confirm("믹스 구매", "NFT로부터 MIX를 수령받기 위해서는 수령받을 MIX의 10%의 MIX를 선납해야 합니다." ,"구매", () => {
+                                        open("https://klayswap.com/exchange/swap?input=0x0000000000000000000000000000000000000000&output=0xdd483a970a7a7fef2b223c3510fac852799a88bf");
+                                    });
                                 } else {
                                     if ((await MixContract.allowance(owner, PixelCatPoolContract.address)).lt(fee)) {
                                         await MixContract.approve(PixelCatPoolContract.address, constants.MaxUint256);
