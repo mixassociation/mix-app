@@ -1,6 +1,8 @@
 {
-    "menu": [{
+    "menu": [
+        {
             "uri": "governance",
             "name": "거버넌스"
-        }]
+        }
+    ]
 }

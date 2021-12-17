@@ -28,6 +28,7 @@ declare const _default: {
         Klayswap?: undefined;
         MixPriceEstimator?: undefined;
     } | {
+        Mate: string;
         Mix: string;
         MixEmitter: string;
         DevFundToken: string;
@@ -50,7 +51,6 @@ declare const _default: {
         AnimalsPunksV2Pool: string;
         PixelCat: string;
         PixelCatPool: string;
-        Mate?: undefined;
     };
 };
 export default _default;
