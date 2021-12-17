@@ -93,6 +93,7 @@ export default class Proposal implements View {
             ),
         );
 
+        const walletAddress = await Wallet.loadAddress();
         for (const [optionIndex, option] of proposal.options.entries()) {
             optionList.append(el("li",
                 el(".title", option.title),
@@ -100,31 +101,33 @@ export default class Proposal implements View {
                 el(".percent-container", el("img.mobile-percent", { src: "/images/icon/balance.svg" }),
                     el(".percent", `${CommonUtil.numberWithCommas(String(AssetsCalculator.calculatePercent(proposal.voterAssets, option.voterAssets)))}%`)),
                 el(".controller",
-                    proposal.passed !== true ? undefined : el("button", "투표하기", {
-                        click: () => {
-                            new Confirm("투표하기", `\"${option.title}\" 후보에 투표하시겠습니까? 투표후 다른 후보에 재투표가 가능하며, 투표 취소는 불가능합니다.`, "투표하기", async () => {
-                                const walletAddress = await Wallet.loadAddress();
-                                if (walletAddress !== undefined) {
-                                    const signResult = await Wallet.signMessage("Vote Governance Proposal");
-                                    const result = await fetch(`https://${Config.apiHost}/governance/vote`, {
-                                        method: "POST",
-                                        body: JSON.stringify({
-                                            proposalId,
-                                            optionIndex,
-                                            voter: walletAddress,
-                                            signedMessage: signResult.signedMessage,
-                                            klipSignKey: signResult.klipSignKey,
-                                        }),
-                                    });
-                                    if (result.ok === true) {
-                                        SkyRouter.refresh();
-                                    } else {
-                                        new Alert("실패", "투표에 실패했습니다.");
+                    proposal.passed !== true ? undefined : (
+                        option.voters.includes(walletAddress) === true ? el(".voted", "투표함") : el("button", "투표하기", {
+                            click: () => {
+                                new Confirm("투표하기", `\"${option.title}\" 후보에 투표하시겠습니까? 투표후 다른 후보에 재투표가 가능하며, 투표 취소는 불가능합니다.`, "투표하기", async () => {
+                                    const walletAddress = await Wallet.loadAddress();
+                                    if (walletAddress !== undefined) {
+                                        const signResult = await Wallet.signMessage("Vote Governance Proposal");
+                                        const result = await fetch(`https://${Config.apiHost}/governance/vote`, {
+                                            method: "POST",
+                                            body: JSON.stringify({
+                                                proposalId,
+                                                optionIndex,
+                                                voter: walletAddress,
+                                                signedMessage: signResult.signedMessage,
+                                                klipSignKey: signResult.klipSignKey,
+                                            }),
+                                        });
+                                        if (result.ok === true) {
+                                            SkyRouter.refresh();
+                                        } else {
+                                            new Alert("실패", "투표에 실패했습니다.");
+                                        }
                                     }
-                                }
-                            });
-                        },
-                    }),
+                                });
+                            },
+                        })
+                    ),
                 ),
             ));
         }
