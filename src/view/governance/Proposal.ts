@@ -9,6 +9,7 @@ import Alert from "../../component/dialogue/Alert";
 import Confirm from "../../component/dialogue/Confirm";
 import Prompt from "../../component/dialogue/Prompt";
 import Config from "../../Config";
+import Constants from "../../Constants";
 import Wallet from "../../klaytn/Wallet";
 import TimeFormatter from "../../TimeFormatter";
 import Layout from "../Layout";
@@ -38,7 +39,7 @@ export default class Proposal implements View {
             el("h1", proposal.title),
             el(".content",
                 el("h6", "기간"),
-                el(".paragraph", `투표 종료: ${TimeFormatter.fromNow(new Date(proposal.passTime + 604800000))}`),
+                el(".paragraph", `투표 종료: ${TimeFormatter.fromNow(new Date(proposal.passTime + Constants.VOTE_PERIOD))}`),
                 el("h6", "요약"),
                 el(".paragraph", proposal.summary),
                 el("h6", "본문"),
