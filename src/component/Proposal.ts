@@ -22,6 +22,7 @@ interface GovernanceProposal {
     rejected?: boolean,
     rejectReason?: string,
 
+    startRevoteTime?: number,
     voters: string[],
     revoters?: string[],
 
@@ -35,7 +36,14 @@ export default class Proposal extends DomNode {
         if (proposal.rejected === true) {
             this.addClass("rejected");
         }
-        if (proposal.passed === true) {
+        if (proposal.startRevoteTime !== undefined) {
+            if (proposal.startRevoteTime + Constants.REVOTE_PERIOD - Date.now() < 0) {
+                this.addClass("ended");
+            } else {
+                this.addClass("passed");
+            }
+        }
+        else if (proposal.passed === true) {
             if (proposal.passTime! + Constants.VOTE_PERIOD - Date.now() < 0) {
                 this.addClass("ended");
             } else {
@@ -46,7 +54,11 @@ export default class Proposal extends DomNode {
             el("h5", proposal.title),
             el(".status", proposal.rejected == true ? "기각" : (
                 proposal.passed == true ? (
-                    proposal.passTime! + Constants.VOTE_PERIOD - Date.now() < 0 ? "투표 종료" : "투표중"
+                    proposal.passTime! + Constants.VOTE_PERIOD - Date.now() < 0 ? (
+                        proposal.startRevoteTime === undefined ? "투표 종료" : (
+                            proposal.startRevoteTime + Constants.REVOTE_PERIOD - Date.now() < 0 ? "투표 종료" : "재투표"
+                        )
+                    ) : "투표중"
                 ) : "검토중"
             )),
         );

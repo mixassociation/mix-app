@@ -15,6 +15,7 @@ interface GovernanceProposal {
     passTime?: number;
     rejected?: boolean;
     rejectReason?: string;
+    startRevoteTime?: number;
     voters: string[];
     revoters?: string[];
     options: GovernanceProposalOption[];

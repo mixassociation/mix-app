@@ -60,45 +60,47 @@ class AssetsCalculator {
 
             for (const [address, percent] of Object.entries(this.poolInfo)) {
                 const pool = (pools as any)[address];
-                if (pool.name === "Dev Fund") {
-                    if (total.devfunds !== "0") {
-                        poolPercent += parseFloat(utils.formatEther(assets.devfunds)) / parseFloat(utils.formatEther(total.devfunds)) * percent;
-                        totalPoolPercent += percent;
-                    }
-                } else if (pool.name === "Mates") {
-                    if (total.mates !== 0) {
-                        poolPercent += assets.mates / total.mates * percent;
-                        totalPoolPercent += percent;
-                    }
-                } else if (pool.name === "Klay-MIX LP") {
-                    if (total.klaylp !== "0") {
-                        poolPercent += parseFloat(utils.formatEther(assets.klaylp)) / parseFloat(utils.formatEther(total.klaylp)) * percent;
-                        totalPoolPercent += percent;
-                    }
-                } else if (pool.name === "KSP-MIX LP") {
-                    if (total.ksplp !== "0") {
-                        poolPercent += parseFloat(utils.formatEther(assets.ksplp)) / parseFloat(utils.formatEther(total.ksplp)) * percent;
-                        totalPoolPercent += percent;
-                    }
-                } else if (pool.name === "Cases by Kate") {
-                    if (total.cases !== 0) {
-                        poolPercent += assets.cases / total.cases * percent;
-                        totalPoolPercent += percent;
-                    }
-                } else if (pool.name === "Animals Punks V2") {
-                    if (total.apunks !== 0) {
-                        poolPercent += assets.apunks / total.apunks * percent;
-                        totalPoolPercent += percent;
-                    }
-                } else if (pool.name === "Turntables") {
-                    if (total.turntableVolume !== 0) {
-                        poolPercent += assets.turntableVolume / total.turntableVolume * percent;
-                        totalPoolPercent += percent;
-                    }
-                } else if (pool.name === "Pixel Cat") {
-                    if (total.pixelcats !== 0) {
-                        poolPercent += assets.pixelcats / total.pixelcats * percent;
-                        totalPoolPercent += percent;
+                if (pool !== undefined) {
+                    if (pool.name === "Dev Fund") {
+                        if (total.devfunds !== "0") {
+                            poolPercent += parseFloat(utils.formatEther(assets.devfunds)) / parseFloat(utils.formatEther(total.devfunds)) * percent;
+                            totalPoolPercent += percent;
+                        }
+                    } else if (pool.name === "Mates") {
+                        if (total.mates !== 0) {
+                            poolPercent += assets.mates / total.mates * percent;
+                            totalPoolPercent += percent;
+                        }
+                    } else if (pool.name === "Klay-MIX LP") {
+                        if (total.klaylp !== "0") {
+                            poolPercent += parseFloat(utils.formatEther(assets.klaylp)) / parseFloat(utils.formatEther(total.klaylp)) * percent;
+                            totalPoolPercent += percent;
+                        }
+                    } else if (pool.name === "KSP-MIX LP") {
+                        if (total.ksplp !== "0") {
+                            poolPercent += parseFloat(utils.formatEther(assets.ksplp)) / parseFloat(utils.formatEther(total.ksplp)) * percent;
+                            totalPoolPercent += percent;
+                        }
+                    } else if (pool.name === "Cases by Kate") {
+                        if (total.cases !== 0) {
+                            poolPercent += assets.cases / total.cases * percent;
+                            totalPoolPercent += percent;
+                        }
+                    } else if (pool.name === "Animals Punks V2") {
+                        if (total.apunks !== 0) {
+                            poolPercent += assets.apunks / total.apunks * percent;
+                            totalPoolPercent += percent;
+                        }
+                    } else if (pool.name === "Turntables") {
+                        if (total.turntableVolume !== 0) {
+                            poolPercent += assets.turntableVolume / total.turntableVolume * percent;
+                            totalPoolPercent += percent;
+                        }
+                    } else if (pool.name === "Pixel Cat") {
+                        if (total.pixelcats !== 0) {
+                            poolPercent += assets.pixelcats / total.pixelcats * percent;
+                            totalPoolPercent += percent;
+                        }
                     }
                 }
             }
