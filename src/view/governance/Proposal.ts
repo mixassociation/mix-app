@@ -72,6 +72,9 @@ export default class Proposal implements View {
                     revoted === true || proposal.passed !== true ? undefined : el("button", "후보 추가", {
                         click: () => {
                             new Prompt("후보 추가", "선택지로 추가할 후보를 입력해주시기 바랍니다. 후보를 추가하면 추가한 당사자는 해당 후보로 자동으로 투표합니다.", "추가하기", async (optionTitle) => {
+                                if (await Wallet.connected() !== true) {
+                                    await Wallet.connect();
+                                }
                                 const walletAddress = await Wallet.loadAddress();
                                 if (walletAddress !== undefined) {
                                     const signResult = await Wallet.signMessage("Add Governance Proposal Option");
@@ -117,6 +120,9 @@ export default class Proposal implements View {
                                     option.revoters?.includes(walletAddress) === true ? el(".voted", "투표함") : el("button", "투표하기", {
                                         click: () => {
                                             new Confirm("투표하기", `\"${option.title}\" 후보에 투표하시겠습니까? 투표후 다른 후보에 재투표가 가능하며, 투표 취소는 불가능합니다.`, "투표하기", async () => {
+                                                if (await Wallet.connected() !== true) {
+                                                    await Wallet.connect();
+                                                }
                                                 const walletAddress = await Wallet.loadAddress();
                                                 if (walletAddress !== undefined) {
                                                     const signResult = await Wallet.signMessage("Vote Governance Proposal");
@@ -159,6 +165,9 @@ export default class Proposal implements View {
                             option.voters.includes(walletAddress) === true ? el(".voted", "투표함") : el("button", "투표하기", {
                                 click: () => {
                                     new Confirm("투표하기", `\"${option.title}\" 후보에 투표하시겠습니까? 투표후 다른 후보에 재투표가 가능하며, 투표 취소는 불가능합니다.`, "투표하기", async () => {
+                                        if (await Wallet.connected() !== true) {
+                                            await Wallet.connect();
+                                        }
                                         const walletAddress = await Wallet.loadAddress();
                                         if (walletAddress !== undefined) {
                                             const signResult = await Wallet.signMessage("Vote Governance Proposal");
