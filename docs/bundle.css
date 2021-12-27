@@ -2110,7 +2110,8 @@ body {
   position: absolute;
   left: 3px;
   bottom: 0;
-  font-family: DungGeunMo;
+  color: white;
+  text-shadow: 3px 3px 3px #656565;
 }
 .animals-punks-v2-tab > .punk-list > .punk-item > .content > .punk > .name {
   position: absolute;
@@ -2285,6 +2286,135 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .controller > .claim-button:active {
+  color: white;
+  background-color: black;
+}
+.klits-tab > header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+}
+.klits-tab > header > .total-mix > h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.klits-tab > header > .total-mix > span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.klits-tab > header > .take-all-button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.klits-tab > header > .take-all-button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.klits-tab > header > .take-all-button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.klits-tab > .klits-list {
+  max-width: 1240px;
+  margin: auto;
+}
+.klits-tab > .klits-list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.klits-tab > .klits-list > .klits-item {
+  float: left;
+  width: 50%;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 799px) {
+  .klits-tab > .klits-list > .klits-item {
+    float: none;
+    width: 100%;
+  }
+}
+.klits-tab > .klits-list > .klits-item > .content {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  align-items: center;
+}
+.klits-tab > .klits-list > .klits-item > .content > .klits {
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  line-height: 1em;
+}
+.klits-tab > .klits-list > .klits-item > .content > .klits > .id {
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  color: white;
+  text-shadow: 3px 3px 3px #656565;
+}
+.klits-tab > .klits-list > .klits-item > .content > .klits > .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #FF00F6;
+  text-shadow: 3px 3px 3px #656565;
+}
+@media only screen and (max-width: 799px) {
+  .klits-tab > .klits-list > .klits-item > .content > .klits {
+    width: 64px;
+    height: 64px;
+    font-size: 14px;
+  }
+}
+.klits-tab > .klits-list > .klits-item > .content > .info {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.klits-tab > .klits-list > .klits-item > .content > .info > h5 {
+  font-size: 1rem;
+}
+.klits-tab > .klits-list > .klits-item > .content > .info > .amount {
+  font-size: 1.5rem;
+}
+.klits-tab > .klits-list > .klits-item > .content > .controller {
+  padding-right: 6px;
+}
+.klits-tab > .klits-list > .klits-item > .content > .controller > .claim-button {
+  height: 44px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.klits-tab > .klits-list > .klits-item > .content > .controller > .claim-button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.klits-tab > .klits-list > .klits-item > .content > .controller > .claim-button:active {
   color: white;
   background-color: black;
 }
