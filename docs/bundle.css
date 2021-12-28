@@ -1658,6 +1658,40 @@ body {
 .booth-view > .mixset {
   margin: 8px;
 }
+.booth-view > section {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.booth-view > section > .price {
+  margin-top: 16px;
+}
+.booth-view > section > .price > .bold {
+  font-weight: bold;
+}
+.booth-view > section > .apr {
+  margin-top: 16px;
+}
+.booth-view > section > .apr > .bold {
+  font-weight: bold;
+}
+.booth-view > section > .total-balance {
+  margin-top: 16px;
+}
+.booth-view > section > .total-balance > .bold {
+  font-weight: bold;
+}
+.booth-view > section > .burn-24 {
+  margin-top: 16px;
+}
+.booth-view > section > .burn-24 > .bold {
+  font-weight: bold;
+}
+.booth-view > section > .reward-24 {
+  margin-top: 16px;
+}
+.booth-view > section > .reward-24 > .bold {
+  font-weight: bold;
+}
 .booth-view > .none-bold-h6 {
   font-size: 1rem;
   font-weight: 400;

@@ -29,7 +29,7 @@ export default class PunkItem extends DomNode {
                     this.mixAmount = el(".amount", "Loading..."),
                 ),
                 el(".controller",
-                    el("a.claim-button", "받기", {
+                    el("button.claim-button", "받기", {
                         click: async () => {
                             if (await Wallet.connected() !== true) {
                                 await Wallet.connect();
