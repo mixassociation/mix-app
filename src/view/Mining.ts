@@ -39,6 +39,11 @@ export default class Mining implements View {
                             this.tabContainer.empty().append(new PixelCatTab());
                         },
                     }),
+                    el("a", "KLITS", {
+                        click: () => {
+                            //this.tabContainer.empty().append(new PixelCatTab());
+                        },
+                    }),
                 ),
                 this.tabContainer = el(".tab-container",
                     new MatesTab(),

@@ -18,6 +18,7 @@ export interface TotalAssets {
     cases: number,
     apunks: number,
     pixelcats: number,
+    klits: number,
 }
 
 class AssetsCalculator {
@@ -99,6 +100,11 @@ class AssetsCalculator {
                     } else if (pool.name === "Pixel Cat") {
                         if (total.pixelcats !== 0) {
                             poolPercent += assets.pixelcats / total.pixelcats * percent;
+                            totalPoolPercent += percent;
+                        }
+                    } else if (pool.name === "KLITS") {
+                        if (total.klits !== 0) {
+                            poolPercent += assets.klits / total.klits * percent;
                             totalPoolPercent += percent;
                         }
                     }
