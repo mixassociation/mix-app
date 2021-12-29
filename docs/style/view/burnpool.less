@@ -1,0 +1,47 @@
+.burnpool-view {
+    max-width : 1240px;
+    margin    : auto;
+    margin-top: 32px;
+    text-align: center;
+
+    >h1 {
+        font-size  : @headline1;
+        font-weight: 700;
+    }
+
+    >section {
+        >.balance {
+            font-size    : @headline3;
+            margin-top   : 32px;
+            margin-bottom: 32px;
+
+            >.mix {
+                font-weight: 700;
+            }
+        }
+
+        >button {
+            width           : 392px;
+            height          : 44px;
+            border          : 1px solid @brand-primary;
+            box-sizing      : border-box;
+            border-radius   : 4px;
+            background-color: white;
+            color           : @brand-primary;
+            font-size       : @headline5;
+            font-weight     : 700;
+            padding         : 0px 24px 0px 24px;
+            margin-top      : 8px;
+        }
+
+        >button:hover {
+            color           : white;
+            background-color: rgba(242, 120, 12, 0.8);
+        }
+
+        >button:active {
+            color           : white;
+            background-color: @brand-primary;
+        }
+    }
+}

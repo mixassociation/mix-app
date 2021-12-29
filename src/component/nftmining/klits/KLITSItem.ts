@@ -1,27 +1,26 @@
 import { DomNode, el } from "@hanul/skynode";
 import { BigNumber, constants, utils } from "ethers";
 import CommonUtil from "../../../CommonUtil";
-import AnimalsPunksV2PoolContract from "../../../contracts/mix/AnimalsPunksV2PoolContract";
 import MixContract from "../../../contracts/mix/MixContract";
-import AnimalsPunksV2Contract from "../../../contracts/nft/AnimalsPunksV2Contract";
+import KLITSPoolContract from "../../../contracts/mix/KLITSPoolContract";
+import KLITSContract from "../../../contracts/nft/KLITSContract";
 import Wallet from "../../../klaytn/Wallet";
 import KlubsLoader from "../../../KlubsLoader";
 import Confirm from "../../dialogue/Confirm";
-import AnimalsPunksV2Tab from "./AnimalsPunksV2Tab";
+import KLITSTab from "./KLITSTab";
 
-export default class PunkItem extends DomNode {
+export default class KLITSItem extends DomNode {
 
-    private punk: DomNode;
+    private klits: DomNode;
     private mixAmount: DomNode;
     private claimable: BigNumber = BigNumber.from(0);
     private refreshInterval: any;
 
-    constructor(private tab: AnimalsPunksV2Tab, private id: number) {
-        super(".punk-item");
-
+    constructor(private tab: KLITSTab, private id: number) {
+        super(".klits-item");
         this.append(
             el(".content",
-                this.punk = el(".punk",
+                this.klits = el(".klits",
                     el("span.id", `#${id}`),
                 ),
                 el(".info",
@@ -43,13 +42,13 @@ export default class PunkItem extends DomNode {
                                         open("https://klayswap.com/exchange/swap?input=0x0000000000000000000000000000000000000000&output=0xdd483a970a7a7fef2b223c3510fac852799a88bf");
                                     });
                                 } else {
-                                    if ((await MixContract.allowance(owner, AnimalsPunksV2PoolContract.address)).lt(fee)) {
-                                        await MixContract.approve(AnimalsPunksV2PoolContract.address, constants.MaxUint256);
+                                    if ((await MixContract.allowance(owner, KLITSPoolContract.address)).lt(fee)) {
+                                        await MixContract.approve(KLITSPoolContract.address, constants.MaxUint256);
                                         setTimeout(async () => {
-                                            await AnimalsPunksV2PoolContract.claim([this.id]);
+                                            await KLITSPoolContract.claim([this.id]);
                                         }, 2000);
                                     } else {
-                                        await AnimalsPunksV2PoolContract.claim([this.id]);
+                                        await KLITSPoolContract.claim([this.id]);
                                     }
                                 }
                             }
@@ -64,12 +63,12 @@ export default class PunkItem extends DomNode {
     }
 
     private async loadImage() {
-        const metadata = await KlubsLoader.loadMetadata(AnimalsPunksV2Contract.address, this.id);
-        this.punk.style({ backgroundImage: `url(${metadata.image})` });
+        const metadata = await KlubsLoader.loadMetadata(KLITSContract.address, this.id);
+        this.klits.style({ backgroundImage: `url(${metadata.image})` });
     }
 
     private async load() {
-        const claimable = await AnimalsPunksV2PoolContract.claimableOf(this.id);
+        const claimable = await KLITSPoolContract.claimableOf(this.id);
         if (this.deleted !== true) {
             this.mixAmount.empty().appendText(CommonUtil.numberWithCommas(utils.formatEther(claimable), 5));
             this.tab.changeMix(claimable.sub(this.claimable));

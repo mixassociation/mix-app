@@ -4,6 +4,7 @@ import MatesTab from "../component/nftmining/mates/MatesTab";
 import AnimalsPunksV2Tab from "../component/nftmining/ap2/AnimalsPunksV2Tab";
 import CasesByKateTab from "../component/nftmining/cbk/CasesByKateTab";
 import PixelCatTab from "../component/nftmining/pixelcat/PixelCatTab";
+import KLITSTab from "../component/nftmining/klits/KLITSTab";
 import Layout from "./Layout";
 
 export default class Mining implements View {
@@ -41,7 +42,7 @@ export default class Mining implements View {
                     }),
                     el("a", "KLITS", {
                         click: () => {
-                            //this.tabContainer.empty().append(new PixelCatTab());
+                            this.tabContainer.empty().append(new KLITSTab());
                         },
                     }),
                 ),

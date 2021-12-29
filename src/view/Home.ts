@@ -1,11 +1,19 @@
 import { DomNode, el } from "@hanul/skynode";
 import { View, ViewParams } from "skyrouter";
+import { utils } from "ethers";
+import superagent from "superagent";
+import CommonUtil from "../CommonUtil";
+import BurnPoolContract from "../contracts/mix/BurnPoolContract";
+import MixEmitterContract from "../contracts/mix/MixEmitterContract";
+import Loading from "../component/loading/Loading";
 import Layout from "./Layout";
 import ViewUtil from "./ViewUtil";
 
 export default class Home implements View {
 
     private container: DomNode;
+    private priceDisplay: DomNode;
+    private burnableDisplay: DomNode;
 
     constructor() {
         Layout.current.title = "NFT 프로젝트 허브를 위한 토큰";
@@ -27,9 +35,14 @@ export default class Home implements View {
                 })),
                 el(".paragraph", "MIX는 NFT 프로젝트들의 허브를 위한 토큰입니다.\nDSC 사이트의 전 범위에서 사용되며, Klayswap에서 유동성 공급 및 거래에 사용될 예정입니다.\n또한 MIX를 활용한 기능을 추가하기로 약속한 파트너 프로젝트의 서비스에서도 사용될 예정입니다."),
                 el(".overview-container",
-                    el(".price-container", el(".paragraph", "1믹스 가격"), el("h4", "(연동 중...)원")),
-                    el(".price-container", el(".paragraph", "믹스 발행량"), el("h4", "(연동 중...)MIX")),
-                    el(".price-container", el(".paragraph", "믹스 소각량"), el("h4", "(연동 중...)MIX"))
+                    el(".price-container", el(".paragraph", "1믹스 가격"),
+                        this.priceDisplay = el("h4", new Loading()),
+                        el("h4", "원")),
+                    el(".price-container", el(".paragraph", "믹스 발행량"), el("h4", "...MIX")),
+                    el(".price-container",
+                        el(".paragraph", "믹스 소각풀"),
+                        this.burnableDisplay = el("h4", new Loading()),
+                        el("h4", "MIX")),
                 ),
                 el("h2", "풀 정보"),
                 el(".pool-container",
@@ -54,6 +67,16 @@ export default class Home implements View {
                 )
             )),
         );
+        this.loadPrice();
+    }
+
+    private async loadPrice() {
+        const result = await superagent.get("https://api.dogesound.club/mix/price");
+        this.priceDisplay.empty().appendText(CommonUtil.numberWithCommas(result.text));
+
+        const pid = await BurnPoolContract.getPoolId();
+        const burnable = await MixEmitterContract.pendingMix(pid);
+        this.burnableDisplay.empty().appendText(CommonUtil.numberWithCommas(utils.formatEther(burnable)));
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

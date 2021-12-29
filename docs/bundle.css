@@ -1658,6 +1658,40 @@ body {
 .booth-view > .mixset {
   margin: 8px;
 }
+.booth-view > section {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.booth-view > section > .price {
+  margin-top: 16px;
+}
+.booth-view > section > .price > .bold {
+  font-weight: bold;
+}
+.booth-view > section > .apr {
+  margin-top: 16px;
+}
+.booth-view > section > .apr > .bold {
+  font-weight: bold;
+}
+.booth-view > section > .total-balance {
+  margin-top: 16px;
+}
+.booth-view > section > .total-balance > .bold {
+  font-weight: bold;
+}
+.booth-view > section > .burn-24 {
+  margin-top: 16px;
+}
+.booth-view > section > .burn-24 > .bold {
+  font-weight: bold;
+}
+.booth-view > section > .reward-24 {
+  margin-top: 16px;
+}
+.booth-view > section > .reward-24 > .bold {
+  font-weight: bold;
+}
 .booth-view > .none-bold-h6 {
   font-size: 1rem;
   font-weight: 400;
@@ -1773,6 +1807,45 @@ body {
 .mining-view > .tabs > a:hover {
   background-color: #F8FAFB;
   color: #3190FD;
+}
+.burnpool-view {
+  max-width: 1240px;
+  margin: auto;
+  margin-top: 32px;
+  text-align: center;
+}
+.burnpool-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+.burnpool-view > section > .balance {
+  font-size: 2rem;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.burnpool-view > section > .balance > .mix {
+  font-weight: 700;
+}
+.burnpool-view > section > button {
+  width: 392px;
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.burnpool-view > section > button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.burnpool-view > section > button:active {
+  color: white;
+  background-color: #F2780C;
 }
 .mates-tab > header {
   display: flex;
@@ -2110,7 +2183,8 @@ body {
   position: absolute;
   left: 3px;
   bottom: 0;
-  font-family: DungGeunMo;
+  color: white;
+  text-shadow: 3px 3px 3px #656565;
 }
 .animals-punks-v2-tab > .punk-list > .punk-item > .content > .punk > .name {
   position: absolute;
@@ -2285,6 +2359,135 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .controller > .claim-button:active {
+  color: white;
+  background-color: black;
+}
+.klits-tab > header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+}
+.klits-tab > header > .total-mix > h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.klits-tab > header > .total-mix > span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.klits-tab > header > .take-all-button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.klits-tab > header > .take-all-button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.klits-tab > header > .take-all-button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.klits-tab > .klits-list {
+  max-width: 1240px;
+  margin: auto;
+}
+.klits-tab > .klits-list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.klits-tab > .klits-list > .klits-item {
+  float: left;
+  width: 50%;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 799px) {
+  .klits-tab > .klits-list > .klits-item {
+    float: none;
+    width: 100%;
+  }
+}
+.klits-tab > .klits-list > .klits-item > .content {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  align-items: center;
+}
+.klits-tab > .klits-list > .klits-item > .content > .klits {
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  line-height: 1em;
+}
+.klits-tab > .klits-list > .klits-item > .content > .klits > .id {
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  color: white;
+  text-shadow: 3px 3px 3px #656565;
+}
+.klits-tab > .klits-list > .klits-item > .content > .klits > .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #FF00F6;
+  text-shadow: 3px 3px 3px #656565;
+}
+@media only screen and (max-width: 799px) {
+  .klits-tab > .klits-list > .klits-item > .content > .klits {
+    width: 64px;
+    height: 64px;
+    font-size: 14px;
+  }
+}
+.klits-tab > .klits-list > .klits-item > .content > .info {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.klits-tab > .klits-list > .klits-item > .content > .info > h5 {
+  font-size: 1rem;
+}
+.klits-tab > .klits-list > .klits-item > .content > .info > .amount {
+  font-size: 1.5rem;
+}
+.klits-tab > .klits-list > .klits-item > .content > .controller {
+  padding-right: 6px;
+}
+.klits-tab > .klits-list > .klits-item > .content > .controller > .claim-button {
+  height: 44px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.klits-tab > .klits-list > .klits-item > .content > .controller > .claim-button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.klits-tab > .klits-list > .klits-item > .content > .controller > .claim-button:active {
   color: white;
   background-color: black;
 }

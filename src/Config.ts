@@ -25,6 +25,9 @@ export default {
         KlayMIXListeners: "0x781A91157612DF86959e400bCb27FdfeECCe081D",
         KSPMIXListeners: "0x333Ba1e532c95C6731aa305505B24CAD9c13F013",
 
+        KlayMIXLPToken: "0xAe0a2e1DA2469FFdf8308160eE64Fe3656d9D9D0",
+        KSPMIXLPToken: "0xAe0a2e1DA2469FFdf8308160eE64Fe3656d9D9D0",
+
         // partners
         CasesByKate: "",
         CasesByKatePool: "",
@@ -32,7 +35,8 @@ export default {
         AnimalsPunksV2Pool: "",
         PixelCat: "",
         PixelCatPool: "",
-
+        KLITS: "",
+        KLITSPool: "",
     } : {
         Mate: "0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae",
 
@@ -62,5 +66,7 @@ export default {
         AnimalsPunksV2Pool: "0xF1A72599E9c57BfE4B62A09052e14b67B54e3037",
         PixelCat: "0xCE8905B85119928E6c828E5CB4E2a9fd2e128bf9",
         PixelCatPool: "0x4eb6baE0dcf63f52c951ABBCa292F5293C757F93",
+        KLITS: "0x0a412f094c15010bbd413be0fc07b8da26b0b05f",
+        KLITSPool: "0xAB8f0C87d97b2B2E2C99528Ebb265689F6663D31",
     }
 };
