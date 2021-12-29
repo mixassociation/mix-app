@@ -72,11 +72,15 @@ export default class Home implements View {
 
     private async loadPrice() {
         const result = await superagent.get("https://api.dogesound.club/mix/price");
-        this.priceDisplay.empty().appendText(CommonUtil.numberWithCommas(result.text));
+        if (this.container.deleted !== true) {
+            this.priceDisplay.empty().appendText(CommonUtil.numberWithCommas(result.text));
+        }
 
         const pid = await BurnPoolContract.getPoolId();
         const burnable = await MixEmitterContract.pendingMix(pid);
-        this.burnableDisplay.empty().appendText(CommonUtil.numberWithCommas(utils.formatEther(burnable)));
+        if (this.container.deleted !== true) {
+            this.burnableDisplay.empty().appendText(CommonUtil.numberWithCommas(utils.formatEther(burnable)));
+        }
     }
 
     public changeParams(params: ViewParams, uri: string): void { }
