@@ -1808,6 +1808,45 @@ body {
   background-color: #F8FAFB;
   color: #3190FD;
 }
+.burnpool-view {
+  max-width: 1240px;
+  margin: auto;
+  margin-top: 32px;
+  text-align: center;
+}
+.burnpool-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+.burnpool-view > section > .balance {
+  font-size: 2rem;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.burnpool-view > section > .balance > .mix {
+  font-weight: 700;
+}
+.burnpool-view > section > button {
+  width: 392px;
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.burnpool-view > section > button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.burnpool-view > section > button:active {
+  color: white;
+  background-color: #F2780C;
+}
 .mates-tab > header {
   display: flex;
   justify-content: space-between;
