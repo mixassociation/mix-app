@@ -9,6 +9,7 @@ import Home from "./view/Home";
 import Layout from "./view/Layout";
 import Mining from "./view/Mining";
 import BurnPool from "./view/BurnPool";
+import DevFund from "./view/DevFund";
 
 (async () => {
 
@@ -27,6 +28,7 @@ import BurnPool from "./view/BurnPool";
     SkyRouter.route("mining", Mining);
     SkyRouter.route("booth", Booth);
     SkyRouter.route("burnpool", BurnPool);
+    SkyRouter.route("devfund", DevFund);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);

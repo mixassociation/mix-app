@@ -1847,6 +1847,86 @@ body {
   color: white;
   background-color: #F2780C;
 }
+.devfund-view {
+  margin: auto;
+  margin-top: 16px;
+  text-align: center;
+}
+.devfund-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+.devfund-view > section {
+  margin: auto;
+  margin-top: 16px;
+  text-align: center;
+  max-width: 1240px;
+}
+.devfund-view > section > h2 {
+  margin-top: 32px;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+.devfund-view > section > .balance {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+}
+.devfund-view > section > input {
+  max-width: 1240px;
+  width: 100%;
+  height: 44px;
+  background: #F0F0F0;
+  margin-top: 16px;
+  border-radius: 8px;
+  padding: 8px;
+}
+.devfund-view > section > .info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.devfund-view > section > .info > .balance {
+  font-size: 0.875rem;
+}
+.devfund-view > section > .info > a {
+  background-color: transparent;
+  font-weight: 400;
+  color: #3190FD;
+  font-size: 0.75rem;
+}
+.devfund-view > section > .info > a > a:hover {
+  font-weight: 600;
+}
+.devfund-view > section > .warning {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.devfund-view > section > button {
+  max-width: 1240px;
+  width: 100%;
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.devfund-view > section > button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.devfund-view > section > button:active {
+  color: white;
+  background-color: #F2780C;
+}
 .mates-tab > header {
   display: flex;
   justify-content: space-between;
