@@ -4,6 +4,7 @@ import BoothContract from "./contracts/mix/BoothContract";
 import MixContract from "./contracts/mix/MixContract";
 import MixEmitterContract from "./contracts/mix/MixEmitterContract";
 import pools from "./pools.json";
+import Utils from "./Utils";
 
 export interface TotalAssets {
 
@@ -103,8 +104,8 @@ class AssetsCalculator {
                             totalPoolPercent += percent;
                         }
                     } else if (pool.name === "KLITS") {
-                        if (total.klits !== 0) {
-                            poolPercent += assets.klits / total.klits * percent;
+                        if (Utils.undefinedToZero(total.klits) !== 0) {
+                            poolPercent += Utils.undefinedToZero(assets.klits) / Utils.undefinedToZero(total.klits) * percent;
                             totalPoolPercent += percent;
                         }
                     }

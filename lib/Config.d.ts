@@ -17,14 +17,16 @@ declare const _default: {
         MatesListeners: string;
         KlayMIXListeners: string;
         KSPMIXListeners: string;
+        KlayMIXLPToken: string;
+        KSPMIXLPToken: string;
         CasesByKate: string;
         CasesByKatePool: string;
         AnimalsPunksV2: string;
         AnimalsPunksV2Pool: string;
         PixelCat: string;
         PixelCatPool: string;
-        KlayMIXLPToken?: undefined;
-        KSPMIXLPToken?: undefined;
+        KLITS: string;
+        KLITSPool: string;
         Klayswap?: undefined;
         MixPriceEstimator?: undefined;
     } | {
@@ -51,6 +53,8 @@ declare const _default: {
         AnimalsPunksV2Pool: string;
         PixelCat: string;
         PixelCatPool: string;
+        KLITS: string;
+        KLITSPool: string;
     };
 };
 export default _default;

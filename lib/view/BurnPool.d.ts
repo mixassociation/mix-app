@@ -1,11 +1,11 @@
 import { View, ViewParams } from "skyrouter";
-export default class Home implements View {
+export default class BurnPool implements View {
     private container;
-    private priceDisplay;
     private burnableDisplay;
+    private refreshInterval;
     constructor();
-    private loadPrice;
+    private load;
     changeParams(params: ViewParams, uri: string): void;
     close(): void;
 }
-//# sourceMappingURL=Home.d.ts.map
+//# sourceMappingURL=BurnPool.d.ts.map
