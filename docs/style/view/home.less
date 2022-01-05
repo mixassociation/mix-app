@@ -109,36 +109,39 @@
     }
 
     >.overview-container {
-        display         : flex;
-        justify-content : center;
-        text-align      : center;
-        margin          : auto;
         background-color: @shadow-light;
-        min-height      : 100px;
         margin-top      : 32px;
         margin-bottom   : 32px;
 
-        @media @phone {
-            display       : flex;
-            flex-direction: column;
-            min-height    : 140px;
-        }
+        >section {
+            max-width         : 1248px;
+            min-height        : 100px;
+            display           : flex;
+            text-align        : center;
+            margin            : auto;
 
-        >.price-container {
-            display        : flex;
-            justify-content: center;
-            text-align     : center;
-            align-items    : center;
-            margin         : auto;
-
-            >.paragraph {
-                font-size   : @paragraph;
-                margin-right: 16px;
+            @media @phone {
+                display       : flex;
+                flex-direction: column;
+                min-height    : 140px;
             }
 
-            >h4 {
-                font-size  : @headline4;
-                font-weight: 700;
+            >.price-container {
+                display        : flex;
+                justify-content: center;
+                text-align     : center;
+                align-items    : center;
+                margin         : auto;
+
+                >.paragraph {
+                    font-size   : @paragraph;
+                    margin-right: 16px;
+                }
+
+                >h4 {
+                    font-size  : @headline4;
+                    font-weight: 700;
+                }
             }
         }
     }

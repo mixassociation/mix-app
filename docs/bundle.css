@@ -1494,34 +1494,36 @@ body {
   background-color: black;
 }
 .home-view > .overview-container {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
   background-color: #F9F9F9;
-  min-height: 100px;
   margin-top: 32px;
   margin-bottom: 32px;
 }
+.home-view > .overview-container > section {
+  max-width: 1248px;
+  min-height: 100px;
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
 @media only screen and (max-width: 719px) {
-  .home-view > .overview-container {
+  .home-view > .overview-container > section {
     display: flex;
     flex-direction: column;
     min-height: 140px;
   }
 }
-.home-view > .overview-container > .price-container {
+.home-view > .overview-container > section > .price-container {
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
   margin: auto;
 }
-.home-view > .overview-container > .price-container > .paragraph {
+.home-view > .overview-container > section > .price-container > .paragraph {
   font-size: 0.875rem;
   margin-right: 16px;
 }
-.home-view > .overview-container > .price-container > h4 {
+.home-view > .overview-container > section > .price-container > h4 {
   font-size: 1.5rem;
   font-weight: 700;
 }
