@@ -4,6 +4,10 @@
     margin-top: 32px;
     text-align: center;
 
+    @media @phone {
+        margin: 8px;
+    }
+
     >h1 {
         font-size  : @headline1;
         font-weight: 700;
@@ -20,16 +24,16 @@
     }
 
     >.paragraph {
-        font-size  : @paragraph;
-        font-weight: 400;
-        margin-top : 24px;
-        margin-bottom : 24px;
+        font-size    : @paragraph;
+        font-weight  : 400;
+        margin-top   : 24px;
+        margin-bottom: 24px;
     }
 
     >a {
-        font-size  : @headline6;
-        font-weight: 700;
-        color      : @link;
+        font-size      : @headline6;
+        font-weight    : 700;
+        color          : @link;
         text-decoration: none;
     }
 

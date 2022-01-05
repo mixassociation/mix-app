@@ -1601,6 +1601,11 @@ body {
   margin-top: 32px;
   text-align: center;
 }
+@media only screen and (max-width: 719px) {
+  .buy-view {
+    margin: 8px;
+  }
+}
 .buy-view > h1 {
   font-size: 2.8125rem;
   font-weight: 700;
@@ -1721,6 +1726,11 @@ body {
   border-radius: 8px;
   padding: 8px;
 }
+@media only screen and (max-width: 719px) {
+  .booth-view > .form > input {
+    width: 100%;
+  }
+}
 .booth-view > .form > button {
   width: 392px;
   height: 44px;
@@ -1733,6 +1743,11 @@ body {
   font-weight: 700;
   padding: 0px 24px 0px 24px;
   margin-top: 8px;
+}
+@media only screen and (max-width: 719px) {
+  .booth-view > .form > button {
+    width: 100%;
+  }
 }
 .booth-view > .form > button:hover {
   color: white;
@@ -1748,6 +1763,13 @@ body {
   justify-content: space-between;
   margin-top: 8px;
   font-size: 0.75rem;
+}
+@media only screen and (max-width: 719px) {
+  .booth-view > .form > .container {
+    width: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 .booth-view > .form > .container > .caption {
   display: flex;
@@ -1767,7 +1789,7 @@ body {
 }
 .mining-view {
   margin: auto;
-  margin-top: 32px;
+  margin-top: 16px;
   text-align: center;
 }
 .mining-view > h1 {
@@ -1779,14 +1801,21 @@ body {
   font-weight: 400;
   margin-top: 8px;
 }
-.mining-view > .ribbon {
+@media only screen and (max-width: 719px) {
+  .mining-view > .paragraph {
+    margin: 8px;
+  }
+}
+.mining-view > .text-container {
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: #F9F9F9;
   font-size: 0.875rem;
-  color: black;
-  padding: 12px;
+  font-weight: 400;
+  height: 100px;
   margin-top: 16px;
+  margin-bottom: 16px;
 }
 .mining-view > .tabs {
   display: flex;
@@ -1796,6 +1825,7 @@ body {
   font-weight: 400;
   margin-top: 16px;
   margin-bottom: 16px;
+  overflow-y: scroll;
 }
 .mining-view > .tabs > a {
   font-size: 1rem;
@@ -1813,6 +1843,11 @@ body {
   margin: auto;
   margin-top: 32px;
   text-align: center;
+}
+@media only screen and (max-width: 719px) {
+  .burnpool-view {
+    margin: 8px;
+  }
 }
 .burnpool-view > h1 {
   font-size: 2.8125rem;
@@ -1839,6 +1874,11 @@ body {
   padding: 0px 24px 0px 24px;
   margin-top: 8px;
 }
+@media only screen and (max-width: 719px) {
+  .burnpool-view > section > button {
+    width: 100%;
+  }
+}
 .burnpool-view > section > button:hover {
   color: white;
   background-color: rgba(242, 120, 12, 0.8);
@@ -1852,25 +1892,30 @@ body {
   margin-top: 16px;
   text-align: center;
 }
-.burn-view > h1 {
+@media only screen and (max-width: 719px) {
+  .burn-view > section {
+    margin: 8px;
+  }
+}
+.burn-view > section > h1 {
   font-size: 2.8125rem;
   font-weight: 700;
 }
-.burn-view > h2 {
+.burn-view > section > h2 {
   font-size: 2.25rem;
   font-weight: 700;
 }
-.burn-view > .paragraph {
+.burn-view > section > .paragraph {
   font-size: 0.875rem;
   font-weight: 400;
   margin-top: 16px;
 }
-.burn-view > .form {
+.burn-view > section > .form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.burn-view > .form > input {
+.burn-view > section > .form > input {
   width: 392px;
   height: 44px;
   background: #F0F0F0;
@@ -1878,7 +1923,12 @@ body {
   border-radius: 8px;
   padding: 8px;
 }
-.burn-view > .form > button {
+@media only screen and (max-width: 719px) {
+  .burn-view > section > .form > input {
+    width: 100%;
+  }
+}
+.burn-view > section > .form > button {
   width: 392px;
   height: 44px;
   border: 1px solid #F2780C;
@@ -1891,35 +1941,45 @@ body {
   padding: 0px 24px 0px 24px;
   margin-top: 8px;
 }
-.burn-view > .form > button:hover {
+@media only screen and (max-width: 719px) {
+  .burn-view > section > .form > button {
+    width: 100%;
+  }
+}
+.burn-view > section > .form > button:hover {
   color: white;
   background-color: rgba(242, 120, 12, 0.8);
 }
-.burn-view > .form > button:active {
+.burn-view > section > .form > button:active {
   color: white;
   background-color: #F2780C;
 }
-.burn-view > .form > .container {
+.burn-view > section > .form > .container {
   width: 392px;
   display: flex;
   justify-content: space-between;
   margin-top: 8px;
   font-size: 0.75rem;
 }
-.burn-view > .form > .container > .caption {
+@media only screen and (max-width: 719px) {
+  .burn-view > section > .form > .container {
+    width: 100%;
+  }
+}
+.burn-view > section > .form > .container > .caption {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.burn-view > .form > .container > .caption > img {
+.burn-view > section > .form > .container > .caption > img {
   margin-right: 4px;
 }
-.burn-view > .form > .container > .max-btn {
+.burn-view > section > .form > .container > .max-btn {
   background-color: transparent;
   font-weight: 400;
   color: #3190FD;
 }
-.burn-view > .form > .container > .max-btn:hover {
+.burn-view > section > .form > .container > .max-btn:hover {
   font-weight: 600;
 }
 .burn-view > .text-container {
@@ -1938,9 +1998,25 @@ body {
   margin-top: 16px;
   text-align: center;
 }
+@media only screen and (max-width: 719px) {
+  .devfund-view {
+    margin: 8px;
+  }
+}
 .devfund-view > h1 {
   font-size: 2.8125rem;
   font-weight: 700;
+}
+.devfund-view > .text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F9F9F9;
+  font-size: 0.875rem;
+  font-weight: 400;
+  height: 100px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 .devfund-view > section {
   margin: auto;
@@ -1950,7 +2026,7 @@ body {
 }
 .devfund-view > section > h2 {
   margin-top: 32px;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .devfund-view > section > .balance {
@@ -1959,20 +2035,33 @@ body {
   font-size: 1.25rem;
 }
 .devfund-view > section > input {
-  max-width: 1240px;
-  width: 100%;
+  width: 392px;
   height: 44px;
   background: #F0F0F0;
   margin-top: 16px;
   border-radius: 8px;
   padding: 8px;
 }
+@media only screen and (max-width: 719px) {
+  .devfund-view > section > input {
+    width: 100%;
+  }
+}
 .devfund-view > section > .info {
+  width: 392px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
   margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+@media only screen and (max-width: 719px) {
+  .devfund-view > section > .info {
+    width: 100%;
+  }
 }
 .devfund-view > section > .info > .balance {
   font-size: 0.875rem;
@@ -1986,14 +2075,8 @@ body {
 .devfund-view > section > .info > a > a:hover {
   font-weight: 600;
 }
-.devfund-view > section > .warning {
-  font-size: 0.875rem;
-  font-weight: 400;
-  margin-top: 8px;
-}
 .devfund-view > section > button {
-  max-width: 1240px;
-  width: 100%;
+  width: 392px;
   height: 44px;
   border: 1px solid #F2780C;
   box-sizing: border-box;
@@ -2005,6 +2088,11 @@ body {
   padding: 0px 24px 0px 24px;
   margin-top: 8px;
 }
+@media only screen and (max-width: 719px) {
+  .devfund-view > section > button {
+    width: 100%;
+  }
+}
 .devfund-view > section > button:hover {
   color: white;
   background-color: rgba(242, 120, 12, 0.8);
@@ -2012,6 +2100,11 @@ body {
 .devfund-view > section > button:active {
   color: white;
   background-color: #F2780C;
+}
+@media only screen and (max-width: 719px) {
+  .mates-tab {
+    margin: 8px;
+  }
 }
 .mates-tab > header {
   display: flex;
@@ -2142,6 +2235,11 @@ body {
   color: white;
   background-color: black;
 }
+@media only screen and (max-width: 719px) {
+  .cases-by-kate-tab {
+    margin: 8px;
+  }
+}
 .cases-by-kate-tab > header {
   display: flex;
   justify-content: space-between;
@@ -2270,6 +2368,11 @@ body {
 .cases-by-kate-tab > .case-list > .case-item > .content > .controller > .claim-button:active {
   color: white;
   background-color: black;
+}
+@media only screen and (max-width: 719px) {
+  .animals-punks-v2-tab {
+    margin: 8px;
+  }
 }
 .animals-punks-v2-tab > header {
   display: flex;
@@ -2400,6 +2503,11 @@ body {
   color: white;
   background-color: black;
 }
+@media only screen and (max-width: 719px) {
+  .pixel-cat-tab {
+    margin: 8px;
+  }
+}
 .pixel-cat-tab > header {
   display: flex;
   justify-content: space-between;
@@ -2527,6 +2635,11 @@ body {
 .pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .controller > .claim-button:active {
   color: white;
   background-color: black;
+}
+@media only screen and (max-width: 719px) {
+  .klits-tab {
+    margin: 8px;
+  }
 }
 .klits-tab > header {
   display: flex;

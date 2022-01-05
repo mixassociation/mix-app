@@ -18,7 +18,7 @@ export default class Mining implements View {
             this.container = el(".mining-view",
                 el("h1", "MIX 채굴"),
                 el(".paragraph", "아래 NFT를 보유하고 있으면 MIX를 분배받게 됩니다.\nNFT 홀더들은 쌓여진 MIX를 인출하기 위해 쌓여진 MIX 수량의 10%를 선납해야합니다.\n이를 통해 MIX의 유통량이 늘어납니다."),
-                el(".ribbon", "* MIX 받기에는 2번의 트랜잭션이 발생합니다. 한번은 토큰 사용 허락을 위한 것이며, 다른 하나는 실제로 받기 위한 것입니다."),
+                el(".text-container", "* MIX 받기에는 2번의 트랜잭션이 발생합니다. 한번은 토큰 사용 허락을 위한 것이며, 다른 하나는 실제로 받기 위한 것입니다."),
                 el(".tabs",
                     el("a", "Mates", {
                         click: () => {

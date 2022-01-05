@@ -3,9 +3,25 @@
     margin-top: 16px;
     text-align: center;
 
+    @media @phone {
+        margin: 8px;
+    }
+
     >h1 {
         font-size  : @headline1;
         font-weight: 700;
+    }
+
+    >.text-container {
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        background-color: @shadow-light;
+        font-size       : @paragraph;
+        font-weight     : 400;
+        height          : 100px;
+        margin-top      : 16px;
+        margin-bottom   : 16px;
     }
 
     >section {
@@ -16,7 +32,7 @@
 
         >h2 {
             margin-top : 32px;
-            font-size  : @headline2;
+            font-size  : @headline4;
             font-weight: 700;
         }
 
@@ -27,8 +43,11 @@
         }
 
         >input {
-            max-width    : 1240px;
-            width        : 100%;
+            @media @phone {
+                width: 100%;
+            }
+
+            width        : 392px;
             height       : 44px;
             background   : #F0F0F0;
             margin-top   : 16px;
@@ -37,11 +56,19 @@
         }
 
         >.info {
+            @media @phone {
+                width: 100%;
+            }
+
+            width          : 392px;
             display        : flex;
             flex-direction : row;
             align-items    : center;
             justify-content: space-between;
+            margin         : auto;
             margin-top     : 8px;
+            margin-bottom  : 8px;
+            text-align     : center;
 
             >.balance {
                 font-size: @paragraph;
@@ -59,15 +86,12 @@
             }
         }
 
-        >.warning {
-            font-size  : @paragraph;
-            font-weight: 400;
-            margin-top : 8px;
-        }
-
         >button {
-            max-width       : 1240px;
-            width           : 100%;
+            @media @phone {
+                width: 100%;
+            }
+
+            width           : 392px;
             height          : 44px;
             border          : 1px solid @brand-primary;
             box-sizing      : border-box;

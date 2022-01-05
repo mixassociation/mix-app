@@ -103,6 +103,10 @@
         align-items   : center;
 
         >input {
+            @media @phone {
+                width: 100%;
+            }
+
             width        : 392px;
             height       : 44px;
             background   : #F0F0F0;
@@ -112,6 +116,10 @@
         }
 
         >button {
+            @media @phone {
+                width: 100%;
+            }
+
             width           : 392px;
             height          : 44px;
             border          : 1px solid @brand-primary;
@@ -136,6 +144,12 @@
         }
 
         >.container {
+            @media @phone {
+                width         : 100%;
+                padding-left  : 8px;
+                padding-right: 8px;
+            }
+
             width          : 392px;
             display        : flex;
             justify-content: space-between;

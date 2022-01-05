@@ -3,85 +3,103 @@
     margin-top: 16px;
     text-align: center;
 
-    >h1 {
-        font-size  : @headline1;
-        font-weight: 700;
-    }
-
-    >h2 {
-        font-size  : @headline2;
-        font-weight: 700;
-    }
-
-    >.paragraph {
-        font-size  : @paragraph;
-        font-weight: 400;
-        margin-top : 16px;
-    }
-
-    >.form {
-        display       : flex;
-        flex-direction: column;
-        align-items   : center;
-
-        >input {
-            width        : 392px;
-            height       : 44px;
-            background   : #F0F0F0;
-            margin-top   : 16px;
-            border-radius: 8px;
-            padding      : 8px;
+    >section {
+        @media @phone {
+            margin: 8px;
         }
 
-        >button {
-            width           : 392px;
-            height          : 44px;
-            border          : 1px solid @brand-primary;
-            box-sizing      : border-box;
-            border-radius   : 4px;
-            background-color: white;
-            color           : @brand-primary;
-            font-size       : @headline5;
-            font-weight     : 700;
-            padding         : 0px 24px 0px 24px;
-            margin-top      : 8px;
+        >h1 {
+            font-size  : @headline1;
+            font-weight: 700;
         }
 
-        >button:hover {
-            color           : white;
-            background-color: rgba(242, 120, 12, 0.8);
+        >h2 {
+            font-size  : @headline2;
+            font-weight: 700;
         }
 
-        >button:active {
-            color           : white;
-            background-color: @brand-primary;
+        >.paragraph {
+            font-size  : @paragraph;
+            font-weight: 400;
+            margin-top : 16px;
         }
 
-        >.container {
-            width          : 392px;
-            display        : flex;
-            justify-content: space-between;
-            margin-top     : 8px;
-            font-size      : @caption;
+        >.form {
+            display       : flex;
+            flex-direction: column;
+            align-items   : center;
 
-            >.caption {
-                display        : flex;
-                align-items    : center;
-                justify-content: center;
-
-                >img {
-                    margin-right: 4px;
+            >input {
+                @media @phone {
+                    width: 100%;
                 }
+
+                width        : 392px;
+                height       : 44px;
+                background   : #F0F0F0;
+                margin-top   : 16px;
+                border-radius: 8px;
+                padding      : 8px;
             }
 
-            >.max-btn {
-                background-color: transparent;
-                font-weight     : 400;
-                color           : @link;
+            >button {
+                @media @phone {
+                    width: 100%;
+                }
+
+                width           : 392px;
+                height          : 44px;
+                border          : 1px solid @brand-primary;
+                box-sizing      : border-box;
+                border-radius   : 4px;
+                background-color: white;
+                color           : @brand-primary;
+                font-size       : @headline5;
+                font-weight     : 700;
+                padding         : 0px 24px 0px 24px;
+                margin-top      : 8px;
             }
 
-            >.max-btn:hover {
-                font-weight: 600;
+            >button:hover {
+                color           : white;
+                background-color: rgba(242, 120, 12, 0.8);
+            }
+
+            >button:active {
+                color           : white;
+                background-color: @brand-primary;
+            }
+
+            >.container {
+                @media @phone {
+                    width: 100%;
+                }
+
+                width          : 392px;
+                display        : flex;
+                justify-content: space-between;
+                margin-top     : 8px;
+                font-size      : @caption;
+
+                >.caption {
+                    display        : flex;
+                    align-items    : center;
+                    justify-content: center;
+
+                    >img {
+                        margin-right: 4px;
+                    }
+                }
+
+                >.max-btn {
+                    background-color: transparent;
+                    font-weight     : 400;
+                    color           : @link;
+                }
+
+                >.max-btn:hover {
+                    font-weight: 600;
+                }
             }
         }
     }

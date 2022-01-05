@@ -4,6 +4,10 @@
     margin-top: 32px;
     text-align: center;
 
+    @media @phone {
+        margin: 8px;
+    }
+
     >h1 {
         font-size  : @headline1;
         font-weight: 700;
@@ -21,6 +25,10 @@
         }
 
         >button {
+            @media @phone {
+                width: 100%;
+            }
+
             width           : 392px;
             height          : 44px;
             border          : 1px solid @brand-primary;

@@ -1,6 +1,6 @@
 .mining-view {
     margin    : auto;
-    margin-top: 32px;
+    margin-top: 16px;
     text-align: center;
 
     >h1 {
@@ -12,16 +12,22 @@
         font-size  : @paragraph;
         font-weight: 400;
         margin-top : 8px;
+
+        @media @phone {
+            margin: 8px;
+        }
     }
 
-    >.ribbon {
+    >.text-container {
         display         : flex;
+        align-items     : center;
         justify-content : center;
         background-color: @shadow-light;
         font-size       : @paragraph;
-        color           : black;
-        padding         : 12px;
+        font-weight     : 400;
+        height          : 100px;
         margin-top      : 16px;
+        margin-bottom   : 16px;
     }
 
     >.tabs {
@@ -32,6 +38,7 @@
         font-weight    : 400;
         margin-top     : 16px;
         margin-bottom  : 16px;
+        overflow-y     : scroll;
 
         >a {
             font-size       : @headline6;
