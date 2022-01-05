@@ -3,6 +3,10 @@
         {
             "uri": "governance",
             "name": "거버넌스"
+        },
+        {
+            "uri": "burn",
+            "name": "소각"
         }
     ]
 }

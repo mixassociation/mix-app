@@ -21,7 +21,7 @@ export default class Home implements View {
         Layout.current.content.append(
             (this.container = el(".home-view",
                 el(".ribbon",
-                    "거버넌스를 제외한 다른 페이지들은 작업중입니다. 거버넌스 도입이 시급하여 거버넌스 페이지만을 오픈한 상태입니다.",
+                    "안정적인 기능을 위해 순차적인 테스트 후 페이지 업데이트가 진행되고 있습니다.",
                 ),
                 el("img.mix", { src: "/images/logo/mix.svg", height: "72px" }),
                 el("h1", "NFT 프로젝트 허브를 위한 토큰"),
