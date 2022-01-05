@@ -102,7 +102,7 @@ export default class Booth implements View {
                                 }
                             },
                         })),
-                    el("button", "예치하기", {
+                    el("button", "해제하기", {
                         click: async () => {
                             await BoothContract.unstake(utils.parseEther(this.unstakeInput.domElement.value));
                             ViewUtil.waitTransactionAndRefresh();

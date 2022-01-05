@@ -13,6 +13,7 @@ export default class Home implements View {
 
     private container: DomNode;
     private priceDisplay: DomNode;
+    private poolDisplay: DomNode;
     private burnableDisplay: DomNode;
 
     constructor() {
@@ -38,7 +39,9 @@ export default class Home implements View {
                     el(".price-container", el(".paragraph", "1믹스 가격"),
                         this.priceDisplay = el("h4", new Loading()),
                         el("h4", "원")),
-                    el(".price-container", el(".paragraph", "믹스 발행량"), el("h4", "...MIX")),
+                    el(".price-container", el(".paragraph", "믹스 발행량"),
+                        this.poolDisplay = el("h4", new Loading()),
+                        el("h4", "MIX")),
                     el(".price-container",
                         el(".paragraph", "믹스 소각풀"),
                         this.burnableDisplay = el("h4", new Loading()),
@@ -81,6 +84,8 @@ export default class Home implements View {
         if (this.container.deleted !== true) {
             this.burnableDisplay.empty().appendText(CommonUtil.numberWithCommas(utils.formatEther(burnable)));
         }
+
+        this.poolDisplay.empty().appendText("...");
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

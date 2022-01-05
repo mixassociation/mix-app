@@ -14,6 +14,10 @@ class MixEmitterContract extends Contract {
         super(Config.contracts.MixEmitter, require("./MixEmitterContractABI.json"));
     }
 
+    public async totalAllocPoint(): Promise<BigNumber> {
+        return BigNumber.from(await this.runMethod("totalAllocPoint"));
+    }
+
     public async poolCount(): Promise<BigNumber> {
         return BigNumber.from(await this.runMethod("poolCount"));
     }
