@@ -1554,6 +1554,7 @@ body {
 @media only screen and (max-width: 719px) {
   .home-view > .pool-container > .pool-card-left {
     margin: 16px 0px;
+    padding: 16px;
   }
 }
 .home-view > .pool-container > .pool-card-left > h3 {
@@ -1582,6 +1583,7 @@ body {
 @media only screen and (max-width: 719px) {
   .home-view > .pool-container > .pool-card-right {
     margin: 16px 0px;
+    padding: 16px;
   }
 }
 .home-view > .pool-container > .pool-card-right > h3 {
