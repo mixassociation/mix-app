@@ -5,6 +5,8 @@ import superagent from "superagent";
 import CommonUtil from "../CommonUtil";
 import BurnPoolContract from "../contracts/mix/BurnPoolContract";
 import MixEmitterContract from "../contracts/mix/MixEmitterContract";
+import MixContract from "../contracts/mix/MixContract";
+import Wallet from "../klaytn/Wallet";
 import Loading from "../component/loading/Loading";
 import Layout from "./Layout";
 import ViewUtil from "./ViewUtil";
@@ -38,6 +40,14 @@ export default class Home implements View {
                     }),
                 ),
                 el(".paragraph", "MIX는 NFT 프로젝트들의 허브를 위한 토큰입니다.\nDSC 사이트의 전 범위에서 사용되며, Klayswap에서 유동성 공급 및 거래에 사용될 예정입니다.\n또한 MIX를 활용한 기능을 추가하기로 약속한 파트너 프로젝트의 서비스에서도 사용될 예정입니다."),
+                el("a.add-mix", "MIX 지갑에 추가하기", {
+                    click: () => Wallet.addToken(
+                        MixContract.address,
+                        "MIX",
+                        8,
+                        "https://avatars.githubusercontent.com/u/94335451?s=200&v=4"
+                    ),
+                }),
                 el(".overview-container",
                     el("section",
                         el("a.price-container", { href: "https://dexata.kr/?tokenA=0xdd483a970a7a7fef2b223c3510fac852799a88bf&tokenB=", target: "_blank" },
@@ -47,7 +57,7 @@ export default class Home implements View {
                         el(".price-container", el(".paragraph", "믹스 발행량"),
                             this.poolDisplay = el("h4", new Loading()),
                             el("h4", "MIX")),
-                        el("a.price-container", { click: () => {ViewUtil.go("burn")} },
+                        el("a.price-container", { click: () => { ViewUtil.go("burn") } },
                             el(".paragraph", "믹스 소각풀"),
                             this.burnableDisplay = el("h4", new Loading()),
                             el("h4", "MIX")),

@@ -24,7 +24,7 @@
             font-size   : @headline1;
             margin-left : 8px;
             margin-right: 8px;
-            line-height: 4rem;
+            line-height : 4rem;
         }
     }
 
@@ -39,7 +39,8 @@
     }
 
     >.paragraph {
-        font-size: @paragraph;
+        font-size    : @paragraph;
+        margin-bottom: 16px;
 
         @media @phone {
             margin-left : 8px;
@@ -109,6 +110,17 @@
             color           : white;
             background-color: black;
         }
+    }
+
+    >.add-mix {
+        font-size      : @headline6;
+        font-weight    : 700;
+        color          : @link;
+        text-decoration: none;
+    }
+
+    >.add-mix:hover {
+        text-decoration: underline;
     }
 
     >.overview-container {
