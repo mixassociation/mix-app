@@ -30,14 +30,30 @@
         margin-bottom: 24px;
     }
 
-    >a {
-        font-size      : @headline6;
-        font-weight    : 700;
-        color          : @link;
-        text-decoration: none;
-    }
+    >.link-container {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        margin         : auto;
 
-    >a:hover {
-        text-decoration: underline;
+        >a {
+            margin         : 8px;
+            font-size      : @headline6;
+            font-weight    : 700;
+            color          : @link;
+            text-decoration: none;
+        }
+
+        >a:hover {
+            text-decoration: underline;
+        }
+
+        .add-mix {
+            margin         : 8px;
+            font-size      : @headline6;
+            font-weight    : 700;
+            color          : black;
+            text-decoration: none;
+        }
     }
 }

@@ -1391,6 +1391,7 @@ body {
 }
 .home-view {
   text-align: center;
+  line-height: 1.4rem;
 }
 .home-view > .ribbon {
   display: flex;
@@ -1413,10 +1414,11 @@ body {
     font-size: 2.8125rem;
     margin-left: 8px;
     margin-right: 8px;
+    line-height: 4rem;
   }
 }
 .home-view > h2 {
-  margin-top: 32px;
+  margin-top: 64px;
   font-size: 2.25rem;
   font-weight: 700;
 }
@@ -1479,6 +1481,7 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   padding: 0px 24px 0px 24px;
+  margin-right: 64px;
 }
 @media only screen and (max-width: 719px) {
   .home-view > .button-container > .white-paper-btn {
@@ -1567,7 +1570,7 @@ body {
 .home-view > .pool-container > .pool-card-left > .paragraph {
   max-width: 392px;
   font-size: 0.875rem;
-  padding-top: 8px;
+  padding-top: 16px;
   padding-bottom: 16px;
 }
 .home-view > .pool-container > .pool-card-right {
@@ -1596,7 +1599,7 @@ body {
 .home-view > .pool-container > .pool-card-right > .paragraph {
   max-width: 392px;
   font-size: 0.875rem;
-  padding-top: 8px;
+  padding-top: 16px;
   padding-bottom: 16px;
 }
 .buy-view {
@@ -1628,14 +1631,28 @@ body {
   margin-top: 24px;
   margin-bottom: 24px;
 }
-.buy-view > a {
+.buy-view > .link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+.buy-view > .link-container > a {
+  margin: 8px;
   font-size: 1rem;
   font-weight: 700;
   color: #3190FD;
   text-decoration: none;
 }
-.buy-view > a:hover {
+.buy-view > .link-container > a:hover {
   text-decoration: underline;
+}
+.buy-view > .link-container .add-mix {
+  margin: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
 }
 .booth-view {
   margin: auto;
