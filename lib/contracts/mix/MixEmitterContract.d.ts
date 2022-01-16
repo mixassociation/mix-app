@@ -7,6 +7,7 @@ export interface PoolInfo {
 }
 declare class MixEmitterContract extends Contract {
     constructor();
+    totalAllocPoint(): Promise<BigNumber>;
     poolCount(): Promise<BigNumber>;
     pendingMix(pid: BigNumberish): Promise<BigNumber>;
     poolInfo(pid: BigNumberish): Promise<PoolInfo>;

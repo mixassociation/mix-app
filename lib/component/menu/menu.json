@@ -1,8 +1,15 @@
 {
-    "menu": [
-        {
+    "menu": [{
             "uri": "governance",
             "name": "거버넌스"
+        },
+        {
+            "uri": "mining",
+            "name": "NFT 채굴"
+        },
+        {
+            "uri": "burn",
+            "name": "소각"
         }
     ]
 }

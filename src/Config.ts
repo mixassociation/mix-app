@@ -24,9 +24,14 @@ export default {
         MatesListeners: "0x03E0545C837BFa5Ab9A1F950c54784ee5F0EB53D",
         KlayMIXListeners: "0x781A91157612DF86959e400bCb27FdfeECCe081D",
         KSPMIXListeners: "0x333Ba1e532c95C6731aa305505B24CAD9c13F013",
+        KlayMIXListenersV2: "",
+        KSPMIXListenersV2: "",
 
         KlayMIXLPToken: "0xAe0a2e1DA2469FFdf8308160eE64Fe3656d9D9D0",
         KSPMIXLPToken: "0xAe0a2e1DA2469FFdf8308160eE64Fe3656d9D9D0",
+
+        Klayswap: "",
+        MixPriceEstimator: "",
 
         // partners
         CasesByKate: "",
@@ -37,6 +42,8 @@ export default {
         PixelCatPool: "",
         KLITS: "",
         KLITSPool: "",
+        Cryptorus: "",
+        CryptorusPool: "",
     } : {
         Mate: "0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae",
 
@@ -52,6 +59,8 @@ export default {
         MatesListeners: "0x97245cDC80F1Ca50CD59f37030cdA00805A2dc54",
         KlayMIXListeners: "0xe5C799A39450F1FFCaDf768b229DB9e13F23bb5E",
         KSPMIXListeners: "0x1D3bC75B6D33C5b5DE7D734686bb5404C6454a4d",
+        KlayMIXListenersV2: "0xBeE6480d1A82C29938923B4e4e59C89f4aFFE1Ac",
+        KSPMIXListenersV2: "0xF28C1be4129f795593071EC9A39Dfc3De602CDd5",
 
         KlayMIXLPToken: "0xa50cec0216c1cee6f90c7d5359444d46315279bd",
         KSPMIXLPToken: "0xade6684a81a205e4bfc544b51cca448c458c0961",
@@ -62,11 +71,17 @@ export default {
         // partners
         CasesByKate: "0x0af3f3fe9e822b7a740ca45ce170340b2da6f4cc",
         CasesByKatePool: "0xAF7ca190179d54860484f0A3263e0B7E8B13b9C7",
+
         AnimalsPunksV2: "0x590744cb8cf1a698d7db509b52bf209e3cccb8e0",
         AnimalsPunksV2Pool: "0xF1A72599E9c57BfE4B62A09052e14b67B54e3037",
+
         PixelCat: "0xCE8905B85119928E6c828E5CB4E2a9fd2e128bf9",
         PixelCatPool: "0x4eb6baE0dcf63f52c951ABBCa292F5293C757F93",
+
         KLITS: "0x0a412f094c15010bbd413be0fc07b8da26b0b05f",
         KLITSPool: "0xAB8f0C87d97b2B2E2C99528Ebb265689F6663D31",
+
+        Cryptorus: "0x4e12759360777cac29bb72494baf034da685bed8",
+        CryptorusPool: "0x0709B98Cdf42D2de2f1E787fB8952131b4B31BCE",
     }
 };

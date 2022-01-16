@@ -2617,7 +2617,8 @@ body {
   position: absolute;
   left: 3px;
   bottom: 0;
-  font-family: DungGeunMo;
+  color: white;
+  text-shadow: 3px 3px 3px #656565;
 }
 .pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .pixel-cat > .name {
   position: absolute;
@@ -2664,6 +2665,140 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .pixel-cat-tab > .pixel-cat-list > .pixel-cat-item > .content > .controller > .claim-button:active {
+  color: white;
+  background-color: black;
+}
+@media only screen and (max-width: 719px) {
+  .cryptorus-tab {
+    margin: 8px;
+  }
+}
+.cryptorus-tab > header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+}
+.cryptorus-tab > header > .total-mix > h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.cryptorus-tab > header > .total-mix > span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.cryptorus-tab > header > .take-all-button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.cryptorus-tab > header > .take-all-button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.cryptorus-tab > header > .take-all-button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.cryptorus-tab > .cryptorus-list {
+  max-width: 1240px;
+  margin: auto;
+}
+.cryptorus-tab > .cryptorus-list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item {
+  float: left;
+  width: 50%;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-top: 16px;
+}
+@media only screen and (max-width: 799px) {
+  .cryptorus-tab > .cryptorus-list > .cryptorus-item {
+    float: none;
+    width: 100%;
+  }
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item > .content {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  align-items: center;
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item > .content > .cryptorus {
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  line-height: 1em;
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item > .content > .cryptorus > .id {
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  color: white;
+  text-shadow: 3px 3px 3px #656565;
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item > .content > .cryptorus > .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #FF00F6;
+  text-shadow: 3px 3px 3px #656565;
+}
+@media only screen and (max-width: 799px) {
+  .cryptorus-tab > .cryptorus-list > .cryptorus-item > .content > .cryptorus {
+    width: 64px;
+    height: 64px;
+    font-size: 14px;
+  }
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item > .content > .info {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item > .content > .info > h5 {
+  font-size: 1rem;
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item > .content > .info > .amount {
+  font-size: 1.5rem;
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item > .content > .controller {
+  padding-right: 6px;
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item > .content > .controller > .claim-button {
+  height: 44px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item > .content > .controller > .claim-button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.cryptorus-tab > .cryptorus-list > .cryptorus-item > .content > .controller > .claim-button:active {
   color: white;
   background-color: black;
 }

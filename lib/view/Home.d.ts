@@ -2,6 +2,7 @@ import { View, ViewParams } from "skyrouter";
 export default class Home implements View {
     private container;
     private priceDisplay;
+    private poolDisplay;
     private burnableDisplay;
     constructor();
     private loadPrice;
