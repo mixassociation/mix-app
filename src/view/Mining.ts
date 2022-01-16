@@ -46,7 +46,7 @@ export default class Mining implements View {
                             this.tabContainer.empty().append(new KLITSTab());
                         },
                     }),
-                    el("a", "Cryptorus", {
+                    el("a", "Cryptorus Land", {
                         click: () => {
                             this.tabContainer.empty().append(new CryptorusTab());
                         },
