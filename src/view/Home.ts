@@ -44,7 +44,7 @@ export default class Home implements View {
                     click: () => Wallet.addToken(
                         MixContract.address,
                         "MIX",
-                        8,
+                        18,
                         "https://avatars.githubusercontent.com/u/94335451?s=200&v=4"
                     ),
                 }),
