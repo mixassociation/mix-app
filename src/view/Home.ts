@@ -99,9 +99,8 @@ export default class Home implements View {
         const burnable = await MixEmitterContract.pendingMix(pid);
         if (this.container.deleted !== true) {
             this.burnableDisplay.empty().appendText(CommonUtil.numberWithCommas(utils.formatEther(burnable)));
+            this.poolDisplay.empty().appendText("...");
         }
-
-        this.poolDisplay.empty().appendText("...");
     }
 
     public changeParams(params: ViewParams, uri: string): void { }
