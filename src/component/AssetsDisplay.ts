@@ -21,6 +21,7 @@ export default class AssetsDisplay extends DomNode {
                 el(".asset.apunks", el("h6", "Animals Punks V2 개수"), el("span", String(assets.apunks))),
                 el(".asset.pixelcats", el("h6", "Pixel Cats 개수"), el("span", String(assets.pixelcats))),
                 el(".asset.klits", el("h6", "KLITS 개수"), el("span", String(Utils.undefinedToZero(assets.klits)))),
+                el(".asset.cryptorus", el("h6", "Cryptorus Land 개수"), el("span", String(Utils.undefinedToZero(assets.cryptorus)))),
 
                 el(".asset.klaylp", el("h6", "Klay-MIX LP 토큰 총 수량"), el("span", utils.formatEther(assets.klaylp))),
                 el(".asset.ksplp", el("h6", "KSP-MIX LP 토큰 총 수량"), el("span", utils.formatEther(assets.ksplp))),

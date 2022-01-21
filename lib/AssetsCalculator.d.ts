@@ -10,6 +10,7 @@ export interface TotalAssets {
     apunks: number;
     pixelcats: number;
     klits: number;
+    cryptorus: number;
 }
 declare class AssetsCalculator {
     private mixsetToMix;

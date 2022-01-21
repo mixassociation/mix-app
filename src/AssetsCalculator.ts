@@ -20,6 +20,7 @@ export interface TotalAssets {
     apunks: number,
     pixelcats: number,
     klits: number,
+    cryptorus: number,
 }
 
 class AssetsCalculator {
@@ -106,6 +107,11 @@ class AssetsCalculator {
                     } else if (pool.name === "KLITS") {
                         if (Utils.undefinedToZero(total.klits) !== 0) {
                             poolPercent += Utils.undefinedToZero(assets.klits) / Utils.undefinedToZero(total.klits) * percent;
+                            totalPoolPercent += percent;
+                        }
+                    } else if (pool.name === "Cryptorus") {
+                        if (Utils.undefinedToZero(total.cryptorus) !== 0) {
+                            poolPercent += Utils.undefinedToZero(assets.cryptorus) / Utils.undefinedToZero(total.cryptorus) * percent;
                             totalPoolPercent += percent;
                         }
                     }

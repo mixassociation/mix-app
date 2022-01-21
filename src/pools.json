@@ -55,6 +55,10 @@
         "name": "KLITS",
         "color": "#f55442"
     },
+    "0x0709B98Cdf42D2de2f1E787fB8952131b4B31BCE": {
+        "name": "Cryptorus",
+        "color": "#05BAAD"
+    },
     "0x43793E818aC2ba1De69C279d571D3e8d7d9Bfb15": {
         "name": "Testnet: Dev Fund",
         "color": "#333333"
