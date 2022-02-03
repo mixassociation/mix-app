@@ -1,0 +1,221 @@
+.turntable-detail-view {
+    max-width: 780px;
+    padding  : 135px 20px;
+    margin   : auto;
+
+    @media @phone {
+        padding: 90px 20px;
+    }
+
+    >h1 {
+        font-size     : @headline1;
+        font-weight   : 700;
+        text-shadow   : 3px 3px 3px #656565;
+        margin-bottom : 30px;
+        text-align    : center;
+        text-transform: uppercase;
+    }
+
+    >.info {
+        >img {
+            width  : 320px;
+            display: block;
+            margin : auto;
+        }
+
+        >.volume {
+            font-size : 20px;
+            text-align: center;
+        }
+
+        >.video {
+            margin-top: 50px;
+            width     : 100%;
+        }
+
+        >p {
+            margin     : 30px 0;
+            font-size  : @paragraph;
+            font-weight: 400;
+            margin-top : 8px;
+        }
+
+        >.social {
+            font-size  : @paragraph;
+            font-weight: 400;
+            margin-top : 8px;
+        }
+
+        >.owner {
+            font-size  : @paragraph;
+            font-weight: 400;
+            margin-top : 8px;
+        }
+
+        >.lifetime {
+            font-size  : @paragraph;
+            font-weight: 400;
+            margin-top : 8px;
+        }
+    }
+
+    >.controller {
+        margin-top   : 30px;
+        margin-bottom: 20px;
+        .float-wrapper();
+
+        >.charge-button,
+        >.add-mates-button {
+            float: left;
+        }
+
+        >.update-button,
+        >.remove-mates-button {
+            float: right;
+        }
+
+        >button {
+            height          : 44px;
+            border          : 1px solid black;
+            box-sizing      : border-box;
+            border-radius   : 4px;
+            background-color: white;
+            color           : black;
+            font-size       : @headline5;
+            font-weight     : 700;
+            padding         : 0px 24px 0px 24px;
+
+            &:hover {
+                color           : white;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            &:active {
+                color           : white;
+                background-color: black;
+            }
+        }
+    }
+
+    >.controller2 {
+        >.claim-button {
+            height          : 44px;
+            border          : 1px solid @brand-primary;
+            box-sizing      : border-box;
+            border-radius   : 4px;
+            background-color: white;
+            color           : @brand-primary;
+            font-size       : @headline5;
+            font-weight     : 700;
+            padding         : 0px 24px 0px 24px;
+            margin-top      : 8px;
+
+            &:hover {
+                color           : white;
+                background-color: rgba(242, 120, 12, 0.8);
+            }
+
+            &:active {
+                color           : white;
+                background-color: @brand-primary;
+            }
+        }
+    }
+
+    >.mate-holders-button {
+        color          : black;
+        text-decoration: underline;
+    }
+
+    >section {
+        margin-top: 60px;
+
+        >h2 {
+            font-size    : 26px;
+            margin-bottom: 16px;
+            line-height  : 1.5em;
+
+            @media @phone {
+                font-size: 20px;
+            }
+        }
+
+        >.mate-reward-info {
+            display      : flex;
+            font-size    : @paragraph;
+            font-weight  : 400;
+            margin-bottom: 16px;
+
+            @media @phone {
+                display: block;
+            }
+
+            >span {
+                flex-grow: 1;
+            }
+        }
+
+        >button {
+            height          : 44px;
+            border          : 1px solid @brand-primary;
+            box-sizing      : border-box;
+            border-radius   : 4px;
+            background-color: white;
+            color           : @brand-primary;
+            font-size       : @headline5;
+            font-weight     : 700;
+            padding         : 0px 24px 0px 24px;
+            margin-bottom   : 16px;
+
+            &:hover {
+                color           : white;
+                background-color: rgba(242, 120, 12, 0.8);
+            }
+
+            &:active {
+                color           : white;
+                background-color: @brand-primary;
+            }
+
+            @media @phone {
+                margin-top: 16px;
+                display   : block;
+            }
+        }
+
+        >.warning {
+            width     : 80%;
+            margin    : auto;
+            margin-top: 30px;
+            border    : 1px solid #FF3B30;
+            color     : #FF3B30;
+            padding   : 15px;
+            word-break: break-all;
+            text-align: left;
+            font-size : 14px;
+        }
+
+        >.mate-list {
+            margin-top: 30px;
+            margin    : auto;
+            height    : 300px;
+        }
+
+        >.listeners {
+            margin-top: 30px;
+            .float-wrapper();
+
+            >.lp-token-listeners {
+                margin-bottom: 16px;
+            }
+
+            >.lp-token-listeners:first-of-type {
+                float: left;
+            }
+
+            >.lp-token-listeners:last-of-type {
+                float: right;
+            }
+        }
+    }
+}

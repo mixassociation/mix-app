@@ -12,6 +12,15 @@ import BurnPool from "./view/BurnPool";
 import Burn from "./view/Burn";
 import DevFund from "./view/DevFund";
 
+import Turntable from "./view/turntable/Turntable";
+import BuyTurntable from "./view/turntable/BuyTurntable";
+import TurntableDetail from "./view/turntable/Detail";
+import Update from "./view/turntable/Update";
+import AddMates from "./view/turntable/AddMates";
+import RemoveMates from "./view/turntable/RemoveMates";
+import MiningMates from "./view/turntable/MiningMates";
+import MateHolders from "./view/turntable/MateHolders";
+
 (async () => {
 
     await AssetsCalculator.init();
@@ -31,6 +40,15 @@ import DevFund from "./view/DevFund";
     SkyRouter.route("burnpool", BurnPool);
     SkyRouter.route("burn", Burn);
     SkyRouter.route("devfund", DevFund);
+
+    SkyRouter.route("turntable", Turntable);
+    SkyRouter.route("turntable/buy", BuyTurntable);
+    SkyRouter.route("turntable/{id}", TurntableDetail, ["turntable/buy"]);
+    SkyRouter.route("turntable/{id}/update", Update);
+    SkyRouter.route("turntable/{id}/addmates", AddMates);
+    SkyRouter.route("turntable/{id}/removemates", RemoveMates);
+    SkyRouter.route("turntable/{id}/miningmates", MiningMates);
+    SkyRouter.route("turntable/{id}/mateholders", MateHolders);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);

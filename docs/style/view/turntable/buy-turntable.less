@@ -1,0 +1,106 @@
+.buy-turntable-view {
+    margin     : auto;
+    margin-top : 32px;
+    text-align : center;
+    line-height: 1.4rem;
+
+    @media @phone {
+        margin    : 8px;
+        margin-top: 32px;
+    }
+
+    >.content {
+        margin   : auto;
+        max-width: 1240px;
+
+        >h1 {
+            font-size  : @headline1;
+            font-weight: 700;
+        }
+
+        >p {
+            font-size    : @paragraph;
+            font-weight  : 400;
+            margin-top   : 24px;
+            margin-bottom: 24px;
+        }
+    }
+
+    >.warning {
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        background-color: @shadow-light;
+        font-size       : @paragraph;
+        font-weight     : 400;
+        height          : 100px;
+        margin-top      : 16px;
+        margin-bottom   : 16px;
+
+        >.text-wrap {
+            max-width: 1240px;
+        }
+    }
+
+    >.turntable-list {
+        margin               : auto;
+        max-width            : 1240px;
+        display              : grid;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        column-gap           : 2rem;
+
+        @media @phone {
+            grid-template-columns: 100%;
+        }
+
+        >.buy-turntable-item {
+            margin-top: 60px;
+            float     : left;
+            text-align: center;
+
+            >h4 {
+                font-size: 20px;
+            }
+
+            >img {
+                width: 246.666667px;
+            }
+
+            >.volume,
+            >.price {
+                font-size: 20px;
+            }
+
+            >.lifetime {
+                font-size: 14px;
+            }
+
+            >button {
+                height          : 44px;
+                border          : 1px solid @brand-primary;
+                box-sizing      : border-box;
+                border-radius   : 4px;
+                background-color: white;
+                color           : @brand-primary;
+                font-size       : @headline5;
+                font-weight     : 700;
+                padding         : 0px 24px 0px 24px;
+                margin-top      : 8px;
+
+                &:hover {
+                    color           : white;
+                    background-color: rgba(242, 120, 12, 0.8);
+                }
+
+                &:active {
+                    color           : white;
+                    background-color: @brand-primary;
+                }
+            }
+
+            @media @phone {
+                width: 100%;
+            }
+        }
+    }
+}
