@@ -1,0 +1,98 @@
+.turntable-view {
+    max-width  : 1240px;
+    margin     : auto;
+    margin-top : 32px;
+    text-align : center;
+    line-height: 1.4rem;
+
+    @media @phone {
+        margin    : 8px;
+        margin-top: 32px;
+    }
+
+    >h1 {
+        font-size  : @headline1;
+        font-weight: 700;
+    }
+
+    >p {
+        font-size    : @paragraph;
+        font-weight  : 400;
+        margin-top   : 24px;
+        margin-bottom: 24px;
+    }
+
+    >.my-turntable {
+        >h2 {
+            font-size    : @headline3;
+            font-weight  : 700;
+            margin-top   : 32px;
+            margin-bottom: 8px;
+        }
+
+        >button {
+            height          : 44px;
+            border          : 1px solid @brand-primary;
+            box-sizing      : border-box;
+            border-radius   : 4px;
+            background-color: white;
+            color           : @brand-primary;
+            font-size       : @headline5;
+            font-weight     : 700;
+            padding         : 0px 24px 0px 24px;
+            margin-top      : 8px;
+
+            &:hover {
+                color           : white;
+                background-color: rgba(242, 120, 12, 0.8);
+            }
+
+            &:active {
+                color           : white;
+                background-color: @brand-primary;
+            }
+        }
+    }
+
+    >.listening-turntable {
+        >h2 {
+            font-size    : @headline3;
+            font-weight  : 700;
+            margin-top   : 32px;
+            margin-bottom: 8px;
+        }
+
+        >p {
+            font-size    : @paragraph;
+            font-weight  : 400;
+            margin-top   : 24px;
+            margin-bottom: 24px;
+        }
+    }
+
+    >.all-turntable {
+        >h2 {
+            font-size    : @headline3;
+            font-weight  : 700;
+            margin-top   : 32px;
+            margin-bottom: 8px;
+        }
+
+        >p {
+            font-size    : @headline5;
+            font-weight  : 400;
+            margin-top   : 24px;
+            margin-bottom: 24px;
+        }
+
+        >.turntable-list {
+            display              : grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            column-gap           : 2rem;
+
+            @media @phone {
+                grid-template-columns: 100%;
+            }
+        }
+    }
+}

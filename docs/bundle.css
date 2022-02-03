@@ -1295,6 +1295,127 @@ body {
   background-color: rgba(199, 254, 162, 0.2);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+.mate-list > .mate-line {
+  display: flex;
+  justify-content: center;
+}
+.mate-list > .mate-line > .mate-item {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  line-height: 1em;
+}
+.mate-list > .mate-line > .mate-item > .id {
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+  color: white;
+  text-shadow: 3px 3px 3px #656565;
+}
+.mate-list > .mate-line > .mate-item > .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #F2780C;
+  text-shadow: 3px 3px 3px #656565;
+}
+.mate-list > .mate-line > .mate-item > .score {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: right;
+  color: #006400;
+}
+.mate-list > .mate-line > .mate-item > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+}
+@media only screen and (max-width: 799px) {
+  .mate-list > .mate-line > .mate-item {
+    width: 64px;
+    height: 64px;
+    font-size: 14px;
+  }
+}
+.mate-list > .mate-line > .mate-item.off {
+  opacity: 0.5;
+}
+.lp-token-listeners {
+  border: 1px solid #000000;
+  padding: 15px;
+  width: calc(50% - 8px);
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 8px;
+  line-height: 1.2rem;
+}
+@media only screen and (max-width: 719px) {
+  .lp-token-listeners {
+    width: 100%;
+  }
+}
+.lp-token-listeners > h4 {
+  text-align: center;
+  color: #000000;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.lp-token-listeners > a {
+  margin-top: 16px;
+  display: block;
+  font-size: 16px;
+  color: #000000;
+  border: 1px solid;
+  background-color: transparent;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bold;
+}
+.lp-token-listeners > a:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.lp-token-listeners > a:active {
+  color: white;
+  background-color: black;
+}
+.lp-token-listeners > .warning {
+  margin-top: 16px;
+  border: 1px solid #FF3B30;
+  color: #FF3B30;
+  padding: 8px;
+  word-break: break-all;
+  font-size: 14px;
+}
+.turntable-item {
+  text-align: center;
+  cursor: pointer;
+  width: 246.666667px;
+  height: 380px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 719px) {
+  .turntable-item {
+    width: 100%;
+  }
+}
+.turntable-item > h4 {
+  font-size: 20px;
+}
+.turntable-item > img {
+  width: 246.666667px;
+}
+.turntable-item > .lifetime {
+  font-size: 14px;
+}
 .layout {
   width: 100%;
 }
@@ -1831,6 +1952,7 @@ body {
   font-size: 0.875rem;
   font-weight: 400;
   margin-top: 8px;
+  line-height: 1.4rem;
 }
 @media only screen and (max-width: 719px) {
   .mining-view > .paragraph {
@@ -3427,5 +3549,771 @@ body {
 .governance-proposal-view > .controller > button:active {
   color: white;
   background-color: #F2780C;
+}
+.turntable-view {
+  max-width: 1240px;
+  margin: auto;
+  margin-top: 32px;
+  text-align: center;
+  line-height: 1.4rem;
+}
+@media only screen and (max-width: 719px) {
+  .turntable-view {
+    margin: 8px;
+    margin-top: 32px;
+  }
+}
+.turntable-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+.turntable-view > p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.turntable-view > .my-turntable > h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+.turntable-view > .my-turntable > button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.turntable-view > .my-turntable > button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.turntable-view > .my-turntable > button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.turntable-view > .listening-turntable > h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+.turntable-view > .listening-turntable > p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.turntable-view > .all-turntable > h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+.turntable-view > .all-turntable > p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.turntable-view > .all-turntable > .turntable-list {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  column-gap: 2rem;
+}
+@media only screen and (max-width: 719px) {
+  .turntable-view > .all-turntable > .turntable-list {
+    grid-template-columns: 100%;
+  }
+}
+.buy-turntable-view {
+  margin: auto;
+  margin-top: 32px;
+  text-align: center;
+  line-height: 1.4rem;
+}
+@media only screen and (max-width: 719px) {
+  .buy-turntable-view {
+    margin: 8px;
+    margin-top: 32px;
+  }
+}
+.buy-turntable-view > .content {
+  margin: auto;
+  max-width: 1240px;
+}
+.buy-turntable-view > .content > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+.buy-turntable-view > .content > p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.buy-turntable-view > .warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F9F9F9;
+  font-size: 0.875rem;
+  font-weight: 400;
+  height: 100px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.buy-turntable-view > .warning > .text-wrap {
+  max-width: 1240px;
+}
+.buy-turntable-view > .turntable-list {
+  margin: auto;
+  max-width: 1240px;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  column-gap: 2rem;
+}
+@media only screen and (max-width: 719px) {
+  .buy-turntable-view > .turntable-list {
+    grid-template-columns: 100%;
+  }
+}
+.buy-turntable-view > .turntable-list > .buy-turntable-item {
+  margin-top: 60px;
+  float: left;
+  text-align: center;
+}
+.buy-turntable-view > .turntable-list > .buy-turntable-item > h4 {
+  font-size: 20px;
+}
+.buy-turntable-view > .turntable-list > .buy-turntable-item > img {
+  width: 246.666667px;
+}
+.buy-turntable-view > .turntable-list > .buy-turntable-item > .volume,
+.buy-turntable-view > .turntable-list > .buy-turntable-item > .price {
+  font-size: 20px;
+}
+.buy-turntable-view > .turntable-list > .buy-turntable-item > .lifetime {
+  font-size: 14px;
+}
+.buy-turntable-view > .turntable-list > .buy-turntable-item > button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.buy-turntable-view > .turntable-list > .buy-turntable-item > button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.buy-turntable-view > .turntable-list > .buy-turntable-item > button:active {
+  color: white;
+  background-color: #F2780C;
+}
+@media only screen and (max-width: 719px) {
+  .buy-turntable-view > .turntable-list > .buy-turntable-item {
+    width: 100%;
+  }
+}
+.turntable-detail-view {
+  max-width: 780px;
+  padding: 135px 20px;
+  margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  .turntable-detail-view {
+    padding: 90px 20px;
+  }
+}
+.turntable-detail-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+  text-shadow: 3px 3px 3px #656565;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.turntable-detail-view > .info > img {
+  width: 320px;
+  display: block;
+  margin: auto;
+}
+.turntable-detail-view > .info > .volume {
+  font-size: 20px;
+  text-align: center;
+}
+.turntable-detail-view > .info > .video {
+  margin-top: 50px;
+  width: 100%;
+}
+.turntable-detail-view > .info > p {
+  margin: 30px 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.turntable-detail-view > .info > .social {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.turntable-detail-view > .info > .owner {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.turntable-detail-view > .info > .lifetime {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.turntable-detail-view > .controller {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.turntable-detail-view > .controller:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.turntable-detail-view > .controller > .charge-button,
+.turntable-detail-view > .controller > .add-mates-button {
+  float: left;
+}
+.turntable-detail-view > .controller > .update-button,
+.turntable-detail-view > .controller > .remove-mates-button {
+  float: right;
+}
+.turntable-detail-view > .controller > button {
+  height: 44px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+}
+.turntable-detail-view > .controller > button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.turntable-detail-view > .controller > button:active {
+  color: white;
+  background-color: black;
+}
+.turntable-detail-view > .controller2 > .claim-button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.turntable-detail-view > .controller2 > .claim-button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.turntable-detail-view > .controller2 > .claim-button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.turntable-detail-view > .mate-holders-button {
+  color: black;
+  text-decoration: underline;
+}
+.turntable-detail-view > section {
+  margin-top: 60px;
+}
+.turntable-detail-view > section > h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+  line-height: 1.5em;
+}
+@media only screen and (max-width: 719px) {
+  .turntable-detail-view > section > h2 {
+    font-size: 20px;
+  }
+}
+.turntable-detail-view > section > .mate-reward-info {
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 719px) {
+  .turntable-detail-view > section > .mate-reward-info {
+    display: block;
+  }
+}
+.turntable-detail-view > section > .mate-reward-info > span {
+  flex-grow: 1;
+}
+.turntable-detail-view > section > button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-bottom: 16px;
+}
+.turntable-detail-view > section > button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.turntable-detail-view > section > button:active {
+  color: white;
+  background-color: #F2780C;
+}
+@media only screen and (max-width: 719px) {
+  .turntable-detail-view > section > button {
+    margin-top: 16px;
+    display: block;
+  }
+}
+.turntable-detail-view > section > .warning {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  border: 1px solid #FF3B30;
+  color: #FF3B30;
+  padding: 15px;
+  word-break: break-all;
+  text-align: left;
+  font-size: 14px;
+}
+.turntable-detail-view > section > .mate-list {
+  margin-top: 30px;
+  margin: auto;
+  height: 300px;
+}
+.turntable-detail-view > section > .listeners {
+  margin-top: 30px;
+}
+.turntable-detail-view > section > .listeners:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.turntable-detail-view > section > .listeners > .lp-token-listeners {
+  margin-bottom: 16px;
+}
+.turntable-detail-view > section > .listeners > .lp-token-listeners:first-of-type {
+  float: left;
+}
+.turntable-detail-view > section > .listeners > .lp-token-listeners:last-of-type {
+  float: right;
+}
+.update-turntable-view {
+  max-width: 780px;
+  padding: 135px 20px;
+  margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  .update-turntable-view {
+    padding: 90px 20px;
+  }
+}
+.update-turntable-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.update-turntable-view > .form {
+  margin-top: 30px;
+}
+.update-turntable-view > .form:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.update-turntable-view > .form > label {
+  display: block;
+  margin-bottom: 20px;
+}
+.update-turntable-view > .form > label > h4 {
+  font-size: 22px;
+}
+.update-turntable-view > .form > label > input,
+.update-turntable-view > .form > label > textarea {
+  margin-top: 10px;
+  display: block;
+  color: black;
+  background-color: transparent;
+  padding: 7.5px;
+  border: 2px solid black;
+  font-size: 15px;
+  width: 280px;
+  height: 45px;
+  width: 100%;
+}
+.update-turntable-view > .form > label > textarea {
+  height: 100px;
+  border: 2px solid black;
+}
+.update-turntable-view > .form > .save-button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.update-turntable-view > .form > .save-button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.update-turntable-view > .form > .save-button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.update-turntable-view > .form > .destroy-button {
+  margin-top: 30px;
+  float: right;
+  height: 44px;
+  border: 1px solid #FF3B30;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #FF3B30;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.update-turntable-view > .form > .destroy-button:hover {
+  color: white;
+  background-color: rgba(255, 0, 0, 0.8);
+}
+.update-turntable-view > .form > .destroy-button:active {
+  color: white;
+  background-color: #FF3B30;
+}
+.add-mates-to-turntable-view {
+  max-width: 780px;
+  margin: auto;
+  margin-top: 32px;
+  line-height: 1.4rem;
+}
+@media only screen and (max-width: 719px) {
+  .add-mates-to-turntable-view {
+    padding: 90px 20px;
+  }
+}
+.add-mates-to-turntable-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.add-mates-to-turntable-view > p {
+  margin-top: 30px;
+  text-align: center;
+}
+.add-mates-to-turntable-view > p > a {
+  text-decoration: underline;
+}
+.add-mates-to-turntable-view > .selected-mates {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.add-mates-to-turntable-view > .button-container > a {
+  color: #000000;
+}
+.add-mates-to-turntable-view > .mate-list {
+  margin-top: 10px;
+  height: 300px;
+}
+.add-mates-to-turntable-view > .submit-button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.add-mates-to-turntable-view > .submit-button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.add-mates-to-turntable-view > .submit-button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.add-mates-to-turntable-view {
+  max-width: 780px;
+  margin: auto;
+  margin-top: 32px;
+  line-height: 1.4rem;
+}
+@media only screen and (max-width: 719px) {
+  .add-mates-to-turntable-view {
+    padding: 90px 20px;
+  }
+}
+.add-mates-to-turntable-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.add-mates-to-turntable-view > p {
+  margin-top: 30px;
+  text-align: center;
+}
+.add-mates-to-turntable-view > p > a {
+  text-decoration: underline;
+}
+.add-mates-to-turntable-view > .selected-mates {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.add-mates-to-turntable-view > .button-container > a {
+  color: #000000;
+}
+.add-mates-to-turntable-view > .mate-list {
+  margin-top: 10px;
+  height: 300px;
+}
+.add-mates-to-turntable-view > .submit-button {
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.add-mates-to-turntable-view > .submit-button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.add-mates-to-turntable-view > .submit-button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.mining-mates-from-turntable-view {
+  max-width: 1240px;
+  margin: auto;
+  margin-top: 32px;
+  text-align: center;
+  line-height: 1.4rem;
+}
+.mining-mates-from-turntable-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.mining-mates-from-turntable-view > p {
+  margin-top: 30px;
+  text-align: center;
+}
+.mining-mates-from-turntable-view > p > a {
+  text-decoration: underline;
+}
+.mining-mates-from-turntable-view > header {
+  margin-top: 16px;
+  padding-right: 22.5px;
+  padding-bottom: 15px;
+}
+.mining-mates-from-turntable-view > header:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.mining-mates-from-turntable-view > header > .total-mix {
+  float: left;
+  font-size: 20px;
+}
+.mining-mates-from-turntable-view > header > .total-mix > h4 {
+  margin-bottom: 5px;
+}
+.mining-mates-from-turntable-view > header > .total-mix > span {
+  font-size: 30px;
+}
+@media only screen and (max-width: 799px) {
+  .mining-mates-from-turntable-view > header > .total-mix > span {
+    font-size: 25px;
+  }
+}
+.mining-mates-from-turntable-view > header > .take-all-button {
+  float: right;
+  height: 44px;
+  border: 1px solid #F2780C;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+  color: #F2780C;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0px 24px 0px 24px;
+  margin-top: 8px;
+}
+.mining-mates-from-turntable-view > header > .take-all-button:hover {
+  color: white;
+  background-color: rgba(242, 120, 12, 0.8);
+}
+.mining-mates-from-turntable-view > header > .take-all-button:active {
+  color: white;
+  background-color: #F2780C;
+}
+.mining-mates-from-turntable-view > .mate-list:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.mining-mates-from-turntable-view > .mate-list > .mate-item {
+  float: left;
+  width: 50%;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+@media only screen and (max-width: 799px) {
+  .mining-mates-from-turntable-view > .mate-list > .mate-item {
+    float: none;
+    width: 100%;
+  }
+}
+.mining-mates-from-turntable-view > .mate-list > .mate-item > .content {
+  display: flex;
+  border: 1px solid #06BC00;
+  padding: 10px;
+  align-items: center;
+}
+.mining-mates-from-turntable-view > .mate-list > .mate-item > .content > .mate {
+  display: block;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+  line-height: 1em;
+}
+.mining-mates-from-turntable-view > .mate-list > .mate-item > .content > .mate > .id {
+  position: absolute;
+  left: 3px;
+  bottom: 0;
+}
+.mining-mates-from-turntable-view > .mate-list > .mate-item > .content > .mate > .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #FF00F6;
+  text-shadow: 3px 3px 3px #656565;
+}
+@media only screen and (max-width: 799px) {
+  .mining-mates-from-turntable-view > .mate-list > .mate-item > .content > .mate {
+    width: 64px;
+    height: 64px;
+    font-size: 14px;
+  }
+}
+.mining-mates-from-turntable-view > .mate-list > .mate-item > .content > .info {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+.mining-mates-from-turntable-view > .mate-list > .mate-item > .content > .info > .amount {
+  font-size: 24px;
+}
+.mining-mates-from-turntable-view > .mate-list > .mate-item > .content > .controller {
+  padding-right: 6px;
+}
+.mining-mates-from-turntable-view > .mate-list > .mate-item > .content > .controller > .claim-button {
+  font-size: 20px;
+  color: #000000;
+  background-color: #FBFF72;
+  box-shadow: 7.5px 7.5px 0px 0px #BFC500;
+  padding: 12px 16px;
+  font-weight: bold;
+}
+.turntable-mate-holders-view {
+  max-width: 780px;
+  padding: 135px 20px;
+  margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  .turntable-mate-holders-view {
+    padding: 90px 20px;
+  }
+}
+.turntable-mate-holders-view > h1 {
+  font-size: 2.8125rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.turntable-mate-holders-view > table {
+  width: 100%;
+  min-width: 510px;
+}
+.turntable-mate-holders-view > table th,
+.turntable-mate-holders-view > table td {
+  padding: 15px;
+  border-bottom: 1px solid #333;
+}
+.turntable-mate-holders-view > table td {
+  text-align: center;
 }
 
