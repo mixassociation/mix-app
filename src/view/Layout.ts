@@ -35,7 +35,7 @@ export default class Layout implements View {
                     )),
                 el("main", (this.content = el(".content"))),
                 el("footer",
-                    "Copyright © 2021 Mix Association. All rights reserved.",
+                    "주식회사 디에스씨레이블 | 대표이사 :권태홍 | 사업자번호 :838-86-02498 | 개인정보보호책임자:권태홍\n주소: 대전광역시 유성구 대학로 82, 5층 505호 | mix-works@ayias.io\nCopyright @2021 DSCLabel Inc. ALL RIGHTS RESERVED.",
                 ),
             ))
         );

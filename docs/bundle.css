@@ -1509,6 +1509,7 @@ body {
   font-size: 12px;
   height: 100px;
   margin-top: 32px;
+  line-height: 1.2rem;
 }
 .home-view {
   text-align: center;
