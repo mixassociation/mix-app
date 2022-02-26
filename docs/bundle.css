@@ -4253,6 +4253,8 @@ body {
   position: absolute;
   left: 3px;
   bottom: 0;
+  color: white;
+  text-shadow: 3px 3px 3px #656565;
 }
 .mining-mates-from-turntable-view > .mate-list > .mate-item > .content > .mate > .name {
   position: absolute;

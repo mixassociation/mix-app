@@ -12,6 +12,10 @@
             "name": "턴테이블"
         },
         {
+            "uri": "booth",
+            "name": "부스"
+        },
+        {
             "uri": "burn",
             "name": "소각"
         }
