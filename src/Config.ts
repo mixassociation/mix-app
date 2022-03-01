@@ -54,6 +54,8 @@ export default {
         PixelCatPool: "",
         KLITS: "",
         KLITSPool: "",
+        Cryptorus: "",
+        CryptorusPool: "",
     } : {
         // Mainnet
         Mate: "0xe47e90c58f8336a2f24bcd9bcb530e2e02e1e8ae",
@@ -100,5 +102,7 @@ export default {
         PixelCatPool: "0x4eb6baE0dcf63f52c951ABBCa292F5293C757F93",
         KLITS: "0x0a412f094c15010bbd413be0fc07b8da26b0b05f",
         KLITSPool: "0xAB8f0C87d97b2B2E2C99528Ebb265689F6663D31",
+        Cryptorus: "0xf556116c62203424fa0c0c659cadcdd8d9d07675",
+        CryptorusPool: "0x47910a706348bf2ae14086e78AC080d31762B171",
     },
 };
