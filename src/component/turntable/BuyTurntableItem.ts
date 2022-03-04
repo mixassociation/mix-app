@@ -6,6 +6,7 @@ import MixEmitterContract from "../../contracts/mix/MixEmitterContract";
 import TurntablesContract from "../../contracts/turntable/TurntablesContract";
 import turntables from "../../turntables.json";
 import ViewUtil from "../../view/ViewUtil";
+import Alert from "../dialogue/Alert";
 
 export default class BuyTurntableItem extends DomNode {
 
@@ -23,8 +24,9 @@ export default class BuyTurntableItem extends DomNode {
             this.apr = el(".apr", `APR: Loading...`),
             el("button", "구매하기", {
                 click: async () => {
-                    await TurntablesContract.buy(typeId);
-                    setTimeout(() => ViewUtil.go("/turntable"), 2000);
+                    new Alert("구매 불가", "MIX 백서 v2 실행으로 인해 턴테이블 추가 생성은 불가능합니다.");
+                    // await TurntablesContract.buy(typeId);
+                    // setTimeout(() => ViewUtil.go("/turntable"), 2000);
                 },
             }),
         );
