@@ -1,5 +1,6 @@
 import { DomNode, el } from "@hanul/skynode";
 import { View, ViewParams } from "skyrouter";
+import Alert from "../../component/dialogue/Alert";
 import Proposal from "../../component/Proposal";
 import Config from "../../Config";
 import Layout from "../Layout";
@@ -16,7 +17,7 @@ export default class Governance implements View {
             this.container = el(".governance-view",
                 el("h1", "MIX 거버넌스"),
                 el(".top-nav", el("h2", "제안들"), el("button", "제안 생성", {
-                    click: () => ViewUtil.go("/governance/propose"),
+                    click: () => new Alert("생성 불가", "MIX 백서 v2 실행이 완료될 때 까지 거버넌스 제안 생성이 불가능합니다."),
                 })),
                 this.proposalList = el(".proposal-list"),
             )
