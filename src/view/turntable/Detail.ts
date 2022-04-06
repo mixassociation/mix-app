@@ -149,11 +149,12 @@ export default class Detail implements View {
                 this.controller.empty().append(
                     el("button.charge-button", "충전하기", {
                         click: () => {
-                            new Prompt("충전하기", "얼마만큼의 MIX를 충전하시겠습니까? 배터리 충전 가격은 턴테이블의 가격의 1/5와 비례하며, 턴테이블의 가격과 같은 액수의 MIX로 배터리를 충전하면 턴테이블 수명의 5배의 수명이 더해집니다.", "충전하기", async (amount) => {
+                            /*new Prompt("충전하기", "얼마만큼의 MIX를 충전하시겠습니까? 배터리 충전 가격은 턴테이블의 가격의 1/5와 비례하며, 턴테이블의 가격과 같은 액수의 MIX로 배터리를 충전하면 턴테이블 수명의 5배의 수명이 더해집니다.", "충전하기", async (amount) => {
                                 const mix = utils.parseEther(amount);
                                 await TurntablesContract.charge(turntableId, mix);
                                 ViewUtil.waitTransactionAndRefresh();
-                            });
+                            });*/
+                            alert("턴테이블 충전이 종료되었습니다.");
                         },
                     }),
                     el("button.update-button", "수정하기", { click: () => ViewUtil.go(`/turntable/${turntableId}/update`) }),

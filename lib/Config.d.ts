@@ -5,7 +5,18 @@ declare const _default: {
     admin: string;
     contracts: {
         Mate: string;
+        DogeSoundContest: string;
+        Name: string;
+        NameV2: string;
+        Message: string;
+        Image: string;
+        Attributes: string;
+        DogeSoundContestV2: string;
+        FollowMe: string;
+        Vote: string;
         Mix: string;
+        KSP: string;
+        NewKlayPunk: string;
         MixEmitter: string;
         DevFundToken: string;
         DevFundPool: string;
